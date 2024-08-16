@@ -2,6 +2,8 @@ import styled from "styled-components";
 
 // components
 import { NavLink, Outlet } from "react-router-dom";
+import { useThemeStore } from "../stores/themeStore";
+import { themes } from "../constants";
 
 // styled components
 const Header = styled.header`
@@ -20,28 +22,40 @@ const NavList = styled.ul`
   list-style: none;
 `;
 
-const App = () => (
-  <>
-    <Header>
-      <input type="range" id="switcher" name="switcher" min="0" max="11" />
-      <Nav>
-        <NavList>
-          <li>
-            <NavLink to="/">home</NavLink>
-          </li>
-          <li>
-            <NavLink to="/one">one</NavLink>
-          </li>
-          <li>
-            <NavLink to="/two">two</NavLink>
-          </li>
-        </NavList>
-      </Nav>
-    </Header>
-    <main>
-      <Outlet />
-    </main>
-  </>
-);
+const App = () => {
+  const { theme, updateTheme } = useThemeStore();
+  return (
+    <>
+      <Header>
+        Current theme: {theme}
+        <input
+          type="range"
+          id="switcher"
+          name="switcher"
+          min="0"
+          max={themes.length}
+          onChange={e => updateTheme(e.target.value)}
+          value={parseInt(theme, 10)}
+        />
+        <Nav>
+          <NavList>
+            <li>
+              <NavLink to="/">home</NavLink>
+            </li>
+            <li>
+              <NavLink to="/one">one</NavLink>
+            </li>
+            <li>
+              <NavLink to="/two">two</NavLink>
+            </li>
+          </NavList>
+        </Nav>
+      </Header>
+      <main>
+        <Outlet />
+      </main>
+    </>
+  );
+};
 
 export default App;
