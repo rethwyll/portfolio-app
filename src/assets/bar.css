@@ -1,0 +1,8 @@
+[data-theme="bar"] {
+  color-scheme: light;
+  background: #c0ffee;
+}
+
+[data-theme="bar"] main {
+  font-size: 5rem;
+}

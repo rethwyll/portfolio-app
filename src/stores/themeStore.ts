@@ -12,5 +12,8 @@ type Action = {
 
 export const useThemeStore = create<State & Action>(set => ({
   theme: sample(themes) ?? themes[0],
-  updateTheme: theme => set(() => ({ theme }))
+  updateTheme: theme => {
+    set(() => ({ theme }));
+    document.documentElement.dataset["theme"] = theme;
+  }
 }));

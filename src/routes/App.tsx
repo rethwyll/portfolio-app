@@ -23,11 +23,12 @@ const NavList = styled.ul`
 `;
 
 const App = () => {
-  const { theme, updateTheme } = useThemeStore();
+  const currentTheme = useThemeStore(state => state.theme);
+  const updateTheme = useThemeStore(state => state.updateTheme);
   return (
     <>
       <Header>
-        Current theme: {theme}
+        Current theme: {currentTheme}
         <input
           type="range"
           id="switcher"
@@ -37,7 +38,7 @@ const App = () => {
           onChange={e => {
             updateTheme(themes[parseInt(e.target.value, 10)]);
           }}
-          value={themes.indexOf(theme)}
+          value={themes.indexOf(currentTheme)}
         />
         <Nav>
           <NavList>

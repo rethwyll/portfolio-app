@@ -2,6 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import "./assets/reset.css";
 import "./assets/index.css";
+import "./assets/themes.css";
 
 // components
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
