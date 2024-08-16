@@ -1,9 +1,16 @@
-import styled from "styled-components";
+import styled, { ThemeProvider } from "styled-components";
 
 // components
 import { NavLink, Outlet } from "react-router-dom";
+
+// constants
+import { themeKeys } from "../constants";
+
+// stores
 import { useThemeStore } from "../stores/themeStore";
-import { themes } from "../constants";
+
+// themes
+import allThemes from "../themes/allThemes";
 
 // styled components
 const Header = styled.header`
@@ -34,11 +41,11 @@ const App = () => {
           id="switcher"
           name="switcher"
           min="0"
-          max={themes.length - 1}
+          max={themeKeys.length - 1}
           onChange={e => {
-            updateTheme(themes[parseInt(e.target.value, 10)]);
+            updateTheme(themeKeys[parseInt(e.target.value, 10)]);
           }}
-          value={themes.indexOf(currentTheme)}
+          value={themeKeys.indexOf(currentTheme)}
         />
         <Nav>
           <NavList>
