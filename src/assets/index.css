@@ -1,4 +1,4 @@
-#root {
+#theme-container {
   display: grid;
   grid-template-rows: min-content;
   grid-auto-rows: 1fr;

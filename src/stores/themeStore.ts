@@ -1,9 +1,8 @@
-import { sample } from "lodash";
+import { isNull } from "lodash";
 import { create } from "zustand";
-import { themeKeys } from "../constants";
 
 type State = {
-  theme: string;
+  theme: string | null;
 };
 
 type Action = {
@@ -11,9 +10,11 @@ type Action = {
 };
 
 export const useThemeStore = create<State & Action>(set => ({
-  theme: sample(themeKeys) ?? themeKeys[0],
-  updateTheme: theme => {
-    set(() => ({ theme }));
-    document.documentElement.dataset["theme"] = theme;
+  theme: null,
+  updateTheme: updatedTheme => {
+    set(() => ({ theme: updatedTheme }));
+    if (!isNull(updatedTheme)) {
+      document.documentElement.dataset["theme"] = updatedTheme;
+    }
   }
 }));

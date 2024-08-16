@@ -1,8 +1,5 @@
 [data-theme="foo"] {
   color-scheme: light;
   background: #bada55;
-}
-
-[data-theme="foo"] main {
-  font-size: 2rem;
+  font-family: "Lobster", cursive;
 }

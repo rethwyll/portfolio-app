@@ -1,4 +1,6 @@
+import { ReactElement, useEffect } from "react";
 import styled, { ThemeProvider } from "styled-components";
+import { isNull, sample } from "lodash";
 
 // components
 import { NavLink, Outlet } from "react-router-dom";
@@ -19,8 +21,10 @@ const Header = styled.header`
   grid-auto-columns: 1fr;
   grid-auto-rows: min-content;
   font-size: 2rem;
-  line-height: 1rem;
   padding: 5rem;
+`;
+const Title = styled.h1`
+  font-size: 3rem;
 `;
 const Nav = styled.nav`
   align-items: center;
@@ -31,15 +35,25 @@ const NavList = styled.ul`
   display: flex;
   gap: 1rem;
   list-style: none;
+
+  & .active {
+    color: red;
+  }
 `;
 
-const App = () => {
+const App = (): ReactElement | null => {
   const currentTheme = useThemeStore(state => state.theme);
   const updateTheme = useThemeStore(state => state.updateTheme);
-  return (
+
+  // initialize theme
+  useEffect(() => {
+    updateTheme(sample(themeKeys) ?? themeKeys[0]);
+  }, [updateTheme]);
+
+  return isNull(currentTheme) ? null : (
     <ThemeProvider theme={allThemes[currentTheme]}>
       <Header>
-        <h1>into the aprilverse</h1>
+        <Title>into the aprilverse</Title>
         Current theme: {currentTheme}
         <input
           type="range"
