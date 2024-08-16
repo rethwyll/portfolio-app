@@ -33,9 +33,11 @@ const App = () => {
           id="switcher"
           name="switcher"
           min="0"
-          max={themes.length}
-          onChange={e => updateTheme(e.target.value)}
-          value={parseInt(theme, 10)}
+          max={themes.length - 1}
+          onChange={e => {
+            updateTheme(themes[parseInt(e.target.value, 10)]);
+          }}
+          value={themes.indexOf(theme)}
         />
         <Nav>
           <NavList>

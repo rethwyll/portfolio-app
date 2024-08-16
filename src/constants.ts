@@ -1,3 +1,1 @@
-import { times } from "lodash";
-
-export const themes = times(100, i => i.toLocaleString());
+export const themes = ["foo", "bar", "baz", "bleem", "woot", "wow", "poot"];
