@@ -1,0 +1,8 @@
+[data-theme="baz"] {
+  color-scheme: light;
+  background: purple;
+}
+
+[data-theme="baz"] main {
+  font-size: 5rem;
+}

@@ -39,6 +39,7 @@ const App = () => {
   return (
     <ThemeProvider theme={allThemes[currentTheme]}>
       <Header>
+        <h1>into the aprilverse</h1>
         Current theme: {currentTheme}
         <input
           type="range"
