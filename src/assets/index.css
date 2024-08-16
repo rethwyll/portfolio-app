@@ -1,5 +1,5 @@
 #root {
   display: grid;
-  grid-template-rows: 10rem;
+  grid-template-rows: min-content;
   grid-auto-rows: 1fr;
 }

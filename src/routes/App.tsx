@@ -15,7 +15,11 @@ import allThemes from "../themes/allThemes";
 // styled components
 const Header = styled.header`
   display: grid;
+  gap: 2rem;
   grid-auto-columns: 1fr;
+  grid-auto-rows: min-content;
+  font-size: 2rem;
+  line-height: 1rem;
   padding: 5rem;
 `;
 const Nav = styled.nav`
@@ -33,7 +37,7 @@ const App = () => {
   const currentTheme = useThemeStore(state => state.theme);
   const updateTheme = useThemeStore(state => state.updateTheme);
   return (
-    <>
+    <ThemeProvider theme={allThemes[currentTheme]}>
       <Header>
         Current theme: {currentTheme}
         <input
@@ -64,7 +68,7 @@ const App = () => {
       <main>
         <Outlet />
       </main>
-    </>
+    </ThemeProvider>
   );
 };
 
