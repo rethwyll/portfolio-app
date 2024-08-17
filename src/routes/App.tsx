@@ -35,18 +35,14 @@ const NavList = styled.ul`
   display: flex;
   gap: 1rem;
   list-style: none;
-
-  & .active {
-    color: red;
-  }
 `;
-
 const App = (): ReactElement | null => {
   const currentTheme = useThemeStore(state => state.theme);
   const updateTheme = useThemeStore(state => state.updateTheme);
 
   // initialize theme
   useEffect(() => {
+    console.log("NE", sample(themeKeys) ?? themeKeys[0]);
     updateTheme(sample(themeKeys) ?? themeKeys[0]);
   }, [updateTheme]);
 
@@ -54,7 +50,7 @@ const App = (): ReactElement | null => {
     <ThemeProvider theme={allThemes[currentTheme]}>
       <Header>
         <Title>into the aprilverse</Title>
-        Current theme: {currentTheme}
+        <p>Current theme: {currentTheme}</p>
         <input
           type="range"
           id="switcher"
@@ -69,13 +65,13 @@ const App = (): ReactElement | null => {
         <Nav>
           <NavList>
             <li>
-              <NavLink to="/">home</NavLink>
-            </li>
-            <li>
-              <NavLink to="/one">one</NavLink>
+              <NavLink to="/">Home</NavLink>
             </li>
             <li>
               <NavLink to="/two">two</NavLink>
+            </li>
+            <li>
+              <NavLink to="/contact">Contact</NavLink>
             </li>
           </NavList>
         </Nav>
@@ -83,6 +79,8 @@ const App = (): ReactElement | null => {
       <main>
         <Outlet />
       </main>
+      <aside></aside>
+      <footer></footer>
     </ThemeProvider>
   );
 };

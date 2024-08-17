@@ -1,0 +1,17 @@
+[
+  {
+    "name": "Uplevel",
+    "url": "http://www.uplevelteam.com",
+    "start": "2024-03-01",
+    "end": null,
+    "summary": "Uplevel, a series-A startup hatched at Madrona Venture Labs, hired me to stand up a greenfield React SPA web app for its engineering  effectiveness dashboard. On the path to product/market fit, I have created two different greenfield SPAs to support the product.",
+    "contributions": [
+      "Led front-end development of two different React SPA (create-react-app and vite) webapps delivering effectiveness dashboards for software engineering organizations, including Fortune 100 companies.",
+      "Developed a hackathon project that was integrated into the production app: a robust query parameters utility that enabled flexible sharing of UI state for customer data visibility and greater efficiency during QA cycles.",
+      "Led/anchored feature initiatives for the development team, serving as liaison to PMs; documenting and maintaining technical requirements; shepherding development calendar.",
+      "Worked closely with PMs and design to negotiate and document technical requirements.",
+      "Led front-end engineering efforts on error handling and monitoring.",
+      "Led front-end engineering efforts on i18n and l10n."
+    ]
+  }
+]

@@ -9,6 +9,7 @@ import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import App from "./routes/App";
 import Error from "./routes/Error";
 import Home from "./routes/Home";
+import Contact from "./routes/Contact";
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
   <React.StrictMode>
@@ -23,12 +24,8 @@ ReactDOM.createRoot(document.getElementById("root")!).render(
               element: <Home />
             },
             {
-              path: "/one",
-              element: <>one</>
-            },
-            {
-              path: "/two",
-              element: <>two</>
+              path: "/contact",
+              element: <Contact />
             }
           ]
         }

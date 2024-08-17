@@ -1,6 +1,4 @@
 import { DefaultTheme } from "styled-components/dist/types";
-import { bar } from "./bar";
-import { foo } from "./foo";
-import { baz } from "./baz";
+import { recipe } from "./recipe";
 
-export default { foo, bar, baz } as { [key: string]: DefaultTheme };
+export default { recipe } as { [key: string]: DefaultTheme };
