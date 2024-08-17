@@ -5,12 +5,14 @@ import Skills from "../components/Skills";
 import Education from "../components/Education";
 import Keywords from "../components/Keywords";
 import Experience from "../components/Experience";
+import SkillsFilter from "../components/SkillsFilter";
 
 // styled components
 const Container = styled.div``;
 
 const Home = () => (
   <Container>
+    <SkillsFilter />
     <Intro />
     <Objective />
     <Skills />

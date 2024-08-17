@@ -2,6 +2,9 @@
   {
     "name": "Uplevel",
     "url": "http://www.uplevelteam.com",
+    "location": "Seattle, WA",
+    "mapsLink": null,
+    "title": "Principal engineer",
     "start": "2024-03-01",
     "end": null,
     "summary": "Uplevel, a series-A startup hatched at Madrona Venture Labs, hired me to stand up a greenfield React SPA web app for its engineering  effectiveness dashboard. On the path to product/market fit, I have created two different greenfield SPAs to support the product.",
@@ -12,6 +15,132 @@
       "Worked closely with PMs and design to negotiate and document technical requirements.",
       "Led front-end engineering efforts on error handling and monitoring.",
       "Led front-end engineering efforts on i18n and l10n."
+    ],
+    "skills": [
+      "typescript",
+      "javascript",
+      "react",
+      "html",
+      "css",
+      "project-management",
+      "devops"
+    ]
+  },
+  {
+    "name": "The Climate Corporation",
+    "url": "http://www.climate.com",
+    "location": "Seattle, WA",
+    "mapsLink": null,
+    "title": "Staff software developer",
+    "start": "2014-09-01",
+    "end": "2019-01-01",
+    "summary": "As a staff engineer for The Climate Corporation&rsquo;s Insights web team, I supported the desktop and webview UI with HTML5, CSS (SASS and css-modules) and React/Redux. I also Led the initiative to build the next iteration of our internal React component asset library.",
+    "contributions": [
+      "Led UI development of React app to integrate digital farming diagnostic equipment with farm field mapping and CRUD operations.",
+      "Collaborated closely with UX design teams in California and Missouri to test and validate use cases.",
+      "Led project to refactor and improve internal React library for use by internal front-end development team with an eye towards extensibility and acessibility.",
+      "Mentored junior developers in front-end development via technical presentations and brown bag sessions."
+    ],
+    "skills": [
+      "javascript",
+      "react",
+      "html",
+      "css",
+      "project-management",
+      "devops"
+    ]
+  },
+  {
+    "name": "Wetpaint",
+    "url": "https://en.wikipedia.org/wiki/Wetpaint",
+    "location": "Seattle, WA",
+    "mapsLink": null,
+    "title": "Front-end software developer",
+    "start": "2012-10-01",
+    "end": "2014-09-01",
+    "summary": "I was hired by Wetpaint to supplement its growing development team supporting dynamic entertainment content for women aged 18-34.",
+    "contributions": [],
+    "skills": ["javascript", "html", "css", "project-management"]
+  },
+  {
+    "name": "Aptimus (Apollo Education Group)",
+    "url": "https://www.linkedin.com/company/apollo-group/",
+    "location": "Seattle, WA",
+    "mapsLink": null,
+    "title": "Front-end software developer",
+    "start": "2009-02-01",
+    "end": "2012-10-01",
+    "summary": "I was hired By Aptimus as the cornerstone of a growing front-end development team tasked with supporting the University of Phoenix marketing website (http://www.phoenix.edu), a high-traffic site that receives millions of page views every month. As Led UI developer, I create dynamic, data-driven templates and components utilized by the Apollo Group web content strategy team to build the UOPX website.",
+    "contributions": [
+      "Led development of template UI for UOPX homepage, degree-program pages, course pages and continuing education mini-site (many of the site&rsquo;s highest-visibility pages), as well as various extensible components",
+      "Collaborated closely with UX design teams in California and Missouri to test and validate use cases.",
+      "Spearheaded integration of Backbone MVC framework in codebase from research through implementation to standardize team Javascript coding efforts",
+      "Led key CSS refactoring efforts to reduce CSS load times and improve development efficiency",
+      "Mentored junior developers in Day (Adobe) CQ enterprise CMS development and Javascript",
+      "Initiated project to support responsive presentation for mobile devices via implementation of Twitter Bootstrap"
+    ],
+    "skills": ["javascript", "html", "css", "project-management"]
+  },
+  {
+    "name": "Zillow.com",
+    "url": "https://www.zillow.com/",
+    "location": "Seattle, WA",
+    "mapsLink": null,
+    "title": "Front-end software developer",
+    "start": "2008-05-01",
+    "end": "2008-10-01",
+    "summary": "I was recruited by Zillow.com to provide development expertise with regard to UI.",
+    "contributions": [
+      "Developed UI for Zillow Professional Directory",
+      "Presented talk advocating for semantic HTML development during Zillow Developer Presentation",
+      "Contributed core Web 2.0 concepts such as standards-based development; code validation; and separation of structure, presentation and behavior into Zillow codebase."
+    ],
+    "skills": ["javascript", "html", "css"]
+  },
+  {
+    "name": "Seismic Interactive & Design",
+    "url": "https://www.seismicinteractive.com/",
+    "location": "Green Bay, WI",
+    "mapsLink": null,
+    "title": "Web designer/developer",
+    "start": "2003-05-01",
+    "end": "2008-04-01",
+    "summary": "I was hired to guide development of company into full-service interactive agency, implement processes for small- and large-scale web project development and provide advanced level of design/development expertise with regard to UI and programming. I implemented all phases of site development; mentored co-workers in web development skills; administrated Linux-based dedicated server and in-house Internet connectivity infrastructure on a day-to-day operational basis; and provided Internet technologies consulting for 20+ employees of strategic-management affiliate company.",
+    "contributions": [
+      "Created proprietary WAVE<sup>&trade;</sup> client needs evaluation, which was implemented as standard procedure in project exploratory process.",
+      "Managed transfer of client websites to in-house dedicated server, allowing company to generate new revenue stream and significantly reduce third-party website hosting expenses.",
+      "Headed technical development of ADDY award-winning projects: Green Bay Chamber of Commerce &ldquo;Shine&rdquo; interactive CD (2003), Green Bay Chamber of Commerce &ldquo;A Place To Shine&rdquo; website (2006).",
+      "Integrated core Web 2.0 concepts such as standards-based development; code validation; and separation of structure, presentation and behavior into company web development process."
+    ],
+    "skills": [
+      "javascript",
+      "html",
+      "css",
+      "project-management",
+      "ux-design",
+      "devops"
+    ]
+  },
+  {
+    "name": "Pulse Communications",
+    "url": "https://www.pulsecommunications.com/",
+    "location": "Green Bay, WI",
+    "mapsLink": null,
+    "title": "Web designer/developer",
+    "start": "1999-02-01",
+    "end": "2001-04-01",
+    "summary": "I was hired to guide development of company into full-service interactive agency, implement processes for small- and large-scale web project development and provide advanced level of design/development expertise with regard to UI and programming. I implemented all phases of site development; mentored co-workers in web development skills; administrated Linux-based dedicated server and in-house Internet connectivity infrastructure on a day-to-day operational basis; and provided Internet technologies consulting for 20+ employees of strategic-management affiliate company.",
+    "contributions": [
+      "Developed interactive tradeshow kiosk, increasing client&rsquo;s product sales by 625%. (25 systems vs. 4 systems in previous year)",
+      "Proposed, built and deployed company intranet to improve internal communication and project coordination."
+    ],
+    "skills": [
+      "javascript",
+      "html",
+      "css",
+      "project-management",
+      "ux-design",
+      "devops"
     ]
   }
 ]
