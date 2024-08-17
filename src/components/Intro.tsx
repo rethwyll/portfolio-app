@@ -1,22 +1,18 @@
 import React from "react";
-import styled from "styled-components";
 
-// styled components
-const Title = styled.h2`
-  font-size: 10rem;
-`;
-const ElevatorPitch = styled.p`
-  font-size: 5rem;
-`;
+// components
+import Typography from "@mui/material/Typography";
 
 const Intro = () => {
   return (
     <header>
-      <Title>April Bingham</Title>
-      <ElevatorPitch>
+      <Typography variant="h2" color="secondary">
+        April Bingham
+      </Typography>
+      <Typography variant="body1">
         Multi-faceted web developer with extensive production and project
         management experience in producing dynamic, user-focused experiences.
-      </ElevatorPitch>
+      </Typography>
     </header>
   );
 };

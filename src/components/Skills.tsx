@@ -1,10 +1,11 @@
 import React from "react";
+import Typography from "@mui/material/Typography";
 
 const Skills = () => {
   return (
     <section>
       <header>
-        <h3>Skills and Knowledge Base</h3>
+        <Typography variant="h3">Skills and Knowledge Base</Typography>
         <p>
           20+ years of web development and design experience for commercial
           clients, with demonstrated proficiency in all phases of site
@@ -25,7 +26,9 @@ const Skills = () => {
         </p>
       </header>
       <dl>
-        <dt>Development</dt>
+        <Typography variant="h4" component="dt">
+          Development
+        </Typography>
         <dd>
           HTML5; CSS2 and CSS3; CSS-in-JS; Javascript; Typescript; React; Vite;
           SPA; RESTful service calls; Highcharts; Launch Darkly; Agile; Jira
@@ -33,12 +36,16 @@ const Skills = () => {
           semantic development; HTML/CSS validation; Macintosh, Windows, *nix
           environments
         </dd>
-        <dt>UX</dt>
+        <Typography variant="h4" component="dt">
+          UX
+        </Typography>
         <dd>
           UI; site navigation; graphical &ldquo;look and feel&rdquo;; component
           libraries; analytics tools
         </dd>
-        <dt>Project</dt>
+        <Typography variant="h4" component="dt">
+          Project
+        </Typography>
         <dd>
           production estimation; client relations; copyediting; project
           management; documentation/technical writing; client

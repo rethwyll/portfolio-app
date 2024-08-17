@@ -1,6 +1,6 @@
 import { snakeCase } from "lodash";
 
-export const themeKeys = ["recipe"];
+export const themeKeys = ["recipe", "two"];
 export const skills = [
   "typescript",
   "javascript",

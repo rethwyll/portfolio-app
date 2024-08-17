@@ -1,10 +1,11 @@
 import React from "react";
+import Typography from "@mui/material/Typography";
 
 const Keywords = () => {
   return (
     <section>
       <header>
-        <h3>Keywords</h3>
+        <Typography variant="h3">Keywords</Typography>
       </header>
       <ul>
         <li>Web</li>

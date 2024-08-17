@@ -1,15 +1,32 @@
 import React from "react";
+import styled from "@emotion/styled";
+
+// components
+import Typography from "@mui/material/Typography";
+
+// types
 import { ExperienceItem } from "../types/experience";
 
+// styled components
+const Skills = styled.ul`
+  align-items: baseline;
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+`;
+
 type Props = {
+  className?: string;
   experienceItem: ExperienceItem;
 };
 
-const ExperienceItemDisplay = ({ experienceItem }: Props) => {
+const ExperienceItemDisplay = ({ className, experienceItem }: Props) => {
   return (
-    <li>
+    <li className={className}>
       <header>
-        <h4>
+        <Typography variant="h4">
           {experienceItem.url ? (
             <a
               href={experienceItem.url}
@@ -22,7 +39,7 @@ const ExperienceItemDisplay = ({ experienceItem }: Props) => {
             experienceItem.name
           )}
           , {experienceItem.location}
-        </h4>
+        </Typography>
         <p>
           {experienceItem.title},{" "}
           <time dateTime={experienceItem.start}>{experienceItem.start}</time>-
@@ -36,7 +53,7 @@ const ExperienceItemDisplay = ({ experienceItem }: Props) => {
       <p dangerouslySetInnerHTML={{ __html: experienceItem.summary }} />
       {experienceItem.contributions.length ? (
         <>
-          <h5>Key Contributions:</h5>
+          <Typography variant="h5">Key Contributions</Typography>
           <ul>
             {experienceItem.contributions.map(c => (
               <li key={c} dangerouslySetInnerHTML={{ __html: c }} />
@@ -44,11 +61,11 @@ const ExperienceItemDisplay = ({ experienceItem }: Props) => {
           </ul>
         </>
       ) : null}
-      <ul>
+      <Skills>
         {experienceItem.skills.map(s => (
           <li key={s}>{s}</li>
         ))}
-      </ul>
+      </Skills>
     </li>
   );
 };

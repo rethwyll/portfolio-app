@@ -1,4 +1,7 @@
-import styled from "styled-components";
+import styled from "@emotion/styled";
+
+// components
+import Button from "@mui/material/Button";
 
 // constants
 import { skills } from "../constants";
@@ -8,11 +11,12 @@ import { useSkillsStore } from "../stores/skillsStore";
 
 // styled components
 const Container = styled.ul`
-  display: grid;
+  display: inline-grid;
   grid-template-columns: repeat(3, 1fr);
-`;
-const Button = styled.button<{ $active: boolean }>`
-  background: ${props => (props.$active ? "red" : "#bada55")};
+  gap: 2rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
 `;
 
 const SkillsFilter = () => {
@@ -31,8 +35,9 @@ const SkillsFilter = () => {
       {skills.map(s => (
         <li key={s}>
           <Button
-            $active={currentSkills.includes(s)}
             onClick={() => onClickSkill(s)}
+            color={currentSkills.includes(s) ? "success" : "primary"}
+            variant="contained"
           >
             {s}
           </Button>

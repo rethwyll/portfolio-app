@@ -1,10 +1,11 @@
 import React from "react";
+import Typography from "@mui/material/Typography";
 
 const Education = () => {
   return (
     <section>
       <header>
-        <h3>Education</h3>
+        <Typography variant="h3">Education</Typography>
       </header>
       <p>
         BS, Scientific and Technical Communication (practical minor in Computer
