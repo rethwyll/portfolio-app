@@ -31,6 +31,10 @@ const Nav = styled.nav`
   align-items: center;
   display: flex;
   justify-content: center;
+
+  & .active {
+    color: red;
+  }
 `;
 const NavList = styled.ul`
   display: flex;
@@ -78,7 +82,7 @@ const App = (): ReactElement | null => {
               <NavLink to="/">Home</NavLink>
             </li>
             <li>
-              <NavLink to="/two">two</NavLink>
+              <NavLink to="/experience">Experience</NavLink>
             </li>
             <li>
               <NavLink to="/contact">Contact</NavLink>
@@ -89,7 +93,6 @@ const App = (): ReactElement | null => {
       <main>
         <Outlet />
       </main>
-      <aside></aside>
       <footer></footer>
     </ThemeProvider>
   );

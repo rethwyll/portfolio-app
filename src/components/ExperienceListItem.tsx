@@ -22,7 +22,7 @@ type Props = {
   experienceItem: ExperienceItem;
 };
 
-const ExperienceItemDisplay = ({ className, experienceItem }: Props) => {
+const ExperienceListItem = ({ className, experienceItem }: Props) => {
   return (
     <li className={className}>
       <header>
@@ -70,4 +70,4 @@ const ExperienceItemDisplay = ({ className, experienceItem }: Props) => {
   );
 };
 
-export default ExperienceItemDisplay;
+export default ExperienceListItem;

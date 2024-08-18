@@ -7,9 +7,10 @@ import "./assets/themes.css";
 // components
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import App from "./routes/App";
-import Error from "./routes/Error";
-import Home from "./routes/Home";
 import Contact from "./routes/Contact";
+import Error from "./routes/Error";
+import Experience from "./routes/Experience";
+import Home from "./routes/Home";
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
   <React.StrictMode>
@@ -22,6 +23,10 @@ ReactDOM.createRoot(document.getElementById("root")!).render(
             {
               path: "/",
               element: <Home />
+            },
+            {
+              path: "/experience",
+              element: <Experience />
             },
             {
               path: "/contact",

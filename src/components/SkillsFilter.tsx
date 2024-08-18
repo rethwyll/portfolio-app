@@ -11,8 +11,7 @@ import { useSkillsStore } from "../stores/skillsStore";
 
 // styled components
 const Container = styled.ul`
-  display: inline-grid;
-  grid-template-columns: repeat(3, 1fr);
+  display: flex;
   gap: 2rem;
   list-style: none;
   margin: 0;
@@ -20,6 +19,7 @@ const Container = styled.ul`
 `;
 
 const SkillsFilter = () => {
+  console.log("SKILLS", skills);
   const currentSkills = useSkillsStore(state => state.skills);
   const updateSkills = useSkillsStore(state => state.updateSkills);
 
@@ -37,7 +37,6 @@ const SkillsFilter = () => {
           <Button
             onClick={() => onClickSkill(s)}
             color={currentSkills.includes(s) ? "success" : "primary"}
-            variant="contained"
           >
             {s}
           </Button>

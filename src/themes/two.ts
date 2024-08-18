@@ -53,5 +53,12 @@ export default createTheme({
     body1: {
       color: "#666"
     }
-  })
+  }),
+  components: {
+    MuiButton: {
+      defaultProps: {
+        variant: "contained"
+      }
+    }
+  }
 });

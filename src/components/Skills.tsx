@@ -7,13 +7,13 @@ const Skills = () => {
       <header>
         <Typography variant="h3">Skills and Knowledge Base</Typography>
         <p>
-          20+ years of web development and design experience for commercial
+          25+ years of web development and design experience for commercial
           clients, with demonstrated proficiency in all phases of site
           development: client contact, website architecture, UI design and
           development, graphics production, testing cycle, deployment, ongoing
           site maintenance.
         </p>
-        <p>Extensive experience in front-end UI development.</p>
+        <p>Extensive experience in front-end UI/UX development.</p>
         <p>
           Unique ability to bridge communication gap between creative and
           technical.
@@ -31,10 +31,9 @@ const Skills = () => {
         </Typography>
         <dd>
           HTML5; CSS2 and CSS3; CSS-in-JS; Javascript; Typescript; React; Vite;
-          SPA; RESTful service calls; Highcharts; Launch Darkly; Agile; Jira
-          issue tracking software; LAMP technologies; W3C standards-based and
-          semantic development; HTML/CSS validation; Macintosh, Windows, *nix
-          environments
+          SPA; RESTful service calls; Highcharts; Launch Darkly; Agile; Jira;
+          W3C standards-based and semantic development; HTML/CSS validation;
+          Macintosh, Windows, *nix environments
         </dd>
         <Typography variant="h4" component="dt">
           UX
@@ -47,9 +46,8 @@ const Skills = () => {
           Project
         </Typography>
         <dd>
-          production estimation; client relations; copyediting; project
-          management; documentation/technical writing; client
-          training/instruction
+          project estimation; client relations; copyediting; project management;
+          documentation/technical writing; client training/instruction
         </dd>
       </dl>
     </section>

@@ -8,22 +8,23 @@ const Keywords = () => {
         <Typography variant="h3">Keywords</Typography>
       </header>
       <ul>
-        <li>Web</li>
+        <li>css-in-js</li>
+        <li>css</li>
         <li>development</li>
-        <li>front-end</li>
-        <li>HTML5</li>
-        <li>CSS</li>
-        <li>CSS3</li>
-        <li>CSS-in-JS</li>
-        <li>Javascript</li>
-        <li>Typescript</li>
-        <li>React</li>
-        <li>Vite</li>
-        <li>Highcharts</li>
-        <li>Launch Darkly</li>
         <li>feature flags</li>
-        <li>UI</li>
-        <li>UX</li>
+        <li>front-end</li>
+        <li>highcharts</li>
+        <li>html</li>
+        <li>javascript</li>
+        <li>launch darkly</li>
+        <li>mui</li>
+        <li>react</li>
+        <li>typescript</li>
+        <li>ui</li>
+        <li>ux</li>
+        <li>vite</li>
+        <li>web</li>
+        <li>zod</li>
       </ul>
     </section>
   );
