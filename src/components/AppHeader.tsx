@@ -47,9 +47,9 @@ const AppHeader = (): ReactElement | null => {
   return isNull(currentTheme) ? null : (
     <Header>
       <Typography variant="h1" color="primary">
-        into the aprilverse
+        {t("main-title")}
       </Typography>
-      <p>Current theme: {currentTheme}</p>
+      <p>{t("current-theme", { theme: currentTheme })}</p>
       <input
         type="range"
         id="switcher"
@@ -63,17 +63,13 @@ const AppHeader = (): ReactElement | null => {
       />
       <Nav>
         <NavList>
-          <li>
-            <NavLink to="/">{t("home", { ns: "routes" })}</NavLink>
-          </li>
-          <li>
-            <NavLink to="/experience">
-              {t("experience", { ns: "routes" })}
-            </NavLink>
-          </li>
-          <li>
-            <NavLink to="/contact">{t("contact", { ns: "routes" })}</NavLink>
-          </li>
+          {["home", "experience", "contact"].map(r => (
+            <li key={r}>
+              <NavLink to={`/${r === "home" ? "" : r}`}>
+                {t(r, { ns: "routes" })}
+              </NavLink>
+            </li>
+          ))}
         </NavList>
       </Nav>
     </Header>

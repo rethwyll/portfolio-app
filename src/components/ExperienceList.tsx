@@ -1,4 +1,4 @@
-import React, { ReactElement } from "react";
+import { ReactElement } from "react";
 import { styled } from "@mui/material/styles";
 import data from "../data/experience.json";
 

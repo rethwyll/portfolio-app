@@ -1,17 +1,21 @@
+// components
 import Typography from "@mui/material/Typography";
 
+// hooks
+import { useTranslation } from "react-i18next";
+
+// stores
+import { useSkillsStore } from "../stores/skillsStore";
+
 const Skills = () => {
+  const { t } = useTranslation();
+  const yearsOfExperience = useSkillsStore(state => state.yearsOfExperience);
+
   return (
     <section>
       <header>
-        <Typography variant="h3">Skills and Knowledge Base</Typography>
-        <p>
-          25+ years of web development and design experience for commercial
-          clients, with demonstrated proficiency in all phases of site
-          development: client contact, website architecture, UI design and
-          development, graphics production, testing cycle, deployment, ongoing
-          site maintenance.
-        </p>
+        <Typography variant="h3">{t("title", { ns: "skills" })}</Typography>
+        <p>{t("intro", { ns: "skills", years: yearsOfExperience })}</p>
         <p>Extensive experience in front-end UI/UX development.</p>
         <p>
           Unique ability to bridge communication gap between creative and

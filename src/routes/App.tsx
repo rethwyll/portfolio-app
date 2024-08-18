@@ -11,8 +11,6 @@ import TranslationProvider from "../components/TranslationProvider";
 // constants
 import { themeKeys } from "../constants";
 
-// hooks
-
 // stores
 import { useThemeStore } from "../stores/themeStore";
 

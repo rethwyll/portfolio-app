@@ -1,18 +1,17 @@
-import React from "react";
-
 // components
 import Typography from "@mui/material/Typography";
 
+// hooks
+import { useTranslation } from "react-i18next";
+
 const Intro = () => {
+  const { t } = useTranslation();
   return (
     <header>
       <Typography variant="h2" color="secondary">
-        April Bingham
+        {t("name")}
       </Typography>
-      <Typography variant="body1">
-        Multi-faceted web developer with extensive production and project
-        management experience in producing dynamic, user-focused experiences.
-      </Typography>
+      <Typography variant="body1">{t("intro")}</Typography>
     </header>
   );
 };

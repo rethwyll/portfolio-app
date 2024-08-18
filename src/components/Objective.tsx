@@ -1,18 +1,21 @@
-import React from "react";
-
 // components
 import Typography from "@mui/material/Typography";
 
+// hooks
+import { useTranslation } from "react-i18next";
+
+// stores
+import { useSkillsStore } from "../stores/skillsStore";
+
 const Objective = () => {
+  const { t } = useTranslation();
+  const yearsOfExperience = useSkillsStore(state => state.yearsOfExperience);
+
   return (
     <section>
       <header>
-        <Typography variant="h3">Objective</Typography>
-        <p>
-          My current career goal is to apply my 20+ years of web development
-          experience to creating world-class, data-driven experiences that
-          delight and engage users.
-        </p>
+        <Typography variant="h3">{t("title", { ns: "objective" })}</Typography>
+        <p>{t("goal", { ns: "objective", years: yearsOfExperience })}</p>
       </header>
     </section>
   );
