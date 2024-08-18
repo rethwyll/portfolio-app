@@ -1,6 +1,5 @@
 import { ReactElement, useEffect } from "react";
-import styled from "@emotion/styled";
-import { ThemeProvider } from "@mui/material/styles";
+import { styled, ThemeProvider } from "@mui/material/styles";
 import { isNull, sample } from "lodash";
 
 // components
@@ -19,7 +18,7 @@ import allThemes from "../themes/allThemes";
 import { GlobalStyles } from "@mui/material";
 
 // styled components
-const Header = styled.header`
+const Header = styled("header")`
   display: grid;
   gap: 2rem;
   grid-auto-columns: 1fr;
@@ -27,16 +26,16 @@ const Header = styled.header`
   font-size: 2rem;
   padding: 5rem;
 `;
-const Nav = styled.nav`
+const Nav = styled("nav")`
   align-items: center;
   display: flex;
   justify-content: center;
 
   & .active {
-    color: red;
+    color: ${props => props.theme.palette.info.main};
   }
 `;
-const NavList = styled.ul`
+const NavList = styled("ul")`
   display: flex;
   gap: 1rem;
   list-style: none;

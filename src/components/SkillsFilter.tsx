@@ -1,4 +1,4 @@
-import styled from "@emotion/styled";
+import { styled } from "@mui/material/styles";
 
 // components
 import Button from "@mui/material/Button";
@@ -10,7 +10,7 @@ import { skills } from "../constants";
 import { useSkillsStore } from "../stores/skillsStore";
 
 // styled components
-const Container = styled.ul`
+const Container = styled("ul")`
   display: flex;
   gap: 2rem;
   list-style: none;

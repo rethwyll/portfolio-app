@@ -1,5 +1,5 @@
 import React, { ReactElement } from "react";
-import styled from "@emotion/styled";
+import { styled } from "@mui/material/styles";
 import data from "../data/experience.json";
 
 // components
@@ -11,7 +11,7 @@ import { intersection, isEmpty } from "lodash";
 import { NavLink } from "react-router-dom";
 
 // styled components
-const ExperienceItems = styled.ul`
+const ExperienceItems = styled("ul")`
   list-style: none;
   margin: 0;
   padding: 0;
