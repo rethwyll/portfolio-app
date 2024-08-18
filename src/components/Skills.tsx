@@ -1,4 +1,3 @@
-import React from "react";
 import Typography from "@mui/material/Typography";
 
 const Skills = () => {
@@ -40,7 +39,7 @@ const Skills = () => {
         </Typography>
         <dd>
           UI; site navigation; graphical &ldquo;look and feel&rdquo;; component
-          libraries; analytics tools
+          libraries; analytics tools; i18n; l10n
         </dd>
         <Typography variant="h4" component="dt">
           Project

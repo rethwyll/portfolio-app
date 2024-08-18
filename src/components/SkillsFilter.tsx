@@ -19,7 +19,6 @@ const Container = styled("ul")`
 `;
 
 const SkillsFilter = () => {
-  console.log("SKILLS", skills);
   const currentSkills = useSkillsStore(state => state.skills);
   const updateSkills = useSkillsStore(state => state.updateSkills);
 

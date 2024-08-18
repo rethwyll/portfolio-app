@@ -1,21 +1,10 @@
-import React from "react";
-import { styled } from "@mui/material/styles";
+import { DateTime } from "luxon";
 
 // components
 import Typography from "@mui/material/Typography";
 
 // types
 import { ExperienceItem } from "../types/experience";
-
-// styled components
-const Skills = styled("ul")`
-  align-items: baseline;
-  display: flex;
-  gap: 2rem;
-  list-style: none;
-  margin: 0;
-  padding: 0;
-`;
 
 type Props = {
   className?: string;
@@ -42,9 +31,21 @@ const ExperienceListItem = ({ className, experienceItem }: Props) => {
         </Typography>
         <p>
           {experienceItem.title},{" "}
-          <time dateTime={experienceItem.start}>{experienceItem.start}</time>-
+          <time dateTime={experienceItem.start}>
+            {DateTime.fromISO(experienceItem.start).toLocaleString({
+              month: "long",
+              year: "numeric"
+            })}
+          </time>
+          -
           {experienceItem.end ? (
-            <time dateTime={experienceItem.end}>{experienceItem.end}</time>
+            <time dateTime={experienceItem.end}>
+              {" "}
+              {DateTime.fromISO(experienceItem.end).toLocaleString({
+                month: "long",
+                year: "numeric"
+              })}
+            </time>
           ) : (
             "present"
           )}
@@ -61,11 +62,11 @@ const ExperienceListItem = ({ className, experienceItem }: Props) => {
           </ul>
         </>
       ) : null}
-      <Skills>
+      <ul>
         {experienceItem.skills.map(s => (
           <li key={s}>{s}</li>
         ))}
-      </Skills>
+      </ul>
     </li>
   );
 };
