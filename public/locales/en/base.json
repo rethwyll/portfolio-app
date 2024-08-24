@@ -2,5 +2,11 @@
   "main-title": "into the aprilverse",
   "current-theme": "current theme: {{theme}}",
   "name": "April Bingham",
-  "intro": "I am a multi-faceted web developer with extensive experience in producing dynamic, user-focused experiences."
+  "intro": "I am a multi-faceted web developer with extensive experience in producing dynamic, user-focused experiences.",
+  "street": "549 N 68th St.",
+  "city": "Seattle",
+  "state": "WA",
+  "country": "United States",
+  "zip": "98103",
+  "email": "hello@aprilbingham.com"
 }

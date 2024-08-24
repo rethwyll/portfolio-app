@@ -4,6 +4,7 @@ import { isNull, sample } from "lodash";
 
 // components
 import { Outlet } from "react-router-dom";
+import AppFooter from "../components/AppFooter";
 import AppHeader from "../components/AppHeader";
 import CssBaseline from "@mui/material/CssBaseline";
 import TranslationProvider from "../components/TranslationProvider";
@@ -49,7 +50,7 @@ const App = (): ReactElement | null => {
         <main>
           <Outlet />
         </main>
-        <footer></footer>
+        <AppFooter />
       </ThemeProvider>
     </TranslationProvider>
   );

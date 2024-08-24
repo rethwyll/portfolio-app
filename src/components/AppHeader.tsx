@@ -63,13 +63,14 @@ const AppHeader = (): ReactElement | null => {
       />
       <Nav>
         <NavList>
-          {["home", "experience", "contact"].map(r => (
-            <li key={r}>
-              <NavLink to={`/${r === "home" ? "" : r}`}>
-                {t(r, { ns: "routes" })}
-              </NavLink>
-            </li>
-          ))}
+          <li>
+            <NavLink to="/">{t("home", { ns: "routes" })}</NavLink>
+          </li>
+          <li>
+            <NavLink to="/experience">
+              {t("experience", { ns: "routes" })}
+            </NavLink>
+          </li>
         </NavList>
       </Nav>
     </Header>

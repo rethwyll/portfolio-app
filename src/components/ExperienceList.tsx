@@ -1,14 +1,14 @@
 import { ReactElement } from "react";
 import { styled } from "@mui/material/styles";
 import data from "../data/experience.json";
+import { intersection, isEmpty } from "lodash";
 
 // components
+import { NavLink } from "react-router-dom";
 import ExperienceListItem from "./ExperienceListItem";
 
 // stores
 import { useSkillsStore } from "../stores/skillsStore";
-import { intersection, isEmpty } from "lodash";
-import { NavLink } from "react-router-dom";
 
 // styled components
 const ExperienceItems = styled("ul")`
