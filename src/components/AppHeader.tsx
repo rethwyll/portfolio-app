@@ -22,15 +22,21 @@ const Header = styled("header")`
   grid-auto-columns: 1fr;
   grid-auto-rows: min-content;
   font-size: 2rem;
-  padding: 5rem;
 `;
 const Nav = styled("nav")`
-  align-items: center;
-  display: flex;
-  justify-content: center;
+  & ul {
+    margin: 0;
+    padding: 0;
+  }
+  & a {
+    align-items: center;
+    color: ${props => props.theme.palette.warning.dark};
+    display: flex;
+    justify-content: center;
 
-  & .active {
-    color: ${props => props.theme.palette.info.main};
+    &.active {
+      color: ${props => props.theme.palette.warning.main};
+    }
   }
 `;
 const NavList = styled("ul")`
@@ -49,19 +55,23 @@ const AppHeader = (): ReactElement | null => {
       <Typography variant="h1" color="primary">
         {t("main-title")}
       </Typography>
-      <p>{t("current-theme", { theme: currentTheme })}</p>
-      <input
-        type="range"
-        id="switcher"
-        name="switcher"
-        min="0"
-        max={themeKeys.length - 1}
-        onChange={e => {
-          updateTheme(themeKeys[parseInt(e.target.value, 10)]);
-        }}
-        value={themeKeys.indexOf(currentTheme)}
-      />
-      <Nav>
+      {themeKeys.length >= 2 ? (
+        <>
+          <p>{t("current-theme", { theme: currentTheme })}</p>
+          <input
+            type="range"
+            id="switcher"
+            name="switcher"
+            min="0"
+            max={themeKeys.length - 1}
+            onChange={e => {
+              updateTheme(themeKeys[parseInt(e.target.value, 10)]);
+            }}
+            value={themeKeys.indexOf(currentTheme)}
+          />
+        </>
+      ) : null}
+      <Nav id="main-nav">
         <NavList>
           <li>
             <NavLink to="/">{t("home", { ns: "routes" })}</NavLink>

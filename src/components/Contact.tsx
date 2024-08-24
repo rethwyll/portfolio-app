@@ -1,5 +1,8 @@
 import { ReactElement } from "react";
 
+// components
+import Link from "@mui/material/Link";
+
 // hooks
 import { useTranslation } from "react-i18next";
 
@@ -15,9 +18,12 @@ const Contact = (): ReactElement => {
         </div>
         <div>{t("country", { ns: "base" })}</div>
         <div>
-          <a href={`mailto:${t("email", { ns: "base" })}`}>
+          <Link
+            color="warning.main"
+            href={`mailto:${t("email", { ns: "base" })}`}
+          >
             {t("email", { ns: "base" })}
-          </a>
+          </Link>
         </div>
       </address>
     </div>

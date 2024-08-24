@@ -22,8 +22,7 @@ import allThemes from "../themes/allThemes";
 import { GlobalStyles } from "@mui/material";
 
 const App = (): ReactElement | null => {
-  const currentTheme = useThemeStore(state => state.theme);
-  const updateTheme = useThemeStore(state => state.updateTheme);
+  const { theme: currentTheme, updateTheme } = useThemeStore();
 
   // initialize theme
   useEffect(() => {
@@ -34,6 +33,7 @@ const App = (): ReactElement | null => {
     return null;
   }
 
+  console.log("CRRE", currentTheme);
   const fullTheme = allThemes[currentTheme];
   return (
     <TranslationProvider>

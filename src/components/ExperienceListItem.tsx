@@ -1,10 +1,13 @@
 import { DateTime } from "luxon";
 
 // components
+import Link from "@mui/material/Link";
 import Typography from "@mui/material/Typography";
 
 // types
 import { ExperienceItem } from "../types/experience";
+
+// styled components
 
 type Props = {
   className?: string;
@@ -17,17 +20,18 @@ const ExperienceListItem = ({ className, experienceItem }: Props) => {
       <header>
         <Typography variant="h4">
           {experienceItem.url ? (
-            <a
+            <Link
+              color="warning.main"
               href={experienceItem.url}
               target="_blank"
               rel="noopener noreferrer"
             >
               {experienceItem.name}
-            </a>
+            </Link>
           ) : (
             experienceItem.name
           )}
-          , {experienceItem.location}
+          / {experienceItem.location}
         </Typography>
         <p>
           {experienceItem.title},{" "}

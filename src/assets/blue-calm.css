@@ -1,0 +1,31 @@
+[data-theme="bluecalm"] {
+  color-scheme: light;
+}
+
+[data-theme="bluecalm"] #home {
+  display: grid;
+  grid-auto-columns: 1fr 1fr;
+}
+
+[data-theme="bluecalm"] #home header {
+  grid-column: 1 / 3;
+}
+
+[data-theme="bluecalm"] #home aside {
+  grid-area: 2 / 1 / 3 / 2;
+}
+
+[data-theme="bluecalm"] #home div {
+  grid-column: 2 / 3;
+}
+
+[data-theme="bluecalm"] #main-nav ul {
+  margin: 0;
+  padding: 0;
+}
+[data-theme="bluecalm"] a {
+  color: #f9a825;
+}
+[data-theme="bluecalm"] #main-nav a.active {
+  color: #f9a825e6;
+}

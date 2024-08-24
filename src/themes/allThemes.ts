@@ -1,5 +1,4 @@
 import { Theme } from "@mui/material/styles";
-import recipe from "./recipe";
-import two from "./two";
+import bluecalm from "./bluecalm";
 
-export default { recipe, two } as { [key: string]: Theme };
+export default { bluecalm } as { [key: string]: Theme };

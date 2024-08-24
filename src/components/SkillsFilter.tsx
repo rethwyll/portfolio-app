@@ -35,7 +35,7 @@ const SkillsFilter = () => {
         <li key={s}>
           <Button
             onClick={() => onClickSkill(s)}
-            color={currentSkills.includes(s) ? "success" : "primary"}
+            variant={currentSkills.includes(s) ? "contained" : "outlined"}
           >
             {s}
           </Button>

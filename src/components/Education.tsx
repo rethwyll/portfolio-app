@@ -2,11 +2,14 @@
 import data from "../data/education.json";
 
 // components
+import Link from "@mui/material/Link";
 import Typography from "@mui/material/Typography";
-import { DateTime } from "luxon";
 
 // hooks
 import { useTranslation } from "react-i18next";
+
+// types
+import { DateTime } from "luxon";
 
 const Education = () => {
   const { t } = useTranslation();
@@ -16,7 +19,7 @@ const Education = () => {
         <Typography variant="h3">{t("title", { ns: "education" })}</Typography>
       </header>
       {data.map(d => (
-        <>
+        <div key={d.college}>
           <Typography variant="h4">
             {d.degree}, {d.major}
           </Typography>
@@ -30,16 +33,16 @@ const Education = () => {
             </time>
           </p>
           <p>
-            <a
+            <Link
               href={d["college-url"]}
               target="_blank"
               rel="noopener noreferrer"
             >
               {d.college}
-            </a>
+            </Link>
           </p>
           <p>{d["college-location"]}</p>
-        </>
+        </div>
       ))}
     </section>
   );
