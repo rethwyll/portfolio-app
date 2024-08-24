@@ -1,0 +1,56 @@
+[
+  {
+    "id": "development",
+    "skills": [
+      "HTML",
+      "CSS",
+      "CSS-in-JS",
+      "Javascript",
+      "Typescript",
+      "React",
+      "Vite",
+      "SPA",
+      "RESTful service calls",
+      "Highcharts",
+      "Launch Darkly",
+      "feature flags",
+      "Vitest",
+      "Jest",
+      "unit testing",
+      "Agile",
+      "Jira",
+      "W3C standards-based and semantic development",
+      "Macintosh, Windows, *nix environments",
+      "MUI"
+    ]
+  },
+  {
+    "id": "ux",
+    "skills": [
+      "UI",
+      "site navigation",
+      "component libraries",
+      "analytics tools",
+      "i18n/l10n"
+    ]
+  },
+  {
+    "id": "project",
+    "skills": [
+      "project estimation",
+      "client relations",
+      "copyediting",
+      "project management",
+      "documentation/technical writing"
+    ]
+  },
+  {
+    "id": "communication",
+    "skills": [
+      "Strong written and oral communication skills",
+      "project meeting facilitation",
+      "in-house technical seminars",
+      "client training/instruction"
+    ]
+  }
+]

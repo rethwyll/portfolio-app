@@ -1,4 +1,9 @@
 {
   "title": "Skills and Knowledge Base",
-  "intro": "I have {{years}}+ years of web development and design experience for commercial clients, with demonstrated proficiency in all phases of site development: client contact, website architecture, UI design and development, graphics production, testing cycle, deployment, ongoing site maintenance."
+  "intro": "I have {{years}}+ years of experience in front-end UI/UX development and design for commercial clients, with demonstrated proficiency in all phases of site development: client contact, website architecture, UI, graphics production, testing cycle, deployment, ongoing site maintenance.",
+  "unique": "My super power is the unique ability to bridge the communication gap between creative and technical.",
+  "development": "Development",
+  "ux": "UX",
+  "project": "Project Management",
+  "communication": "Communication and Facilitation"
 }

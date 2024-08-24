@@ -1,30 +1,23 @@
-import React from "react";
+// copmonents
 import Typography from "@mui/material/Typography";
 
+// data
+import keywordsData from "../data/keywords.json";
+
+// hooks
+import { useTranslation } from "react-i18next";
+
 const Keywords = () => {
+  const { t } = useTranslation();
   return (
     <section>
       <header>
-        <Typography variant="h3">Keywords</Typography>
+        <Typography variant="h3">{t("title", { ns: "keywords" })}</Typography>
       </header>
       <ul>
-        <li>css-in-js</li>
-        <li>css</li>
-        <li>development</li>
-        <li>feature flags</li>
-        <li>front-end</li>
-        <li>highcharts</li>
-        <li>html</li>
-        <li>javascript</li>
-        <li>launch darkly</li>
-        <li>mui</li>
-        <li>react</li>
-        <li>typescript</li>
-        <li>ui</li>
-        <li>ux</li>
-        <li>vite</li>
-        <li>web</li>
-        <li>zod</li>
+        {keywordsData.map(k => (
+          <li key={k}>{k}</li>
+        ))}
       </ul>
     </section>
   );
