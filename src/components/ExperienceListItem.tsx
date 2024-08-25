@@ -18,7 +18,7 @@ const ExperienceListItem = ({ className, experienceItem }: Props) => {
   return (
     <li className={className}>
       <header>
-        <Typography variant="h4">
+        <Typography variant="h3">
           {experienceItem.url ? (
             <Link
               color="warning.main"
@@ -58,7 +58,7 @@ const ExperienceListItem = ({ className, experienceItem }: Props) => {
       <p dangerouslySetInnerHTML={{ __html: experienceItem.summary }} />
       {experienceItem.contributions.length ? (
         <>
-          <Typography variant="h5">Key Contributions</Typography>
+          <Typography variant="h4">Key Contributions</Typography>
           <ul>
             {experienceItem.contributions.map(c => (
               <li key={c} dangerouslySetInnerHTML={{ __html: c }} />

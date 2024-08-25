@@ -1,0 +1,74 @@
+[data-theme="bluecalm"] {
+  color-scheme: light;
+  padding: 4rem;
+}
+[data-theme="bluecalm"] #main-nav ul {
+  margin: 0;
+  padding: 0;
+}
+
+[data-theme="bluecalm"] #main {
+  margin-top: 5em;
+}
+
+[data-theme="bluecalm"] #home {
+  display: grid;
+  gap: 4rem;
+  grid-auto-columns: 1fr 1fr;
+}
+
+[data-theme="bluecalm"] #home > header {
+  grid-column: 1 / 3;
+}
+
+[data-theme="bluecalm"] #home > header h2 {
+  background: linear-gradient(
+    90deg,
+    #d81b60,
+    #ffc107,
+    #8e24aa,
+    #d81b60,
+    #8e24aa
+  );
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+[data-theme="bluecalm"] #home > header p {
+  position: relative;
+  top: -2em;
+}
+
+[data-theme="bluecalm"] #home aside {
+  grid-area: 2 / 1 / 3 / 2;
+}
+
+[data-theme="bluecalm"] #home div {
+  grid-column: 2 / 3;
+}
+
+[data-theme="bluecalm"] #home aside section + section {
+  margin-top: 5em;
+}
+
+[data-theme="bluecalm"] #skills dl div {
+  margin-top: 1.6em;
+}
+
+[data-theme="bluecalm"] #keywords ul {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(5, 1fr);
+}
+
+[data-theme="bluecalm"] #contact {
+  align-items: baseline;
+  display: flex;
+  justify-content: space-between;
+  gap: 1em;
+}
+[data-theme="bluecalm"] #contact address {
+  align: baseline;
+  display: flex;
+  gap: 0.5em;
+}

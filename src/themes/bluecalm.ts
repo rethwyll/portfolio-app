@@ -1,11 +1,21 @@
 import { createTheme } from "@mui/material/styles";
 import base from "./base";
 // https://mui.com/material-ui/customization/color/#2014-material-design-color-palettes
-import { amber, blue, lightGreen, pink, red } from "@mui/material/colors";
+import {
+  amber,
+  blue,
+  indigo,
+  lightGreen,
+  pink,
+  purple,
+  red
+} from "@mui/material/colors";
 
 const bg = "#11111f";
-const primaryBase = blue[100];
+const primaryBase = blue[50];
+const primaryBaseDarker = indigo[200];
 const secondaryBase = pink[600];
+const tertiaryBase = purple[600];
 const errorBase = red[500];
 const warningBase = amber[500];
 const infoBase = primaryBase;
@@ -47,39 +57,44 @@ export default createTheme({
     fontFamily: "Roboto, sans-serif",
     h1: {
       fontFamily: "Josefin Sans, sans-serif",
-
       fontWeight: 800,
-      color: secondaryBase,
-      fontSize: "5em"
+      color: primaryBaseDarker,
+      fontSize: "3em"
     },
     h2: {
+      fontFamily: "Josefin Sans, sans-serif",
       fontWeight: 800,
       color: secondaryBase,
-      fontSize: "10em"
+      fontSize: "12em",
+      lineHeight: "1em"
     },
     h3: {
+      fontFamily: "Josefin Sans, sans-serif",
       fontWeight: 800,
       color: secondaryBase,
       fontSize: "3em"
     },
     h4: {
+      fontFamily: "Josefin Sans, sans-serif",
       fontWeight: 800,
-      color: secondaryBase,
+      color: tertiaryBase,
       fontSize: "2.4em"
     },
     h5: {
+      fontFamily: "Josefin Sans, sans-serif",
       fontWeight: 800,
-      color: secondaryBase,
+      color: tertiaryBase,
       fontSize: "2.2em"
     },
     h6: {
+      fontFamily: "Josefin Sans, sans-serif",
       fontWeight: 800,
-      color: secondaryBase,
-      fontSize: "1.8em"
+      color: primaryBase,
+      fontSize: "2.2em"
     },
     body1: {
       color: primaryBase,
-      fontSize: "1.8em",
+      fontSize: "2.2em",
       fontWeight: 400
     }
   }),

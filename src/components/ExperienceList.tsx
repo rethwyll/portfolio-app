@@ -1,11 +1,13 @@
 import { ReactElement } from "react";
 import { styled } from "@mui/material/styles";
-import data from "../data/experience.json";
-import { intersection, isEmpty } from "lodash";
+import { isEmpty, intersection } from "lodash";
 
 // components
 import { NavLink } from "react-router-dom";
 import ExperienceListItem from "./ExperienceListItem";
+
+// data
+import data from "../data/experience.json";
 
 // stores
 import { useSkillsStore } from "../stores/skillsStore";
@@ -28,8 +30,7 @@ type Props = {
 };
 
 const ExperienceList = ({ num }: Props): ReactElement | null => {
-  const currentSkills = useSkillsStore(state => state.skills);
-
+  const currentSkills = useSkillsStore(state => (num ? [] : state.skills));
   return (
     <>
       <ExperienceItems>
@@ -37,7 +38,8 @@ const ExperienceList = ({ num }: Props): ReactElement | null => {
           .slice(0, num)
           .map(d =>
             isEmpty(currentSkills) ||
-            !!intersection(d.skills, currentSkills).length ? (
+            intersection(d.skills, currentSkills).length ===
+              currentSkills.length ? (
               <Item key={d.name} experienceItem={d} />
             ) : null
           )}

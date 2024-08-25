@@ -18,7 +18,7 @@ const Skills = () => {
     type: "conjunction"
   });
   return (
-    <section>
+    <section id="skills">
       <header>
         <Typography variant="h3">{t("title", { ns: "skills" })}</Typography>
         <p>{t("intro", { ns: "skills", years: yearsOfExperience })}</p>

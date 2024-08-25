@@ -52,9 +52,7 @@ const AppHeader = (): ReactElement | null => {
 
   return isNull(currentTheme) ? null : (
     <Header>
-      <Typography variant="h1" color="primary">
-        {t("main-title")}
-      </Typography>
+      <Typography variant="h1">{t("main-title")}</Typography>
       {themeKeys.length >= 2 ? (
         <>
           <p>{t("current-theme", { theme: currentTheme })}</p>

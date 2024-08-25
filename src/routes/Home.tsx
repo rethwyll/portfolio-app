@@ -8,9 +8,7 @@ import Skills from "../components/Skills";
 
 const Home = () => (
   <section id="home">
-    <header>
-      <Intro />
-    </header>
+    <Intro />
     <div>
       <ExperienceList num={3} />
     </div>

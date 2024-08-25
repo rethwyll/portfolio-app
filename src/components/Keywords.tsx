@@ -10,7 +10,7 @@ import { useTranslation } from "react-i18next";
 const Keywords = () => {
   const { t } = useTranslation();
   return (
-    <section>
+    <section id="keywords">
       <header>
         <Typography variant="h3">{t("title", { ns: "keywords" })}</Typography>
       </header>

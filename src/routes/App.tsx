@@ -33,7 +33,6 @@ const App = (): ReactElement | null => {
     return null;
   }
 
-  console.log("CRRE", currentTheme);
   const fullTheme = allThemes[currentTheme];
   return (
     <TranslationProvider>
@@ -47,7 +46,7 @@ const App = (): ReactElement | null => {
         />
         <CssBaseline />
         <AppHeader />
-        <main>
+        <main id="main">
           <Outlet />
         </main>
         <AppFooter />
