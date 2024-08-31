@@ -6,6 +6,9 @@ import Button from "@mui/material/Button";
 // constants
 import { skills } from "../constants";
 
+// hooks
+import { useTranslation } from "react-i18next";
+
 // stores
 import { useSkillsStore } from "../stores/skillsStore";
 
@@ -17,8 +20,12 @@ const Container = styled("ul")`
   margin: 0;
   padding: 0;
 `;
+const StyledButton = styled(Button)`
+  text-transform: none;
+`;
 
 const SkillsFilter = () => {
+  const { t } = useTranslation();
   const currentSkills = useSkillsStore(state => state.skills);
   const updateSkills = useSkillsStore(state => state.updateSkills);
 
@@ -33,12 +40,12 @@ const SkillsFilter = () => {
     <Container>
       {skills.map(s => (
         <li key={s}>
-          <Button
+          <StyledButton
             onClick={() => onClickSkill(s)}
             variant={currentSkills.includes(s) ? "contained" : "outlined"}
           >
-            {s}
-          </Button>
+            {t(s, { ns: "skills" })}
+          </StyledButton>
         </li>
       ))}
     </Container>

@@ -5,5 +5,13 @@
   "development": "Development",
   "ux": "UX",
   "project": "Project Management",
-  "communication": "Communication and Facilitation"
+  "communication": "Communication and Facilitation",
+  "typescript": "Typescript",
+  "javascript": "Javascript",
+  "react": "React",
+  "html": "HTML",
+  "css": "CSS",
+  "project-management": "Project Management",
+  "uxui-design": "UX/UI Design",
+  "devops": "Dev Ops"
 }

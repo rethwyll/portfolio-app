@@ -54,40 +54,40 @@ export default createTheme({
     // }
   },
   typography: () => ({
-    fontFamily: "Roboto, sans-serif",
+    fontFamily: "'Inter Tight', Roboto, sans-serif",
     h1: {
-      fontFamily: "Josefin Sans, sans-serif",
+      fontFamily: "'Inter Tight', Josefin Sans, sans-serif",
       fontWeight: 800,
       color: primaryBaseDarker,
       fontSize: "3em"
     },
     h2: {
-      fontFamily: "Josefin Sans, sans-serif",
+      fontFamily: "'Inter Tight', Josefin Sans, sans-serif",
       fontWeight: 800,
       color: secondaryBase,
       fontSize: "12em",
       lineHeight: "1em"
     },
     h3: {
-      fontFamily: "Josefin Sans, sans-serif",
+      fontFamily: "'Inter Tight', Josefin Sans, sans-serif",
       fontWeight: 800,
       color: secondaryBase,
       fontSize: "3em"
     },
     h4: {
-      fontFamily: "Josefin Sans, sans-serif",
+      fontFamily: "'Inter Tight', Josefin Sans, sans-serif",
       fontWeight: 800,
       color: tertiaryBase,
       fontSize: "2.4em"
     },
     h5: {
-      fontFamily: "Josefin Sans, sans-serif",
+      fontFamily: "'Inter Tight', Josefin Sans, sans-serif",
       fontWeight: 800,
       color: tertiaryBase,
       fontSize: "2.2em"
     },
     h6: {
-      fontFamily: "Josefin Sans, sans-serif",
+      fontFamily: "'Inter Tight', Josefin Sans, sans-serif",
       fontWeight: 800,
       color: primaryBase,
       fontSize: "2.2em"

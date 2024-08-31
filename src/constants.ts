@@ -8,7 +8,7 @@ export const skills = [
   "html",
   "css",
   "project-management",
-  "ux-design",
+  "uxui-design",
   "devops"
 ];
 export const skillTypes = skills.reduce(
