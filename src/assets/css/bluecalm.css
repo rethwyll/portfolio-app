@@ -3,6 +3,11 @@
   padding: 4rem;
 }
 
+[data-theme="bluecalm"] a {
+  color: #ffa000;
+  text-decoration: underline;
+}
+
 @media (prefers-reduced-motion: no-preference) {
   [data-theme="bluecalm"] a:hover {
     background: linear-gradient(to right, #ffa000, #ffe082, #ffa000);
@@ -20,6 +25,20 @@
     to {
       background-position: 300% center;
     }
+  }
+}
+
+[data-theme="bluecalm"] #app-header nav {
+  align-items: baseline;
+  display: flex;
+}
+
+[data-theme="bluecalm"] #app-header nav a {
+  color: #8c5800;
+  text-decoration-style: solid;
+
+  &.active {
+    color: #ffa000;
   }
 }
 

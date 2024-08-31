@@ -23,22 +23,6 @@ const Header = styled("header")`
   grid-auto-rows: min-content;
   font-size: 2rem;
 `;
-const Nav = styled("nav")`
-  & ul {
-    margin: 0;
-    padding: 0;
-  }
-  & a {
-    align-items: center;
-    color: ${props => props.theme.palette.warning.dark};
-    display: flex;
-    justify-content: center;
-
-    &.active {
-      color: ${props => props.theme.palette.warning.main};
-    }
-  }
-`;
 const NavList = styled("ul")`
   display: flex;
   gap: 1rem;
@@ -69,7 +53,7 @@ const AppHeader = (): ReactElement | null => {
           />
         </>
       ) : null}
-      <Nav id="main-nav">
+      <nav id="main-nav">
         <NavList>
           <li>
             <NavLink to="/">{t("home", { ns: "routes" })}</NavLink>
@@ -80,7 +64,7 @@ const AppHeader = (): ReactElement | null => {
             </NavLink>
           </li>
         </NavList>
-      </Nav>
+      </nav>
     </Header>
   );
 };

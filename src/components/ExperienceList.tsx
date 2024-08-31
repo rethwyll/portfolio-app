@@ -54,7 +54,11 @@ const ExperienceList = ({ num }: Props): ReactElement | null => {
           {t("no-matches", { ns: "experience" })}
         </Typography>
       )}
-      {num ? <NavLink to="/experience">All experience</NavLink> : null}
+      {num ? (
+        <NavLink to="/experience">
+          {t("all-experience", { ns: "experience" })}
+        </NavLink>
+      ) : null}
     </>
   );
 };
