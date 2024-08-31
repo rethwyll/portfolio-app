@@ -1,6 +1,6 @@
 import { ReactElement } from "react";
 import { styled } from "@mui/material/styles";
-import { isEmpty, intersection } from "lodash";
+import { isEmpty, intersection, compact } from "lodash";
 
 // components
 import { NavLink } from "react-router-dom";
@@ -11,6 +11,8 @@ import data from "../data/experience.json";
 
 // stores
 import { useSkillsStore } from "../stores/skillsStore";
+import { useTranslation } from "react-i18next";
+import { Typography } from "@mui/material";
 
 // styled components
 const ExperienceItems = styled("ul")`
@@ -30,20 +32,28 @@ type Props = {
 };
 
 const ExperienceList = ({ num }: Props): ReactElement | null => {
+  const { t } = useTranslation();
   const currentSkills = useSkillsStore(state => (num ? [] : state.skills));
+  const listDisplay = compact(
+    data
+      .slice(0, num)
+      .map(d =>
+        isEmpty(currentSkills) ||
+        intersection(d.skills, currentSkills).length ===
+          currentSkills.length ? (
+          <Item key={d.name} experienceItem={d} />
+        ) : null
+      )
+  );
   return (
     <>
-      <ExperienceItems>
-        {data
-          .slice(0, num)
-          .map(d =>
-            isEmpty(currentSkills) ||
-            intersection(d.skills, currentSkills).length ===
-              currentSkills.length ? (
-              <Item key={d.name} experienceItem={d} />
-            ) : null
-          )}
-      </ExperienceItems>
+      {listDisplay.length ? (
+        <ExperienceItems>{listDisplay}</ExperienceItems>
+      ) : (
+        <Typography variant="body1" component="p">
+          {t("no-matches", { ns: "experience" })}
+        </Typography>
+      )}
       {num ? <NavLink to="/experience">All experience</NavLink> : null}
     </>
   );

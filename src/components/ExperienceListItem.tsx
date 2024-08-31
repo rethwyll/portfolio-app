@@ -19,6 +19,9 @@ type Props = {
 
 const ExperienceListItem = ({ className, experienceItem }: Props) => {
   const { t } = useTranslation();
+  const sortedTranslatedSkills = experienceItem.skills
+    .map(s => t(s, { ns: "skills" }))
+    .sort();
   return (
     <li className={className}>
       <header>
@@ -59,10 +62,10 @@ const ExperienceListItem = ({ className, experienceItem }: Props) => {
         </Typography>
       </header>
       <ul className="experience-skills-list">
-        {experienceItem.skills.map(s => (
-          <Tooltip title={t(s, { ns: "skills" })}>
+        {sortedTranslatedSkills.map(s => (
+          <Tooltip title={s}>
             <Avatar key={s} variant="rounded">
-              {t(s, { ns: "skills" })[0]}
+              {s[0]}
             </Avatar>
           </Tooltip>
         ))}
