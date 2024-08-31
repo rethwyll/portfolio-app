@@ -23,10 +23,12 @@ const Education = () => {
           <Typography variant="h4">
             {d.degree}, {d.major}
           </Typography>
-          <p>
-            {t("title.minor", { ns: "education" })}: {d.minor}
-          </p>
-          <p>{d["degree-honor"]}</p>
+          {d.minor ? (
+            <p>
+              {t("title.minor", { ns: "education" })}: {d.minor}
+            </p>
+          ) : null}
+          {d["degree-honor"] ? <i>{d["degree-honor"]}</i> : null}
           <p>
             <time dateTime={d["graduation-date"]}>
               {DateTime.fromISO(d["graduation-date"]).year}

@@ -3,6 +3,26 @@
   padding: 4rem;
 }
 
+@media (prefers-reduced-motion: no-preference) {
+  [data-theme="bluecalm"] a:hover {
+    background: linear-gradient(to right, #ffa000, #ffe082, #ffa000);
+    background-size: 300% auto;
+    color: transparent;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation-name: link-animation;
+    animation-duration: 5s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-fill-mode: forwards;
+  }
+  @keyframes link-animation {
+    to {
+      background-position: 300% center;
+    }
+  }
+}
+
 [data-theme="bluecalm"] ul {
   list-style: none;
   margin: 0;
@@ -19,26 +39,26 @@
   grid-auto-columns: 1fr 1fr;
 }
 
-[data-theme="bluecalm"] #home > header {
+[data-theme="bluecalm"] #intro {
   grid-column: 1 / 3;
 }
 
-[data-theme="bluecalm"] #home > header h2 {
+[data-theme="bluecalm"] #intro h2 {
   background: linear-gradient(
-    90deg,
+    45deg,
     #d81b60,
     #ffa000,
-    #8e24aa,
+    #ab47bc,
     #d81b60,
-    #8e24aa
+    #ab47bc
   );
   background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
-[data-theme="bluecalm"] #home > header p {
+[data-theme="bluecalm"] #intro p {
   position: relative;
-  top: -2em;
+  top: -1.8em;
 }
 
 [data-theme="bluecalm"] #home aside {
@@ -50,7 +70,7 @@
 }
 
 [data-theme="bluecalm"] #home aside section + section {
-  margin-top: 5em;
+  margin-top: 3em;
 }
 
 [data-theme="bluecalm"] .experience-contributions {
@@ -67,7 +87,7 @@
 }
 
 [data-theme="bluecalm"] #skills dl div {
-  margin-top: 1.6em;
+  margin-top: 1.2em;
 }
 
 [data-theme="bluecalm"] #keywords ul {

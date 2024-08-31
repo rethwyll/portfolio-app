@@ -1,5 +1,6 @@
 import { DateTime } from "luxon";
 import parse from "html-react-parser";
+import classnames from "classnames";
 
 // components
 import Link from "@mui/material/Link";
@@ -23,7 +24,7 @@ const ExperienceListItem = ({ className, experienceItem }: Props) => {
     .map(s => t(s, { ns: "skills" }))
     .sort();
   return (
-    <li className={className}>
+    <li className={classnames(className, "experience-list-item")}>
       <header>
         <Typography variant="h3">
           {experienceItem.url ? (
@@ -73,7 +74,9 @@ const ExperienceListItem = ({ className, experienceItem }: Props) => {
       <p>{parse(experienceItem.summary)}</p>
       {experienceItem.contributions.length ? (
         <>
-          <Typography variant="h4">Key Contributions</Typography>
+          <Typography variant="h4" className="experience-key-contributions">
+            Key Contributions
+          </Typography>
           <ul className="experience-contributions">
             {experienceItem.contributions.map(c => (
               <li key={c}>{parse(c)}</li>

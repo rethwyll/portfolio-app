@@ -15,7 +15,7 @@ const bg = "#11111f";
 const primaryBase = blue[50];
 const primaryBaseDarker = indigo[200];
 const secondaryBase = pink[600];
-const tertiaryBase = purple[600];
+const tertiaryBase = purple[400];
 const errorBase = red[500];
 const warningBase = amber[700];
 const infoBase = primaryBase;
@@ -65,8 +65,7 @@ export default createTheme({
       fontFamily: "'Inter Tight', Josefin Sans, sans-serif",
       fontWeight: 800,
       color: secondaryBase,
-      fontSize: "12em",
-      lineHeight: "1em"
+      fontSize: "12em"
     },
     h3: {
       fontFamily: "'Inter Tight', Josefin Sans, sans-serif",
@@ -149,7 +148,11 @@ export default createTheme({
     MuiLink: {
       styleOverrides: {
         root: ({ theme }) => ({
-          color: theme.palette.warning.main
+          color: theme.palette.warning.main,
+          textDecorationColor: theme.palette.warning.main,
+          "&:hover": {
+            textDecorationColor: theme.palette.warning.main
+          }
         })
       }
     },
@@ -160,11 +163,11 @@ export default createTheme({
       },
       styleOverrides: {
         arrow: ({ theme }) => ({
-          color: theme.palette.common.black
+          color: theme.palette.secondary.dark
         }),
         tooltip: ({ theme }) => ({
           color: theme.palette.primary.main,
-          backgroundColor: theme.palette.common.black,
+          backgroundColor: theme.palette.secondary.dark,
           fontSize: "1em"
         })
       }
