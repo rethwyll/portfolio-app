@@ -1,0 +1,9 @@
+[
+  { "icon": "flickr", "url": "https://flickr.com/photos/aprilbingham/" },
+  {
+    "icon": "github",
+    "url": "https://github.com/rethwyll/portfolio-app"
+  },
+  { "icon": "instagram", "url": "https://www.instagram.com/rethwyll/" },
+  { "icon": "mastodon", "url": "https://wandering.shop/@rethwyll" }
+]

@@ -46,7 +46,7 @@ const ExperienceList = ({ num }: Props): ReactElement | null => {
       )
   );
   return (
-    <>
+    <div id="experience-list">
       {listDisplay.length ? (
         <ExperienceItems>{listDisplay}</ExperienceItems>
       ) : (
@@ -55,11 +55,11 @@ const ExperienceList = ({ num }: Props): ReactElement | null => {
         </Typography>
       )}
       {num ? (
-        <NavLink to="/experience">
+        <NavLink className="animateable" to="/experience">
           {t("all-experience", { ns: "experience" })}
         </NavLink>
       ) : null}
-    </>
+    </div>
   );
 };
 

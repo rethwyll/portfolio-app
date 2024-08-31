@@ -1,6 +1,6 @@
 import { ReactElement, useEffect } from "react";
 import { ThemeProvider } from "@mui/material/styles";
-import { isNull, sample } from "lodash";
+import { isNull } from "lodash";
 
 // components
 import { Outlet } from "react-router-dom";
@@ -8,9 +8,6 @@ import AppFooter from "../components/AppFooter";
 import AppHeader from "../components/AppHeader";
 import CssBaseline from "@mui/material/CssBaseline";
 import TranslationProvider from "../components/TranslationProvider";
-
-// constants
-import { themeKeys } from "../constants";
 
 // stores
 import { useThemeStore } from "../stores/themeStore";
@@ -22,12 +19,12 @@ import allThemes from "../themes/allThemes";
 import { GlobalStyles } from "@mui/material";
 
 const App = (): ReactElement | null => {
-  const { theme: currentTheme, updateTheme } = useThemeStore();
+  const { theme: currentTheme, initializeTheme } = useThemeStore();
 
   // initialize theme
   useEffect(() => {
-    updateTheme(sample(themeKeys) ?? themeKeys[0]);
-  }, [updateTheme]);
+    initializeTheme();
+  }, [initializeTheme]);
 
   if (isNull(currentTheme)) {
     return null;

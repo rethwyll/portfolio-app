@@ -1,12 +1,5 @@
 import { ReactElement } from "react";
 
-// components
-import Contact from "./Contact";
+const AppFooter = (): ReactElement => <footer id="app-footer"></footer>;
 
-const AppHeader = (): ReactElement => (
-  <footer id="app-footer">
-    <Contact />
-  </footer>
-);
-
-export default AppHeader;
+export default AppFooter;

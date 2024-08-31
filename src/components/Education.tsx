@@ -36,6 +36,7 @@ const Education = () => {
           </p>
           <p>
             <Link
+              className="animateable"
               href={d["college-url"]}
               target="_blank"
               rel="noopener noreferrer"

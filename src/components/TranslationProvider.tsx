@@ -10,12 +10,13 @@ i18next
   .init<HttpBackendOptions>({
     ns: [
       "base",
-      "routes",
+      "contact",
       "education",
-      "objective",
-      "skills",
+      "experience",
       "keywords",
-      "experience"
+      "objective",
+      "routes",
+      "skills"
     ],
     fallbackLng: "en", // use en if detected lng is not available
     interpolation: {

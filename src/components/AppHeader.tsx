@@ -56,11 +56,18 @@ const AppHeader = (): ReactElement | null => {
       <nav id="main-nav">
         <NavList>
           <li>
-            <NavLink to="/">{t("home", { ns: "routes" })}</NavLink>
+            <NavLink className="animateable" to="/">
+              {t("home", { ns: "routes" })}
+            </NavLink>
           </li>
           <li>
-            <NavLink to="/experience">
+            <NavLink className="animateable" to="/experience">
               {t("experience", { ns: "routes" })}
+            </NavLink>
+          </li>
+          <li>
+            <NavLink className="animateable" to="/contact">
+              {t("contact", { ns: "routes" })}
             </NavLink>
           </li>
         </NavList>

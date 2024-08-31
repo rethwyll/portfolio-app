@@ -29,7 +29,7 @@ const ExperienceListItem = ({ className, experienceItem }: Props) => {
         <Typography variant="h3">
           {experienceItem.url ? (
             <Link
-              color="warning.main"
+              className="animateable"
               href={experienceItem.url}
               target="_blank"
               rel="noopener noreferrer"
