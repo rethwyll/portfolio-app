@@ -27,6 +27,34 @@
     ]
   },
   {
+    "name": "Northeastern University",
+    "url": "https://www.northeastern.edu/",
+    "location": "Boston, MA (Seattle campus)",
+    "mapsLink": null,
+    "title": "Part-time Lecturer",
+    "start": "2018-09-01",
+    "end": "2021-05-01",
+    "summary": "Northeastern University invited me to create and teach a weekly 3-hour lecture and practical applications course for grad-level students, focusing on the the basics of front-end development: HTML, CSS, JavaScript, React, usability and accessibility best practices in web UI design and development.",
+    "contributions": [
+      "Prepared lectures, homework, and tests for a 10-week course consisting of weekly 3-hour lectures.",
+      "Delivered weekly lectures.",
+      "Managed github repositories and organizations for class lecture notes and group assignments.",
+      "Facilitated class discussions via Canva learning platform.",
+      "Conducted weekly office hours to provide guidance and mentorship to students.",
+      "Supervised a TA in grading and providing feedback on weekly homework and tests.",
+      "Managed class administration via Canva learning platform."
+    ],
+    "skills": [
+      "javascript",
+      "react",
+      "html",
+      "css",
+      "project-management",
+      "devops",
+      "teaching"
+    ]
+  },
+  {
     "name": "The Climate Corporation",
     "url": "http://www.climate.com",
     "location": "Seattle, WA",

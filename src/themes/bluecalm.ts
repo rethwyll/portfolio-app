@@ -17,7 +17,7 @@ const primaryBaseDarker = indigo[200];
 const secondaryBase = pink[600];
 const tertiaryBase = purple[600];
 const errorBase = red[500];
-const warningBase = amber[500];
+const warningBase = amber[700];
 const infoBase = primaryBase;
 const successBase = lightGreen[500];
 
@@ -94,11 +94,32 @@ export default createTheme({
     },
     body1: {
       color: primaryBase,
-      fontSize: "2.2em",
+      fontSize: "1.8em",
       fontWeight: 400
     }
   }),
   components: {
+    MuiAvatar: {
+      defaultProps: {
+        variant: "rounded"
+      },
+      styleOverrides: {
+        root: {
+          fontSize: "1em",
+          lineHeight: "1em"
+        },
+        rounded: ({ theme }) => ({
+          color: theme.palette.secondary.contrastText,
+          backgroundColor: theme.palette.secondary.main,
+          padding: ".8em",
+          width: "1em",
+          height: "1em",
+          "&:hover": {
+            backgroundColor: theme.palette.secondary.dark
+          }
+        })
+      }
+    },
     MuiButton: {
       defaultProps: {
         variant: "contained"
@@ -129,6 +150,22 @@ export default createTheme({
       styleOverrides: {
         root: ({ theme }) => ({
           color: theme.palette.warning.main
+        })
+      }
+    },
+    MuiTooltip: {
+      defaultProps: {
+        arrow: true,
+        placement: "top"
+      },
+      styleOverrides: {
+        arrow: ({ theme }) => ({
+          color: theme.palette.common.black
+        }),
+        tooltip: ({ theme }) => ({
+          color: theme.palette.primary.main,
+          backgroundColor: theme.palette.common.black,
+          fontSize: "1em"
         })
       }
     }

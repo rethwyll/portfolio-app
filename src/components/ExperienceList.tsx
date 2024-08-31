@@ -14,7 +14,7 @@ import { useSkillsStore } from "../stores/skillsStore";
 
 // styled components
 const ExperienceItems = styled("ul")`
-  list-style: none;
+  list-style-type: none;
   margin: 0;
   padding: 0;
 `;

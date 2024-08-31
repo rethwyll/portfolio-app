@@ -9,7 +9,8 @@ export const skills = [
   "css",
   "project-management",
   "uxui-design",
-  "devops"
+  "devops",
+  "teaching"
 ];
 export const skillTypes = skills.reduce(
   (acc, curr) => ({ ...acc, [snakeCase(curr)]: curr }),

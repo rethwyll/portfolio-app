@@ -10,6 +10,7 @@ import { useTranslation } from "react-i18next";
 
 // types
 import { ExperienceItem } from "../types/experience";
+import { Avatar, Tooltip } from "@mui/material";
 
 type Props = {
   className?: string;
@@ -36,8 +37,7 @@ const ExperienceListItem = ({ className, experienceItem }: Props) => {
           )}
           / {experienceItem.location}
         </Typography>
-        <Typography variant="h4">Title and Duration</Typography>
-        <p>
+        <Typography variant="body1" component="h4">
           {experienceItem.title},{" "}
           <time dateTime={experienceItem.start}>
             {DateTime.fromISO(experienceItem.start).toLocaleString({
@@ -48,7 +48,6 @@ const ExperienceListItem = ({ className, experienceItem }: Props) => {
           -
           {experienceItem.end ? (
             <time dateTime={experienceItem.end}>
-              {" "}
               {DateTime.fromISO(experienceItem.end).toLocaleString({
                 month: "long",
                 year: "numeric"
@@ -57,24 +56,28 @@ const ExperienceListItem = ({ className, experienceItem }: Props) => {
           ) : (
             t("present", { ns: "experience" })
           )}
-        </p>
+        </Typography>
       </header>
+      <ul className="experience-skills-list">
+        {experienceItem.skills.map(s => (
+          <Tooltip title={t(s, { ns: "skills" })}>
+            <Avatar key={s} variant="rounded">
+              {t(s, { ns: "skills" })[0]}
+            </Avatar>
+          </Tooltip>
+        ))}
+      </ul>
       <p>{parse(experienceItem.summary)}</p>
       {experienceItem.contributions.length ? (
         <>
           <Typography variant="h4">Key Contributions</Typography>
-          <ul>
+          <ul className="experience-contributions">
             {experienceItem.contributions.map(c => (
               <li key={c}>{parse(c)}</li>
             ))}
           </ul>
         </>
       ) : null}
-      <ul>
-        {experienceItem.skills.map(s => (
-          <li key={s}>{t(s, { ns: "skills" })}</li>
-        ))}
-      </ul>
     </li>
   );
 };
