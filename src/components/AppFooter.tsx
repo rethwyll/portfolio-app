@@ -4,7 +4,7 @@ import { ReactElement } from "react";
 import Contact from "./Contact";
 
 const AppHeader = (): ReactElement => (
-  <footer>
+  <footer id="app-footer">
     <Contact />
   </footer>
 );

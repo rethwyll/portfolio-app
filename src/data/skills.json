@@ -5,16 +5,16 @@
       "HTML",
       "CSS",
       "CSS-in-JS",
-      "Javascript",
-      "Typescript",
+      "JavaScript",
+      "TypeScript",
       "React",
-      "Vite",
+      "vite",
       "SPA",
       "RESTful service calls",
       "Highcharts",
       "Launch Darkly",
       "feature flags",
-      "Vitest",
+      "vitest",
       "Jest",
       "unit testing",
       "Agile",
@@ -28,29 +28,30 @@
     "id": "ux",
     "skills": [
       "UI",
-      "site navigation",
-      "component libraries",
-      "analytics tools",
+      "Site navigation",
+      "Component libraries",
+      "Analytics tools",
       "i18n/l10n"
     ]
   },
   {
     "id": "project",
     "skills": [
-      "project estimation",
-      "client relations",
-      "copyediting",
-      "project management",
-      "documentation/technical writing"
+      "Project estimation",
+      "Client relations",
+      "Copy-editing",
+      "Project management",
+      "Documentation/technical writing",
+      "Proofreading"
     ]
   },
   {
     "id": "communication",
     "skills": [
       "Strong written and oral communication skills",
-      "project meeting facilitation",
-      "in-house technical seminars",
-      "client training/instruction"
+      "Project meeting facilitation",
+      "In-house technical seminars",
+      "Client training/instruction"
     ]
   }
 ]

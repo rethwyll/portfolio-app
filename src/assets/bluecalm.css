@@ -2,10 +2,6 @@
   color-scheme: light;
   padding: 4rem;
 }
-[data-theme="bluecalm"] #main-nav ul {
-  margin: 0;
-  padding: 0;
-}
 
 [data-theme="bluecalm"] #main {
   margin-top: 5em;
@@ -68,7 +64,7 @@
   gap: 1em;
 }
 [data-theme="bluecalm"] #contact address {
-  align: baseline;
+  align-items: baseline;
   display: flex;
   gap: 0.5em;
 }

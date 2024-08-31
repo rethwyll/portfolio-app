@@ -1,3 +1,6 @@
+import parse from "html-react-parser";
+import i18next from "i18next";
+
 // components
 import Typography from "@mui/material/Typography";
 
@@ -30,11 +33,16 @@ const Skills = () => {
             <Typography variant="h4" component="dt">
               {t(s.id, { ns: "skills" })}
             </Typography>
-            <dd
-              dangerouslySetInnerHTML={{
-                __html: formatter.format(s.skills.sort())
-              }}
-            />
+            <dd>
+              {parse(
+                formatter.format(
+                  s.skills.sort(
+                    new Intl.Collator(i18next.language, { caseFirst: "upper" })
+                      .compare
+                  )
+                )
+              )}
+            </dd>
           </div>
         ))}
       </dl>

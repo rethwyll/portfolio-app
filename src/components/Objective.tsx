@@ -12,7 +12,7 @@ const Objective = () => {
   const yearsOfExperience = useSkillsStore(state => state.yearsOfExperience);
 
   return (
-    <section>
+    <section id="objective">
       <header>
         <Typography variant="h3">{t("title", { ns: "objective" })}</Typography>
         <p>{t("goal", { ns: "objective", years: yearsOfExperience })}</p>

@@ -51,7 +51,7 @@ const AppHeader = (): ReactElement | null => {
   const updateTheme = useThemeStore(state => state.updateTheme);
 
   return isNull(currentTheme) ? null : (
-    <Header>
+    <Header id="app-header">
       <Typography variant="h1">{t("main-title")}</Typography>
       {themeKeys.length >= 2 ? (
         <>

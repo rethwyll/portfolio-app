@@ -7,7 +7,7 @@ import { useTranslation } from "react-i18next";
 const Intro = () => {
   const { t } = useTranslation();
   return (
-    <header>
+    <header id="intro">
       <Typography variant="h2" color="secondary">
         {t("name")}
       </Typography>

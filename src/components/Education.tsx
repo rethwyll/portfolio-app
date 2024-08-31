@@ -14,7 +14,7 @@ import { DateTime } from "luxon";
 const Education = () => {
   const { t } = useTranslation();
   return (
-    <section>
+    <section id="education">
       <header>
         <Typography variant="h3">{t("title", { ns: "education" })}</Typography>
       </header>

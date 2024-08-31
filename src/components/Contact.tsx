@@ -9,7 +9,7 @@ import { useTranslation } from "react-i18next";
 const Contact = (): ReactElement => {
   const { t } = useTranslation();
   return (
-    <div id="contact">
+    <section id="contact">
       <address>
         <div>{t("street", { ns: "base" })}</div>
         <div>
@@ -21,7 +21,7 @@ const Contact = (): ReactElement => {
       <Link color="warning.main" href={`mailto:${t("email", { ns: "base" })}`}>
         {t("email", { ns: "base" })}
       </Link>
-    </div>
+    </section>
   );
 };
 
