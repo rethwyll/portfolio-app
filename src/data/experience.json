@@ -1,6 +1,7 @@
 [
   {
     "name": "Uplevel",
+    "id": "uplevel",
     "url": "http://www.uplevelteam.com",
     "location": "Seattle, WA",
     "mapsLink": null,
@@ -28,6 +29,7 @@
   },
   {
     "name": "Northeastern University",
+    "id": "neu",
     "url": "https://www.northeastern.edu/",
     "location": "Boston, MA (Seattle campus)",
     "mapsLink": null,
@@ -56,6 +58,7 @@
   },
   {
     "name": "The Climate Corporation",
+    "id": "climate",
     "url": "http://www.climate.com",
     "location": "Seattle, WA",
     "mapsLink": null,
@@ -80,6 +83,7 @@
   },
   {
     "name": "Wetpaint",
+    "id": "wetpaint",
     "url": "https://en.wikipedia.org/wiki/Wetpaint",
     "location": "Seattle, WA",
     "mapsLink": null,
@@ -87,11 +91,23 @@
     "start": "2012-10-01",
     "end": "2014-09-01",
     "summary": "I was hired by Wetpaint to supplement its growing development team supporting dynamic entertainment content for women aged 18-34.",
-    "contributions": [],
-    "skills": ["javascript", "html", "css", "project-management"]
+    "contributions": [
+      "Supported UI for the Wetpaint consumer experience website and associated products.",
+      "Drove conversion to a responsive layout to serve both desktop and mobile users.",
+      "Led implementation of site redesign."
+    ],
+    "skills": [
+      "javascript",
+      "html",
+      "css",
+      "project-management",
+      "ruby",
+      "rails"
+    ]
   },
   {
     "name": "Aptimus (Apollo Education Group)",
+    "id": "uopx",
     "url": "https://www.linkedin.com/company/apollo-group/",
     "location": "Seattle, WA",
     "mapsLink": null,
@@ -102,15 +118,16 @@
     "contributions": [
       "Led development of template UI for UOPX homepage, degree-program pages, course pages and continuing education mini-site (many of the site&rsquo;s highest-visibility pages), as well as various extensible components",
       "Collaborated closely with UX design teams in California and Missouri to test and validate use cases.",
-      "Spearheaded integration of Backbone MVC framework in codebase from research through implementation to standardize team Javascript coding efforts",
-      "Led key CSS refactoring efforts to reduce CSS load times and improve development efficiency",
-      "Mentored junior developers in Day (Adobe) CQ enterprise CMS development and Javascript",
-      "Initiated project to support responsive presentation for mobile devices via implementation of Twitter Bootstrap"
+      "Spearheaded integration of Backbone MVC framework in codebase from research through implementation to standardize team Javascript coding efforts.",
+      "Led key CSS refactoring efforts to reduce CSS load times and improve development efficiency.",
+      "Mentored junior developers in Day (Adobe) CQ enterprise CMS development and Javascript.",
+      "Initiated project to support responsive presentation for mobile devices via implementation of Twitter Bootstrap."
     ],
     "skills": ["javascript", "html", "css", "project-management"]
   },
   {
     "name": "Zillow.com",
+    "id": "zillow",
     "url": "https://www.zillow.com/",
     "location": "Seattle, WA",
     "mapsLink": null,
@@ -119,14 +136,15 @@
     "end": "2008-10-01",
     "summary": "I was recruited by Zillow.com to provide development expertise with regard to UI.",
     "contributions": [
-      "Developed UI for Zillow Professional Directory",
-      "Presented talk advocating for semantic HTML development during Zillow Developer Presentation",
+      "Developed UI for Zillow Professional Directory.",
+      "Presented talk advocating for semantic HTML development during Zillow Developer Presentation.",
       "Contributed core Web 2.0 concepts such as standards-based development; code validation; and separation of structure, presentation and behavior into Zillow codebase."
     ],
     "skills": ["javascript", "html", "css"]
   },
   {
     "name": "Seismic Interactive & Design",
+    "id": "seismic",
     "url": "https://www.seismicinteractive.com/",
     "location": "Green Bay, WI",
     "mapsLink": null,
@@ -151,6 +169,7 @@
   },
   {
     "name": "Pulse Communications",
+    "id": "pulse",
     "url": "https://www.pulsecommunications.com/",
     "location": "Green Bay, WI",
     "mapsLink": null,
@@ -159,7 +178,7 @@
     "end": "2001-04-01",
     "summary": "I was hired to guide development of company into full-service interactive agency, implement processes for small- and large-scale web project development and provide advanced level of design/development expertise with regard to UI and programming. I implemented all phases of site development; mentored co-workers in web development skills; administrated Linux-based dedicated server and in-house Internet connectivity infrastructure on a day-to-day operational basis; and provided Internet technologies consulting for 20+ employees of strategic-management affiliate company.",
     "contributions": [
-      "Developed interactive tradeshow kiosk, increasing client&rsquo;s product sales by 625%. (25 systems vs. 4 systems in previous year)",
+      "Developed interactive tradeshow kiosk, increasing client&rsquo;s product sales by 625%. (25 systems vs. 4 systems in previous year).",
       "Proposed, built and deployed company intranet to improve internal communication and project coordination."
     ],
     "skills": [

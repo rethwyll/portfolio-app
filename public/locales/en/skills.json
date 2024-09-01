@@ -14,5 +14,7 @@
   "project-management": "Project Management",
   "uxui-design": "UX/UI Design",
   "devops": "Dev Ops",
-  "teaching": "Teaching"
+  "teaching": "Teaching",
+  "ruby": "Ruby",
+  "rails": "Rails"
 }

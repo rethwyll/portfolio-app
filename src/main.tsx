@@ -6,11 +6,11 @@ import "./assets/css/themes.css";
 
 // components
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
-import App from "./routes/App";
-import Contact from "./components/Contact";
-import Error from "./routes/Error";
-import Experience from "./routes/Experience";
-import Home from "./routes/Home";
+import App from "./routes/App/App";
+import Contact from "./routes/Contact/Contact";
+import Error from "./routes/Error/Error";
+import Experience from "./routes/Experience/Experience";
+import Home from "./routes/Home/Home";
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
   <React.StrictMode>

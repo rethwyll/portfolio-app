@@ -1,12 +1,4 @@
-export type ExperienceItem = {
-  name: string;
-  location: string;
-  mapsLink: string | null;
-  url: string | null;
-  title: string;
-  start: string;
-  end: string | null;
-  summary: string;
-  contributions: Array<string>;
-  skills: Array<string>;
-};
+import { z } from "zod";
+import { sExperienceItem } from "../schema/experience.s";
+
+export type ExperienceItem = z.infer<typeof sExperienceItem>;

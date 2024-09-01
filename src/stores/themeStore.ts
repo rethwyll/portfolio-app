@@ -2,8 +2,9 @@ import { isNil, sample } from "lodash";
 import { create } from "zustand";
 import allThemes from "../themes/allThemes";
 
-type State = {
-  theme: string | null;
+export type State = {
+  allThemes: Array<string>;
+  theme: string;
 };
 
 type Action = {
@@ -11,14 +12,11 @@ type Action = {
   updateTheme: (updatedTheme: State["theme"]) => void;
 };
 
-export const useThemeStore = create<State & Action>(set => ({
+export const useThemeStore = create<State & Action>((set, get) => ({
+  allThemes: Object.keys(allThemes),
   theme: sample(Object.keys(allThemes)) as string,
   initializeTheme: () => {
-    const initialTheme = sample(Object.keys(allThemes));
-    if (!isNil(initialTheme)) {
-      set(() => ({ theme: initialTheme }));
-      document.documentElement.dataset["theme"] = initialTheme;
-    }
+    document.documentElement.dataset["theme"] = get().theme;
   },
   updateTheme: updatedTheme => {
     if (!isNil(updatedTheme)) {
