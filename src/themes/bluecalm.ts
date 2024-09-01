@@ -128,8 +128,8 @@ export default createTheme({
           color: theme.palette.secondary.contrastText,
           backgroundColor: theme.palette.secondary.main,
           padding: "0",
-          width: "3em",
-          height: "3em",
+          width: "1.5em",
+          height: "1.5em",
           "&:hover": {
             backgroundColor: theme.palette.secondary.dark
           }

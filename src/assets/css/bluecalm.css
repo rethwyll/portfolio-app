@@ -196,12 +196,12 @@
 
 [data-theme="bluecalm"] #contact-socials a {
   display: block;
-  height: 3em;
-  width: 3em;
+  height: 1.5em;
+  width: 1.5em;
 }
 
 [data-theme="bluecalm"] #contact-socials svg {
-  font-size: 3em;
+  font-size: 1.5em;
   height: inherit;
   line-height: 1em;
   width: inherit;
@@ -209,7 +209,6 @@
 
 [data-theme="bluecalm"] #error {
   display: grid;
-  gap: 2rem;
   grid-template-columns: 1fr;
   justify-items: center;
 }
