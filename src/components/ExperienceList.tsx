@@ -20,12 +20,6 @@ const ExperienceItems = styled("ul")`
   margin: 0;
   padding: 0;
 `;
-const Item = styled(ExperienceListItem)`
-  & + & {
-    margin-top: 2rem;
-  }
-`;
-
 // types
 type Props = {
   num?: number;
@@ -41,7 +35,7 @@ const ExperienceList = ({ num }: Props): ReactElement | null => {
         isEmpty(currentSkills) ||
         intersection(d.skills, currentSkills).length ===
           currentSkills.length ? (
-          <Item key={d.name} experienceItem={d} />
+          <ExperienceListItem key={d.name} experienceItem={d} />
         ) : null
       )
   );
@@ -50,14 +44,16 @@ const ExperienceList = ({ num }: Props): ReactElement | null => {
       {listDisplay.length ? (
         <ExperienceItems>{listDisplay}</ExperienceItems>
       ) : (
-        <Typography variant="body1" component="p">
+        <Typography variant="body2" component="p">
           {t("no-matches", { ns: "experience" })}
         </Typography>
       )}
       {num ? (
-        <NavLink className="animateable" to="/experience">
-          {t("all-experience", { ns: "experience" })}
-        </NavLink>
+        <Typography id="all-experience" variant="body2" component="div">
+          <NavLink className="animateable" to="/experience">
+            {t("all-experience", { ns: "experience" })}
+          </NavLink>
+        </Typography>
       ) : null}
     </div>
   );

@@ -55,21 +55,21 @@ const AppHeader = (): ReactElement | null => {
       ) : null}
       <nav id="main-nav">
         <NavList>
-          <li>
+          <Typography variant="body1" component="li">
             <NavLink className="animateable" to="/">
               {t("home", { ns: "routes" })}
             </NavLink>
-          </li>
-          <li>
+          </Typography>
+          <Typography variant="body1" component="li">
             <NavLink className="animateable" to="/experience">
               {t("experience", { ns: "routes" })}
             </NavLink>
-          </li>
-          <li>
+          </Typography>
+          <Typography variant="body1" component="li">
             <NavLink className="animateable" to="/contact">
               {t("contact", { ns: "routes" })}
             </NavLink>
-          </li>
+          </Typography>
         </NavList>
       </nav>
     </Header>

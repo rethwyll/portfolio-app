@@ -48,53 +48,70 @@ export default createTheme({
       main: successBase
     },
     tonalOffset: 0.3
-    // tonalOffset: {
-    //   light: 0.1,
-    //   dark: 0.7
-    // }
   },
   typography: () => ({
     fontFamily: "'Inter Tight', Roboto, sans-serif",
     h1: {
-      fontFamily: "'Inter Tight', Josefin Sans, sans-serif",
-      fontWeight: 800,
       color: primaryBaseDarker,
-      fontSize: "3em"
+      fontFamily: "'Inter Tight', Roboto, sans-serif",
+      fontSize: "3.375em", // 54px
+      fontWeight: 800,
+      lineHeight: 1,
+      margin: "0 0 .33333em" // 18px
     },
     h2: {
-      fontFamily: "'Inter Tight', Josefin Sans, sans-serif",
-      fontWeight: 800,
       color: secondaryBase,
-      fontSize: "12em"
+      fontFamily: "'Inter Tight', Roboto, sans-serif",
+      fontSize: "12em", // 192px
+      fontWeight: 800,
+      lineHeight: 1.25,
+      margin: "0"
     },
     h3: {
-      fontFamily: "'Inter Tight', Josefin Sans, sans-serif",
-      fontWeight: 800,
       color: secondaryBase,
-      fontSize: "3em"
+      fontFamily: "'Inter Tight', Roboto, sans-serif",
+      fontSize: "4em", // 64px
+      fontWeight: 800,
+      lineHeight: 1.5, // 96px
+      margin: "0"
     },
     h4: {
-      fontFamily: "'Inter Tight', Josefin Sans, sans-serif",
-      fontWeight: 800,
       color: tertiaryBase,
-      fontSize: "2.4em"
+      fontFamily: "'Inter Tight', Roboto, sans-serif",
+      fontSize: "3em", // 48px
+      fontWeight: 800,
+      lineHeight: 1.5, // 72px
+      margin: "0" // 24px
     },
     h5: {
-      fontFamily: "'Inter Tight', Josefin Sans, sans-serif",
-      fontWeight: 800,
       color: tertiaryBase,
-      fontSize: "2.2em"
+      fontFamily: "'Inter Tight', Roboto, sans-serif",
+      fontSize: "1.5em", // 24px
+      fontWeight: 400,
+      lineHeight: 2, // 48px
+      margin: "0"
     },
     h6: {
-      fontFamily: "'Inter Tight', Josefin Sans, sans-serif",
-      fontWeight: 800,
       color: primaryBase,
-      fontSize: "2.2em"
+      fontFamily: "'Inter Tight', Roboto, sans-serif",
+      fontSize: "1.5em", // 24px
+      fontWeight: 400,
+      lineHeight: 2, // 48px
+      margin: "0"
     },
     body1: {
       color: primaryBase,
-      fontSize: "1.8em",
-      fontWeight: 400
+      fontSize: "1.6rem", // 16px
+      fontWeight: 400,
+      lineHeight: 1.5, // 24px
+      margin: "0"
+    },
+    body2: {
+      color: primaryBase,
+      fontSize: "1.5em", // 24px
+      fontWeight: 400,
+      lineHeight: 2, // 48px
+      margin: "0"
     }
   }),
   components: {
@@ -105,14 +122,14 @@ export default createTheme({
       styleOverrides: {
         root: {
           fontSize: "1em",
-          lineHeight: "1em"
+          lineHeight: "1.5em"
         },
         rounded: ({ theme }) => ({
           color: theme.palette.secondary.contrastText,
           backgroundColor: theme.palette.secondary.main,
-          padding: ".8em",
-          width: "1em",
-          height: "1em",
+          padding: "0",
+          width: "3em",
+          height: "3em",
           "&:hover": {
             backgroundColor: theme.palette.secondary.dark
           }
@@ -124,10 +141,10 @@ export default createTheme({
         variant: "contained"
       },
       styleOverrides: {
-        root: {
-          fontSize: "1em",
-          lineHeight: "1em"
-        },
+        root: ({ theme }) => ({
+          fontSize: theme.typography.body1.fontSize,
+          lineHeight: theme.typography.body1.lineHeight
+        }),
         contained: ({ theme }) => ({
           color: theme.palette.getContrastText(theme.palette.secondary.main),
           backgroundColor: theme.palette.secondary.main,

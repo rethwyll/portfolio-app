@@ -1,10 +1,10 @@
 import { ReactElement } from "react";
 import parse from "html-react-parser";
-import { styled } from "@mui/material/styles";
 
 // components
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Link from "@mui/material/Link";
+import Typography from "@mui/material/Typography";
 
 // data
 import socials from "../data/socials.json";
@@ -28,24 +28,19 @@ const iconMap = {
   mastodon: faMastodon
 } as { [key: string]: IconDefinition };
 
-// styled components
-const Socials = styled("ul")`
-  align-items: baseline;
-  display: flex;
-  gap: 0.5em;
-`;
-const Icon = styled(FontAwesomeIcon)`
-  font-size: 2em;
-`;
-
 const Contact = (): ReactElement => {
   const { t } = useTranslation();
   const locationStore = useLocationStore();
 
   return (
     <section id="contact">
+      <header>
+        <Typography variant="h2">{t("contact", { ns: "routes" })}</Typography>
+      </header>
       <div>
-        <p>{parse(t("availability", { ns: "contact", ...locationStore }))}</p>
+        <Typography variant="body1" component="p">
+          {parse(t("availability", { ns: "contact", ...locationStore }))}
+        </Typography>
         <figure>
           <a
             data-flickr-embed="true"
@@ -66,20 +61,25 @@ const Contact = (): ReactElement => {
         </figure>
       </div>
       <aside>
-        <Link
-          className="animateable"
-          color="warning.main"
-          href={`mailto:${t("email", { ns: "contact" })}`}
-        >
-          {t("email", { ns: "contact" })}
-        </Link>
-        <Socials>
+        <Typography variant="body1">
+          <Link
+            className="animateable"
+            color="warning.main"
+            href={`mailto:${t("email", { ns: "contact" })}`}
+          >
+            {t("email", { ns: "contact" })}
+          </Link>
+        </Typography>
+
+        <ul id="contact-socials">
           {socials.map(s => (
-            <Link href={s.url} target="_blank" rel="noopener noreferrer">
-              <Icon icon={iconMap[s.icon]} />
-            </Link>
+            <Typography variant="body1" component="li" key={s.icon}>
+              <Link href={s.url} target="_blank" rel="noopener noreferrer">
+                <FontAwesomeIcon icon={iconMap[s.icon]} />
+              </Link>
+            </Typography>
           ))}
-        </Socials>
+        </ul>
       </aside>
     </section>
   );

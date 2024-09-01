@@ -16,7 +16,9 @@ const Keywords = () => {
       </header>
       <ul>
         {keywordsData.map(k => (
-          <li key={k}>{k}</li>
+          <Typography variant="body1" component="li" key={k}>
+            {k}
+          </Typography>
         ))}
       </ul>
     </section>

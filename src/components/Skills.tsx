@@ -24,8 +24,12 @@ const Skills = () => {
     <section id="skills">
       <header>
         <Typography variant="h3">{t("title", { ns: "skills" })}</Typography>
-        <p>{t("intro", { ns: "skills", years: yearsOfExperience })}</p>
-        <p>{t("unique", { ns: "skills" })}</p>
+        <Typography variant="body1" component="p">
+          {t("intro", { ns: "skills", years: yearsOfExperience })}
+        </Typography>
+        <Typography variant="body1" component="p">
+          {t("unique", { ns: "skills" })}
+        </Typography>
       </header>
       <dl>
         {skillsData.map(s => (
@@ -33,7 +37,7 @@ const Skills = () => {
             <Typography variant="h4" component="dt">
               {t(s.id, { ns: "skills" })}
             </Typography>
-            <dd>
+            <Typography variant="body1" component="dd">
               {parse(
                 formatter.format(
                   s.skills.sort(
@@ -42,7 +46,7 @@ const Skills = () => {
                   )
                 )
               )}
-            </dd>
+            </Typography>
           </div>
         ))}
       </dl>

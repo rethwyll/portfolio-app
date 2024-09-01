@@ -26,7 +26,7 @@ const ExperienceListItem = ({ className, experienceItem }: Props) => {
   return (
     <li className={classnames(className, "experience-list-item")}>
       <header>
-        <Typography variant="h3">
+        <Typography variant="h3" className="experience-name">
           {experienceItem.url ? (
             <Link
               className="animateable"
@@ -39,9 +39,11 @@ const ExperienceListItem = ({ className, experienceItem }: Props) => {
           ) : (
             experienceItem.name
           )}
-          / {experienceItem.location}
         </Typography>
-        <Typography variant="body1" component="h4">
+        <Typography className="experience-location" variant="body2">
+          {experienceItem.location}
+        </Typography>
+        <Typography variant="body2">
           {experienceItem.title},{" "}
           <time dateTime={experienceItem.start}>
             {DateTime.fromISO(experienceItem.start).toLocaleString({
@@ -62,16 +64,9 @@ const ExperienceListItem = ({ className, experienceItem }: Props) => {
           )}
         </Typography>
       </header>
-      <ul className="experience-skills-list">
-        {sortedTranslatedSkills.map(s => (
-          <Tooltip title={s}>
-            <Avatar key={s} variant="rounded">
-              {s[0]}
-            </Avatar>
-          </Tooltip>
-        ))}
-      </ul>
-      <p>{parse(experienceItem.summary)}</p>
+      <Typography variant="body1" component="p" className="experience-summary">
+        {parse(experienceItem.summary)}
+      </Typography>
       {experienceItem.contributions.length ? (
         <>
           <Typography variant="h4" className="experience-key-contributions">
@@ -79,11 +74,20 @@ const ExperienceListItem = ({ className, experienceItem }: Props) => {
           </Typography>
           <ul className="experience-contributions">
             {experienceItem.contributions.map(c => (
-              <li key={c}>{parse(c)}</li>
+              <Typography variant="body1" component="li" key={c}>
+                {parse(c)}
+              </Typography>
             ))}
           </ul>
         </>
       ) : null}
+      <ul className="experience-skills-list">
+        {sortedTranslatedSkills.map(s => (
+          <Tooltip key={s} title={s}>
+            <Avatar variant="rounded">{s[0]}</Avatar>
+          </Tooltip>
+        ))}
+      </ul>
     </li>
   );
 };

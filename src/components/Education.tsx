@@ -24,17 +24,21 @@ const Education = () => {
             {d.degree}, {d.major}
           </Typography>
           {d.minor ? (
-            <p>
+            <Typography variant="body1" component="p">
               {t("title.minor", { ns: "education" })}: {d.minor}
-            </p>
+            </Typography>
           ) : null}
-          {d["degree-honor"] ? <i>{d["degree-honor"]}</i> : null}
-          <p>
+          {d["degree-honor"] ? (
+            <Typography variant="body1" component="i">
+              {d["degree-honor"]}
+            </Typography>
+          ) : null}
+          <Typography variant="body1" component="p">
             <time dateTime={d["graduation-date"]}>
               {DateTime.fromISO(d["graduation-date"]).year}
             </time>
-          </p>
-          <p>
+          </Typography>
+          <Typography variant="body1" component="p">
             <Link
               className="animateable"
               href={d["college-url"]}
@@ -43,8 +47,10 @@ const Education = () => {
             >
               {d.college}
             </Link>
-          </p>
-          <p>{d["college-location"]}</p>
+          </Typography>
+          <Typography variant="body1" component="p">
+            {d["college-location"]}
+          </Typography>
         </div>
       ))}
     </section>

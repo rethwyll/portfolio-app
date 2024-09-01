@@ -15,7 +15,9 @@ const Objective = () => {
     <section id="objective">
       <header>
         <Typography variant="h3">{t("title", { ns: "objective" })}</Typography>
-        <p>{t("goal", { ns: "objective", years: yearsOfExperience })}</p>
+        <Typography variant="body1" component="p">
+          {t("goal", { ns: "objective", years: yearsOfExperience })}
+        </Typography>
       </header>
     </section>
   );

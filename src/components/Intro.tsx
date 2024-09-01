@@ -11,7 +11,7 @@ const Intro = () => {
       <Typography variant="h2" color="secondary">
         {t("name")}
       </Typography>
-      <Typography variant="body1">{t("intro")}</Typography>
+      <Typography variant="body2">{t("intro")}</Typography>
     </header>
   );
 };

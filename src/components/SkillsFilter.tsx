@@ -14,13 +14,6 @@ import { useSkillsStore } from "../stores/skillsStore";
 import { sortBy } from "lodash";
 
 // styled components
-const Container = styled("ul")`
-  display: flex;
-  gap: 2rem;
-  list-style: none;
-  margin: 0;
-  padding: 0;
-`;
 const StyledButton = styled(Button)`
   text-transform: none;
 `;
@@ -42,7 +35,7 @@ const SkillsFilter = () => {
   };
 
   return (
-    <Container id="skills-filter">
+    <ul id="skills-filter">
       {sortedTranslatedSkills.map(([s, translated]) => (
         <li key={s}>
           <StyledButton
@@ -53,7 +46,7 @@ const SkillsFilter = () => {
           </StyledButton>
         </li>
       ))}
-    </Container>
+    </ul>
   );
 };
 
