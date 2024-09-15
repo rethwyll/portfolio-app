@@ -1,10 +1,11 @@
 import SkillsFilter from "./SkillsFilter";
 import { expect, it } from "vitest";
-import { act, render, waitFor } from "@testing-library/react";
+import { render, waitFor } from "@testing-library/react";
 import { userEvent } from "@testing-library/user-event";
 import TranslationProvider from "../../providers/TranslationProvider";
 import i18next from "i18next";
 import { skills } from "../../constants";
+import { act } from "react";
 const skillId = skills[0];
 
 it("renders", async () => {
@@ -40,6 +41,11 @@ it("deactivates skill", async () => {
     </TranslationProvider>
   );
   await waitFor(() => expect(queryByTestId(skillId)).toBeTruthy());
+  await waitFor(() =>
+    expect(queryByTestId(`${skillId}-outlined`)).toBeTruthy()
+  );
+  const skillInactive = getByTestId(`${skillId}-outlined`);
+  await act(() => userEvent.click(skillInactive));
   await waitFor(() =>
     expect(queryByTestId(`${skillId}-contained`)).toBeTruthy()
   );

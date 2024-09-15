@@ -1,6 +1,7 @@
 import { expect, it } from "vitest";
 import { renderHook, waitFor } from "@testing-library/react";
 import { useSkillsStore } from "./skillsStore";
+import { act } from "react";
 
 it("renders initial state", () => {
   const { result } = renderHook(() => useSkillsStore());
@@ -10,7 +11,7 @@ it("renders initial state", () => {
 
 it("updates skills", async () => {
   const { result } = renderHook(() => useSkillsStore());
-  result.current.updateSkills(["foo"]);
+  await act(() => result.current.updateSkills(["foo"]));
   await waitFor(() => {
     expect(result.current.skills).toEqual(["foo"]);
   });
