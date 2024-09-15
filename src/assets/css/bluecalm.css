@@ -23,7 +23,7 @@
     background: linear-gradient(to right, #ffa000, #ffe082, #ffa000);
     background-clip: text;
     background-size: 300% auto;
-    color: transparent;
+    /* color: transparent; */
   }
   [data-theme="bluecalm"] #intro h2:hover {
     -webkit-text-fill-color: transparent;
@@ -108,6 +108,10 @@
   grid-area: 2 / 1 / 3 / 2;
 }
 
+[data-theme="bluecalm"] #home aside section + section {
+  margin: 1.5em 0 0;
+}
+
 [data-theme="bluecalm"] #skills p + p {
   margin: 1.5em 0 0;
 }
@@ -122,6 +126,17 @@
 
 [data-theme="bluecalm"] #education p {
   margin: 0;
+}
+
+[data-theme="bluecalm"] #education .college-url a {
+  align-items: baseline;
+  display: inline-flex;
+  flex-flow: row nowrap;
+  gap: 0.4em;
+}
+
+[data-theme="bluecalm"] #education .college-url a svg {
+  font-size: 0.8em;
 }
 
 [data-theme="bluecalm"] #keywords ul {

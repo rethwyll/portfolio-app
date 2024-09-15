@@ -125,13 +125,15 @@ export default createTheme({
           lineHeight: "1.5em"
         },
         rounded: ({ theme }) => ({
-          color: theme.palette.secondary.contrastText,
           backgroundColor: theme.palette.secondary.main,
+          color: theme.palette.secondary.contrastText,
+          cursor: "pointer",
+          height: "1.5em",
           padding: "0",
           width: "1.5em",
-          height: "1.5em",
           "&:hover": {
-            backgroundColor: theme.palette.secondary.dark
+            backgroundColor: theme.palette.warning.main,
+            color: bg
           }
         })
       }
@@ -180,11 +182,11 @@ export default createTheme({
       },
       styleOverrides: {
         arrow: ({ theme }) => ({
-          color: theme.palette.secondary.dark
+          color: theme.palette.secondary.main
         }),
         tooltip: ({ theme }) => ({
           color: theme.palette.primary.main,
-          backgroundColor: theme.palette.secondary.dark,
+          backgroundColor: theme.palette.secondary.main,
           fontSize: "1em"
         })
       }

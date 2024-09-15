@@ -2,12 +2,14 @@ import React, { ReactElement } from "react";
 import { DateTime } from "luxon";
 
 // components
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Link from "@mui/material/Link";
 import Typography from "@mui/material/Typography";
 
 // hooks
 import { useTranslation } from "react-i18next";
 import { EducationItem } from "../../types/education";
+import { faArrowUpRightFromSquare } from "@fortawesome/free-solid-svg-icons";
 
 // types
 type Props = {
@@ -47,6 +49,7 @@ const EducationListItem = ({ educationItem }: Props): ReactElement => {
       </Typography>
       {educationItem["college-url"] ? (
         <Typography
+          className="college-url"
           variant="body1"
           component="p"
           data-testid={`${testId}-college-url`}
@@ -58,6 +61,7 @@ const EducationListItem = ({ educationItem }: Props): ReactElement => {
             rel="noopener noreferrer"
           >
             {educationItem.college}
+            <FontAwesomeIcon icon={faArrowUpRightFromSquare} />
           </Link>
         </Typography>
       ) : null}
