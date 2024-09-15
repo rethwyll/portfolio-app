@@ -132,8 +132,7 @@ export default createTheme({
           padding: "0",
           width: "1.5em",
           "&:hover": {
-            backgroundColor: theme.palette.warning.main,
-            color: bg
+            backgroundColor: theme.palette.secondary.light
           }
         })
       }

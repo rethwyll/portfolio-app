@@ -18,6 +18,10 @@ i18next
       "routes",
       "skills"
     ],
+    backend: {
+      loadPath: () =>
+        `${import.meta.env.PROD ? "./" : ""}/locales/{{lng}}/{{ns}}.json`
+    },
     fallbackLng: "en", // use en if detected lng is not available
     interpolation: {
       escapeValue: false // not needed for react as it escapes by default

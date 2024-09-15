@@ -15,29 +15,32 @@ import Home from "./routes/Home/Home";
 ReactDOM.createRoot(document.getElementById("root")!).render(
   <React.StrictMode>
     <RouterProvider
-      router={createBrowserRouter([
-        {
-          element: <App />,
-          children: [
-            {
-              path: "/",
-              element: <Home />
-            },
-            {
-              path: "/experience",
-              element: <Experience />
-            },
-            {
-              path: "/contact",
-              element: <Contact />
-            },
-            {
-              path: "*",
-              element: <Error />
-            }
-          ]
-        }
-      ])}
+      router={createBrowserRouter(
+        [
+          {
+            element: <App />,
+            children: [
+              {
+                path: "/",
+                element: <Home />
+              },
+              {
+                path: "/experience",
+                element: <Experience />
+              },
+              {
+                path: "/contact",
+                element: <Contact />
+              },
+              {
+                path: "*",
+                element: <Error />
+              }
+            ]
+          }
+        ],
+        { basename: import.meta.env.BASE_URL }
+      )}
     />
   </React.StrictMode>
 );
