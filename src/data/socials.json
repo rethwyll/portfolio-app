@@ -2,8 +2,7 @@
   { "icon": "flickr", "url": "https://flickr.com/photos/aprilbingham/" },
   {
     "icon": "github",
-    "url": "https://github.com/rethwyll/portfolio-app"
+    "url": "https://github.com/rethwyll"
   },
-  { "icon": "instagram", "url": "https://www.instagram.com/rethwyll/" },
-  { "icon": "mastodon", "url": "https://wandering.shop/@rethwyll" }
+  { "icon": "linkedin", "url": "https://www.linkedin.com/in/aprilbingham/" }
 ]

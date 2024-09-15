@@ -8,20 +8,44 @@
   text-decoration: underline;
 }
 
+[data-theme="bluecalm"] a:hover {
+  cursor: pointer;
+}
+
 @media (prefers-reduced-motion: no-preference) {
   [data-theme="bluecalm"] a.animateable:hover {
-    background: linear-gradient(to right, #ffa000, #ffe082, #ffa000);
-    background-size: 300% auto;
-    color: transparent;
-    background-clip: text;
     -webkit-text-fill-color: transparent;
-    animation-name: link-animation;
+    animation-name: text-animation;
     animation-duration: 5s;
     animation-timing-function: linear;
     animation-iteration-count: infinite;
     animation-fill-mode: forwards;
+    background: linear-gradient(to right, #ffa000, #ffe082, #ffa000);
+    background-clip: text;
+    background-size: 300% auto;
+    color: transparent;
   }
-  @keyframes link-animation {
+  [data-theme="bluecalm"] #intro h2:hover {
+    -webkit-text-fill-color: transparent;
+    animation-duration: 5s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+    animation-name: text-animation;
+    animation-timing-function: linear;
+    background: linear-gradient(
+      45deg,
+      #d81b60,
+      #ffa000,
+      #ab47bc,
+      #d81b60,
+      #ab47bc
+    );
+    background-clip: text;
+    background-size: 300% auto;
+    cursor: pointer;
+  }
+
+  @keyframes text-animation {
     to {
       background-position: 300% center;
     }
@@ -165,6 +189,7 @@
 
 [data-theme="bluecalm"] #all-experience {
   justify-self: flex-end;
+  font-weight: 800;
 }
 
 [data-theme="bluecalm"] #contact {

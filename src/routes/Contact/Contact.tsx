@@ -17,15 +17,13 @@ import { useLocationStore } from "../../stores/locationStore";
 import {
   faFlickr,
   faGithub,
-  faInstagram,
-  faMastodon,
+  faLinkedin,
   IconDefinition
 } from "@fortawesome/free-brands-svg-icons";
 const iconMap = {
   flickr: faFlickr,
   github: faGithub,
-  instagram: faInstagram,
-  mastodon: faMastodon
+  linkedin: faLinkedin
 } as { [key: string]: IconDefinition };
 
 const Contact = (): ReactElement => {
