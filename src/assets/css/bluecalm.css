@@ -166,6 +166,10 @@
   grid-template-rows: 1fr min-content;
 }
 
+[data-theme="bluecalm"] #experience-list hr {
+  display: none;
+}
+
 [data-theme="bluecalm"] .experience-list-item {
   margin-bottom: 1.5em;
 }

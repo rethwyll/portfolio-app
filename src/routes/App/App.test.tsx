@@ -1,17 +1,40 @@
 import App from "./App";
 import { expect, it } from "vitest";
 import { render } from "@testing-library/react";
-import { MemoryRouter } from "react-router-dom";
-import TranslationProvider from "../../providers/TranslationProvider";
-import i18next from "i18next";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
 it("renders", async () => {
+  // Mock global window.open
+  vi.stubGlobal("scrollTo", vi.fn());
   const { queryByTestId } = render(
-    <MemoryRouter>
-      <TranslationProvider i18n={i18next}>
-        <App />
-      </TranslationProvider>
-    </MemoryRouter>
+    <RouterProvider
+      router={createBrowserRouter(
+        [
+          {
+            element: <App />,
+            children: [
+              {
+                path: "/",
+                element: <>home</>
+              },
+              {
+                path: "/experience",
+                element: <>experience</>
+              },
+              {
+                path: "/contact",
+                element: <>contact</>
+              },
+              {
+                path: "*",
+                element: <>error</>
+              }
+            ]
+          }
+        ],
+        { basename: import.meta.env.BASE_URL }
+      )}
+    />
   );
   expect(queryByTestId("app")).toBeTruthy();
 });

@@ -8,9 +8,7 @@ const Intro = () => {
   const { t } = useTranslation();
   return (
     <header id="intro" data-testid="intro">
-      <Typography variant="h2" color="secondary">
-        {t("name")}
-      </Typography>
+      <Typography variant="h2">{t("name")}</Typography>
       <Typography variant="body2">{t("intro")}</Typography>
     </header>
   );

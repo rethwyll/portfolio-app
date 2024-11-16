@@ -1,22 +1,14 @@
 import { createTheme } from "@mui/material/styles";
 import base from "./base";
 // https://mui.com/material-ui/customization/color/#2014-material-design-color-palettes
-import {
-  amber,
-  blue,
-  indigo,
-  lightGreen,
-  pink,
-  purple,
-  red
-} from "@mui/material/colors";
+import { grey, lightGreen, amber, red } from "@mui/material/colors";
 
-const bg = "#11111f";
-const primaryBase = blue[50];
-const primaryBaseDarker = indigo[200];
-const secondaryBase = pink[600];
-const tertiaryBase = purple[400];
-const errorBase = red[500];
+const bg = "#F3D549";
+const primaryBase = grey[900];
+const secondaryBase = red["A700"];
+// const tertiaryBase = red["A700"];
+const tertiaryBase = grey[900];
+const errorBase = red["A700"];
 const warningBase = amber[700];
 const infoBase = primaryBase;
 const successBase = lightGreen[500];
@@ -50,54 +42,59 @@ export default createTheme({
     tonalOffset: 0.3
   },
   typography: () => ({
-    fontFamily: "'Inter Tight', Roboto, sans-serif",
+    fontFamily: "'Roboto Slab', serif",
     h1: {
-      color: primaryBaseDarker,
-      fontFamily: "'Inter Tight', Roboto, sans-serif",
+      color: primaryBase,
+      fontFamily: "'Six Caps', cursive",
       fontSize: "3.375em", // 54px
-      fontWeight: 800,
+      fontWeight: 400,
       lineHeight: 1,
       margin: "0 0 .33333em" // 18px
     },
     h2: {
-      color: secondaryBase,
-      fontFamily: "'Inter Tight', Roboto, sans-serif",
-      fontSize: "12em", // 192px
-      fontWeight: 800,
-      lineHeight: 1.25,
-      margin: "0"
+      color: primaryBase,
+      fontFamily: "'Six Caps', cursive",
+      fontSize: "20em", // 320px
+      fontWeight: 400,
+      lineHeight: 0.75,
+      margin: "0 0 0.075em",
+      textTransform: "lowercase"
     },
     h3: {
       color: secondaryBase,
-      fontFamily: "'Inter Tight', Roboto, sans-serif",
+      fontFamily: "'Six Caps', cursive",
       fontSize: "4em", // 64px
-      fontWeight: 800,
+      fontWeight: 400,
       lineHeight: 1.5, // 96px
-      margin: "0"
+      margin: "0",
+      textTransform: "lowercase"
     },
     h4: {
       color: tertiaryBase,
-      fontFamily: "'Inter Tight', Roboto, sans-serif",
-      fontSize: "3em", // 48px
-      fontWeight: 800,
-      lineHeight: 1.5, // 72px
-      margin: "0" // 24px
+      fontFamily: "'Space Mono', monospace",
+      fontSize: "2em", // 32px
+      fontWeight: 600,
+      lineHeight: 1.5, // 48px
+      margin: "0", // 24px
+      textTransform: "uppercase"
     },
     h5: {
       color: tertiaryBase,
-      fontFamily: "'Inter Tight', Roboto, sans-serif",
+      fontFamily: "'Space Mono', monospace",
       fontSize: "1.5em", // 24px
       fontWeight: 400,
       lineHeight: 2, // 48px
-      margin: "0"
+      margin: "0",
+      textTransform: "uppercase"
     },
     h6: {
       color: primaryBase,
-      fontFamily: "'Inter Tight', Roboto, sans-serif",
+      fontFamily: "'Space Mono', monospace",
       fontSize: "1.5em", // 24px
       fontWeight: 400,
       lineHeight: 2, // 48px
-      margin: "0"
+      margin: "0",
+      textTransform: "uppercase"
     },
     body1: {
       color: primaryBase,
@@ -108,8 +105,9 @@ export default createTheme({
     },
     body2: {
       color: primaryBase,
+      fontFamily: "'Space Mono', monospace",
       fontSize: "1.5em", // 24px
-      fontWeight: 400,
+      fontWeight: 600,
       lineHeight: 2, // 48px
       margin: "0"
     }
@@ -120,20 +118,24 @@ export default createTheme({
         variant: "rounded"
       },
       styleOverrides: {
-        root: {
+        root: ({ theme }) => ({
+          boxShadow: `.2em .2em 0 ${theme.palette.primary.main}`,
           fontSize: "1em",
-          lineHeight: "1.5em"
-        },
+          lineHeight: "1.5em",
+          "&:hover": {
+            boxShadow: `0 0 0 ${theme.palette.primary.main}`
+          }
+        }),
         rounded: ({ theme }) => ({
           backgroundColor: theme.palette.secondary.main,
-          borderRadius: "50% 50%",
+          borderRadius: 0,
           color: theme.palette.secondary.contrastText,
           cursor: "pointer",
           height: "1.5em",
           padding: "0",
           width: "1.5em",
           "&:hover": {
-            backgroundColor: theme.palette.secondary.light
+            backgroundColor: theme.palette.secondary.dark
           }
         })
       }
@@ -150,16 +152,20 @@ export default createTheme({
         contained: ({ theme }) => ({
           color: theme.palette.getContrastText(theme.palette.secondary.main),
           backgroundColor: theme.palette.secondary.main,
+          borderRadius: 0,
+          boxShadow: `.2em .2em 0 ${theme.palette.primary.main}`,
           "&:hover": {
-            backgroundColor: theme.palette.secondary.dark
+            backgroundColor: theme.palette.secondary.dark,
+            boxShadow: `0 0 0 ${theme.palette.primary.main}`
           }
         }),
         outlined: ({ theme }) => ({
-          color: theme.palette.warning.main,
-          borderColor: theme.palette.warning.main,
+          color: theme.palette.error.main,
+          borderColor: theme.palette.error.main,
+          borderRadius: 0,
           "&:hover": {
-            color: theme.palette.warning.dark,
-            borderColor: theme.palette.warning.dark
+            color: theme.palette.error.dark,
+            borderColor: theme.palette.error.dark
           }
         })
       }
@@ -167,10 +173,10 @@ export default createTheme({
     MuiLink: {
       styleOverrides: {
         root: ({ theme }) => ({
-          color: theme.palette.warning.main,
-          textDecorationColor: theme.palette.warning.main,
+          color: theme.palette.error.main,
+          textDecorationColor: theme.palette.error.main,
           "&:hover": {
-            textDecorationColor: theme.palette.warning.main
+            textDecorationColor: theme.palette.error.main
           }
         })
       }
@@ -185,8 +191,9 @@ export default createTheme({
           color: theme.palette.secondary.main
         }),
         tooltip: ({ theme }) => ({
-          color: theme.palette.primary.main,
+          color: theme.palette.secondary.contrastText,
           backgroundColor: theme.palette.secondary.main,
+          borderRadius: 0,
           fontSize: "1em"
         })
       }

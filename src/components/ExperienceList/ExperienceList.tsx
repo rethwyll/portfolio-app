@@ -12,6 +12,7 @@ import data from "../../data/experience.json";
 // stores
 import { useSkillsStore } from "../../stores/skillsStore";
 import { useTranslation } from "react-i18next";
+import { Divider } from "@mui/material";
 
 // types
 type Props = {
@@ -34,6 +35,14 @@ const ExperienceList = ({ num }: Props): ReactElement | null => {
   );
   return (
     <div id="experience-list" data-testid="experience-list">
+      {num ? (
+        <header>
+          <Typography variant="h3">
+            {t("recent-experience", { ns: "experience" })}
+          </Typography>
+          <Divider />
+        </header>
+      ) : null}
       {listDisplay.length ? (
         <ul>{listDisplay}</ul>
       ) : (
