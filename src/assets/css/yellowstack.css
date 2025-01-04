@@ -2,18 +2,6 @@
   color-scheme: light;
 }
 
-[data-theme="yellowstack"] a {
-  color: #d50000;
-  text-decoration: underline;
-}
-
-[data-theme="yellowstack"] a:hover {
-  cursor: pointer;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-}
-
 [data-theme="yellowstack"] ul {
   list-style: none;
   margin: 0;
@@ -63,7 +51,6 @@
 
 [data-theme="yellowstack"] #all-experience {
   justify-self: flex-end;
-  font-weight: 800;
 }
 
 [data-theme="yellowstack"] #skills-filter {
@@ -97,4 +84,27 @@
   height: inherit;
   line-height: 1em;
   width: inherit;
+}
+
+@media screen {
+  [data-theme="yellowstack"] a {
+    color: #d50000;
+    text-decoration: underline;
+  }
+  [data-theme="yellowstack"] a:hover {
+    cursor: pointer;
+  }
+}
+
+@media print {
+  [data-theme="yellowstack"] #theme-switcher,
+  [data-theme="yellowstack"] #main-nav,
+  [data-theme="yellowstack"] #all-experience,
+  [data-theme="yellowstack"] #skills-filter,
+  [data-theme="yellowstack"] #education .college-url a svg {
+    display: none;
+  }
+  [data-theme="yellowstack"] .experience-skills-list-abbreviation {
+    display: none;
+  }
 }

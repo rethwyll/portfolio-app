@@ -42,7 +42,7 @@ const ExperienceListItem = ({ experienceItem }: Props) => {
             experienceItem.name
           )}
         </Typography>
-        <Typography className="experience-location" variant="body2">
+        <Typography component="h4" variant="subtitle1">
           {experienceItem.location}
         </Typography>
         <Typography variant="body2">
@@ -84,7 +84,12 @@ const ExperienceListItem = ({ experienceItem }: Props) => {
       <ul className="experience-skills-list">
         {sortedTranslatedSkills.map(s => (
           <Tooltip key={s} title={s}>
-            <Avatar variant="rounded">{s[0]}</Avatar>
+            <Avatar variant="rounded">
+              <span className="experience-skills-list-abbreviation">
+                {s.slice(0, 1)}
+              </span>
+              <span className="experience-skills-list-full">{s}</span>
+            </Avatar>
           </Tooltip>
         ))}
       </ul>

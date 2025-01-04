@@ -52,7 +52,9 @@ export default createTheme({
   typography: () => ({
     fontFamily: "'Inter Tight', Roboto, sans-serif",
     h1: {
-      color: primaryBaseDarker,
+      "@media screen": {
+        color: primaryBaseDarker
+      },
       fontFamily: "'Inter Tight', Roboto, sans-serif",
       fontSize: "3.375em", // 54px
       fontWeight: 800,
@@ -60,7 +62,9 @@ export default createTheme({
       margin: "0 0 .33333em" // 18px
     },
     h2: {
-      color: secondaryBase,
+      "@media screen": {
+        color: secondaryBase
+      },
       fontFamily: "'Inter Tight', Roboto, sans-serif",
       fontSize: "11em", // 176px
       fontWeight: 800,
@@ -68,7 +72,9 @@ export default createTheme({
       margin: "0"
     },
     h3: {
-      color: secondaryBase,
+      "@media screen": {
+        color: secondaryBase
+      },
       fontFamily: "'Inter Tight', Roboto, sans-serif",
       fontSize: "4em", // 64px
       fontWeight: 800,
@@ -76,7 +82,9 @@ export default createTheme({
       margin: "0"
     },
     h4: {
-      color: tertiaryBase,
+      "@media screen": {
+        color: tertiaryBase
+      },
       fontFamily: "'Inter Tight', Roboto, sans-serif",
       fontSize: "3em", // 48px
       fontWeight: 800,
@@ -84,7 +92,9 @@ export default createTheme({
       margin: "0" // 24px
     },
     h5: {
-      color: tertiaryBase,
+      "@media screen": {
+        color: tertiaryBase
+      },
       fontFamily: "'Inter Tight', Roboto, sans-serif",
       fontSize: "1.5em", // 24px
       fontWeight: 400,
@@ -92,7 +102,9 @@ export default createTheme({
       margin: "0"
     },
     h6: {
-      color: primaryBase,
+      "@media screen": {
+        color: primaryBase
+      },
       fontFamily: "'Inter Tight', Roboto, sans-serif",
       fontSize: "1.5em", // 24px
       fontWeight: 400,
@@ -100,16 +112,29 @@ export default createTheme({
       margin: "0"
     },
     body1: {
-      color: primaryBase,
+      "@media screen": {
+        color: primaryBase
+      },
       fontSize: "1.6rem", // 16px
       fontWeight: 400,
       lineHeight: 1.5, // 24px
       margin: "0"
     },
     body2: {
-      color: primaryBase,
+      "@media screen": {
+        color: primaryBase
+      },
       fontSize: "1.5em", // 24px
       fontWeight: 400,
+      lineHeight: 2, // 48px
+      margin: "0"
+    },
+    subtitle1: {
+      "@media screen": {
+        color: primaryBase
+      },
+      fontSize: "1.5em", // 24px
+      fontWeight: 800,
       lineHeight: 2, // 48px
       margin: "0"
     }
@@ -125,16 +150,26 @@ export default createTheme({
           lineHeight: "1.5em"
         },
         rounded: ({ theme }) => ({
-          backgroundColor: theme.palette.secondary.main,
-          borderRadius: "50% 50%",
-          color: theme.palette.secondary.contrastText,
+          "@media screen": {
+            backgroundColor: theme.palette.secondary.main,
+            borderRadius: "50% 50%",
+            color: theme.palette.secondary.contrastText,
+            height: "1.5em",
+            width: "1.5em",
+            "&:hover": {
+              backgroundColor: theme.palette.secondary.light
+            }
+          },
+          "@media print": {
+            backgroundColor: theme.palette.background.default,
+            color: theme.palette.getContrastText(
+              theme.palette.background.default
+            ),
+            padding: "0 1em",
+            width: "auto"
+          },
           cursor: "pointer",
-          height: "1.5em",
-          padding: "0",
-          width: "1.5em",
-          "&:hover": {
-            backgroundColor: theme.palette.secondary.light
-          }
+          padding: "0"
         })
       }
     },
@@ -148,18 +183,32 @@ export default createTheme({
           lineHeight: theme.typography.body1.lineHeight
         }),
         contained: ({ theme }) => ({
-          color: theme.palette.getContrastText(theme.palette.secondary.main),
-          backgroundColor: theme.palette.secondary.main,
-          "&:hover": {
-            backgroundColor: theme.palette.secondary.dark
+          "@media screen": {
+            color: theme.palette.getContrastText(theme.palette.secondary.main),
+            backgroundColor: theme.palette.secondary.main,
+            "&:hover": {
+              backgroundColor: theme.palette.secondary.dark
+            }
+          },
+          "@media print": {
+            color: theme.palette.getContrastText(
+              theme.palette.background.default
+            ),
+            backgroundColor: theme.palette.background.default
           }
         }),
         outlined: ({ theme }) => ({
-          color: theme.palette.warning.main,
-          borderColor: theme.palette.warning.main,
-          "&:hover": {
-            color: theme.palette.warning.dark,
-            borderColor: theme.palette.warning.dark
+          "@media screen": {
+            color: theme.palette.warning.main,
+            borderColor: theme.palette.warning.main,
+            "&:hover": {
+              color: theme.palette.warning.dark,
+              borderColor: theme.palette.warning.dark
+            }
+          },
+          "@media print": {
+            color: theme.palette.background.default,
+            borderColor: theme.palette.background.default
           }
         })
       }
@@ -167,10 +216,16 @@ export default createTheme({
     MuiLink: {
       styleOverrides: {
         root: ({ theme }) => ({
-          color: theme.palette.warning.main,
-          textDecorationColor: theme.palette.warning.main,
-          "&:hover": {
-            textDecorationColor: theme.palette.warning.main
+          "@media screen": {
+            color: theme.palette.warning.main,
+            textDecorationColor: theme.palette.warning.main,
+            "&:hover": {
+              textDecorationColor: theme.palette.warning.main
+            }
+          },
+          "@media print": {
+            color: theme.palette.background.default,
+            textDecoration: "none"
           }
         })
       }

@@ -53,7 +53,7 @@ const ExperienceList = ({ num }: Props): ReactElement | null => {
       {num ? (
         <Typography
           id="all-experience"
-          variant="body2"
+          variant="subtitle1"
           component="div"
           data-testid="all-experiences"
         >

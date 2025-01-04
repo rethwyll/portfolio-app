@@ -9,7 +9,9 @@ const Intro = () => {
   return (
     <header id="intro" data-testid="intro">
       <Typography variant="h2">{t("name")}</Typography>
-      <Typography variant="body2">{t("intro")}</Typography>
+      <Typography component="p" variant="subtitle1">
+        {t("intro")}
+      </Typography>
     </header>
   );
 };

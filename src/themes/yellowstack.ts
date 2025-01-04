@@ -44,7 +44,9 @@ export default createTheme({
   typography: () => ({
     fontFamily: "'Roboto Slab', serif",
     h1: {
-      color: primaryBase,
+      "@media screen": {
+        color: primaryBase
+      },
       fontFamily: "'Six Caps', cursive",
       fontSize: "3.375em", // 54px
       fontWeight: 400,
@@ -52,7 +54,9 @@ export default createTheme({
       margin: "0 0 .33333em" // 18px
     },
     h2: {
-      color: primaryBase,
+      "@media screen": {
+        color: primaryBase
+      },
       fontFamily: "'Six Caps', cursive",
       fontSize: "20em", // 320px
       fontWeight: 400,
@@ -61,7 +65,9 @@ export default createTheme({
       textTransform: "lowercase"
     },
     h3: {
-      color: secondaryBase,
+      "@media screen": {
+        color: secondaryBase
+      },
       fontFamily: "'Six Caps', cursive",
       fontSize: "4em", // 64px
       fontWeight: 400,
@@ -70,7 +76,9 @@ export default createTheme({
       textTransform: "lowercase"
     },
     h4: {
-      color: tertiaryBase,
+      "@media screen": {
+        color: tertiaryBase
+      },
       fontFamily: "'Space Mono', monospace",
       fontSize: "2em", // 32px
       fontWeight: 600,
@@ -79,7 +87,9 @@ export default createTheme({
       textTransform: "uppercase"
     },
     h5: {
-      color: tertiaryBase,
+      "@media screen": {
+        color: tertiaryBase
+      },
       fontFamily: "'Space Mono', monospace",
       fontSize: "1.5em", // 24px
       fontWeight: 400,
@@ -88,7 +98,9 @@ export default createTheme({
       textTransform: "uppercase"
     },
     h6: {
-      color: primaryBase,
+      "@media screen": {
+        color: tertiaryBase
+      },
       fontFamily: "'Space Mono', monospace",
       fontSize: "1.5em", // 24px
       fontWeight: 400,
@@ -97,17 +109,31 @@ export default createTheme({
       textTransform: "uppercase"
     },
     body1: {
-      color: primaryBase,
+      "@media screen": {
+        color: primaryBase
+      },
       fontSize: "1.6rem", // 16px
       fontWeight: 400,
       lineHeight: 1.5, // 24px
       margin: "0"
     },
     body2: {
-      color: primaryBase,
+      "@media screen": {
+        color: primaryBase
+      },
       fontFamily: "'Space Mono', monospace",
       fontSize: "1.5em", // 24px
       fontWeight: 600,
+      lineHeight: 2, // 48px
+      margin: "0"
+    },
+    subtitle1: {
+      "@media screen": {
+        color: primaryBase
+      },
+      fontFamily: "'Space Mono', monospace",
+      fontSize: "1.5em", // 24px
+      fontWeight: 800,
       lineHeight: 2, // 48px
       margin: "0"
     }
@@ -119,24 +145,34 @@ export default createTheme({
       },
       styleOverrides: {
         root: ({ theme }) => ({
-          boxShadow: `.2em .2em 0 ${theme.palette.primary.main}`,
+          "@media screen": {
+            boxShadow: `.2em .2em 0 ${theme.palette.primary.main}`,
+            "&:hover": {
+              boxShadow: `0 0 0 ${theme.palette.primary.main}`
+            }
+          },
           fontSize: "1em",
-          lineHeight: "1.5em",
-          "&:hover": {
-            boxShadow: `0 0 0 ${theme.palette.primary.main}`
-          }
+          lineHeight: "1.5em"
         }),
         rounded: ({ theme }) => ({
-          backgroundColor: theme.palette.secondary.main,
+          "@media screen": {
+            backgroundColor: theme.palette.secondary.main,
+            color: theme.palette.secondary.contrastText,
+            "&:hover": {
+              backgroundColor: theme.palette.secondary.dark
+            }
+          },
+          "@media print": {
+            backgroundColor: primaryBase,
+            color: theme.palette.getContrastText(primaryBase),
+            padding: "0 1em",
+            width: "auto"
+          },
           borderRadius: 0,
-          color: theme.palette.secondary.contrastText,
           cursor: "pointer",
           height: "1.5em",
           padding: "0",
-          width: "1.5em",
-          "&:hover": {
-            backgroundColor: theme.palette.secondary.dark
-          }
+          width: "1.5em"
         })
       }
     },
@@ -150,22 +186,34 @@ export default createTheme({
           lineHeight: theme.typography.body1.lineHeight
         }),
         contained: ({ theme }) => ({
-          color: theme.palette.getContrastText(theme.palette.secondary.main),
-          backgroundColor: theme.palette.secondary.main,
           borderRadius: 0,
-          boxShadow: `.2em .2em 0 ${theme.palette.primary.main}`,
-          "&:hover": {
-            backgroundColor: theme.palette.secondary.dark,
-            boxShadow: `0 0 0 ${theme.palette.primary.main}`
+          "@media screen": {
+            color: theme.palette.getContrastText(theme.palette.secondary.main),
+            backgroundColor: theme.palette.secondary.main,
+            boxShadow: `.2em .2em 0 ${theme.palette.primary.main}`,
+            "&:hover": {
+              backgroundColor: theme.palette.secondary.dark,
+              boxShadow: `0 0 0 ${theme.palette.primary.main}`
+            }
+          },
+          "@media print": {
+            color: theme.palette.getContrastText(primaryBase),
+            backgroundColor: primaryBase
           }
         }),
         outlined: ({ theme }) => ({
-          color: theme.palette.error.main,
-          borderColor: theme.palette.error.main,
           borderRadius: 0,
-          "&:hover": {
-            color: theme.palette.error.dark,
-            borderColor: theme.palette.error.dark
+          "@media screen": {
+            color: theme.palette.error.main,
+            borderColor: theme.palette.error.main,
+            "&:hover": {
+              color: theme.palette.error.dark,
+              borderColor: theme.palette.error.dark
+            }
+          },
+          "@media print": {
+            color: theme.palette.getContrastText(primaryBase),
+            backgroundColor: primaryBase
           }
         })
       }
@@ -173,10 +221,16 @@ export default createTheme({
     MuiLink: {
       styleOverrides: {
         root: ({ theme }) => ({
-          color: theme.palette.error.main,
-          textDecorationColor: theme.palette.error.main,
-          "&:hover": {
-            textDecorationColor: theme.palette.error.main
+          "@media screen": {
+            color: theme.palette.error.main,
+            textDecorationColor: theme.palette.error.main,
+            "&:hover": {
+              textDecorationColor: theme.palette.error.main
+            }
+          },
+          "@media print": {
+            color: primaryBase,
+            textDecoration: "none"
           }
         })
       }
