@@ -62,9 +62,9 @@ export default createTheme({
     h2: {
       color: secondaryBase,
       fontFamily: "'Inter Tight', Roboto, sans-serif",
-      fontSize: "12em", // 192px
+      fontSize: "11em", // 176px
       fontWeight: 800,
-      lineHeight: 1.25,
+      lineHeight: 1.227,
       margin: "0"
     },
     h3: {
@@ -72,7 +72,7 @@ export default createTheme({
       fontFamily: "'Inter Tight', Roboto, sans-serif",
       fontSize: "4em", // 64px
       fontWeight: 800,
-      lineHeight: 1.5, // 96px
+      lineHeight: 1.125, // 72px
       margin: "0"
     },
     h4: {
