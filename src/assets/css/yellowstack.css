@@ -10,7 +10,7 @@
 
 [data-theme="yellowstack"] #main {
   display: grid;
-  grid-template-columns: 40em 1fr;
+  grid-template-columns: 1fr;
   margin-top: 6em;
 }
 
@@ -28,10 +28,6 @@
   display: inline-flex;
   flex-flow: row nowrap;
   gap: 0.4em;
-}
-
-[data-theme="yellowstack"] #education .college-url a svg {
-  font-size: 0.8em;
 }
 
 [data-theme="yellowstack"] .experience-list-item ul {
@@ -79,13 +75,6 @@
   width: 1.5em;
 }
 
-[data-theme="yellowstack"] #contact-socials svg {
-  font-size: 1.5em;
-  height: inherit;
-  line-height: 1em;
-  width: inherit;
-}
-
 @media screen {
   [data-theme="yellowstack"] a {
     color: #d50000;
@@ -93,6 +82,18 @@
   }
   [data-theme="yellowstack"] a:hover {
     cursor: pointer;
+  }
+  [data-theme="yellowstack"] #education .college-url a svg {
+    font-size: 0.8em;
+  }
+  [data-theme="yellowstack"] #contact-socials svg {
+    font-size: 1.5em;
+    height: inherit;
+    line-height: 1em;
+    width: inherit;
+  }
+  [data-theme="yellowstack"] .experience-skills-list-full {
+    display: none;
   }
 }
 
@@ -106,5 +107,13 @@
   }
   [data-theme="yellowstack"] .experience-skills-list-abbreviation {
     display: none;
+  }
+}
+
+@media screen and (min-width: 900px) {
+  [data-theme="yellowstack"] #main {
+    display: grid;
+    grid-template-columns: 40em 1fr;
+    margin-top: 6em;
   }
 }

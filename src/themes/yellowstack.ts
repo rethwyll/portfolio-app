@@ -44,98 +44,104 @@ export default createTheme({
   typography: () => ({
     fontFamily: "'Roboto Slab', serif",
     h1: {
-      "@media screen": {
-        color: primaryBase
-      },
       fontFamily: "'Six Caps', cursive",
       fontSize: "3.375em", // 54px
       fontWeight: 400,
       lineHeight: 1,
-      margin: "0 0 .33333em" // 18px
-    },
-    h2: {
+      margin: "0 0 .33333em", // 18px
       "@media screen": {
         color: primaryBase
-      },
+      }
+    },
+    h2: {
       fontFamily: "'Six Caps', cursive",
-      fontSize: "20em", // 320px
+      fontSize: "13em", // 208px
       fontWeight: 400,
-      lineHeight: 0.75,
+      lineHeight: 0.80769,
       margin: "0 0 0.075em",
-      textTransform: "lowercase"
+      textTransform: "lowercase",
+      wordBreak: "break-all",
+      "@media screen": {
+        color: primaryBase,
+        [base.breakpoints.up("md")]: {
+          fontSize: "20em", // 320px
+          lineHeight: 0.75,
+          wordBreak: "initial"
+        }
+      }
     },
     h3: {
-      "@media screen": {
-        color: secondaryBase
-      },
       fontFamily: "'Six Caps', cursive",
       fontSize: "4em", // 64px
       fontWeight: 400,
       lineHeight: 1.5, // 96px
       margin: "0",
-      textTransform: "lowercase"
+      textTransform: "lowercase",
+      "@media screen": {
+        color: secondaryBase
+      }
     },
     h4: {
-      "@media screen": {
-        color: tertiaryBase
-      },
       fontFamily: "'Space Mono', monospace",
       fontSize: "2em", // 32px
       fontWeight: 600,
       lineHeight: 1.5, // 48px
       margin: "0", // 24px
-      textTransform: "uppercase"
+      textTransform: "uppercase",
+      "@media screen": {
+        color: tertiaryBase
+      }
     },
     h5: {
-      "@media screen": {
-        color: tertiaryBase
-      },
       fontFamily: "'Space Mono', monospace",
       fontSize: "1.5em", // 24px
       fontWeight: 400,
       lineHeight: 2, // 48px
       margin: "0",
-      textTransform: "uppercase"
+      textTransform: "uppercase",
+      "@media screen": {
+        color: tertiaryBase
+      }
     },
     h6: {
-      "@media screen": {
-        color: tertiaryBase
-      },
       fontFamily: "'Space Mono', monospace",
       fontSize: "1.5em", // 24px
       fontWeight: 400,
       lineHeight: 2, // 48px
       margin: "0",
-      textTransform: "uppercase"
+      textTransform: "uppercase",
+      "@media screen": {
+        color: tertiaryBase
+      }
     },
     body1: {
-      "@media screen": {
-        color: primaryBase
-      },
       fontSize: "1.6rem", // 16px
       fontWeight: 400,
       lineHeight: 1.5, // 24px
-      margin: "0"
-    },
-    body2: {
+      margin: "0",
       "@media screen": {
         color: primaryBase
-      },
+      }
+    },
+    body2: {
       fontFamily: "'Space Mono', monospace",
       fontSize: "1.5em", // 24px
       fontWeight: 600,
       lineHeight: 2, // 48px
-      margin: "0"
-    },
-    subtitle1: {
+      margin: "0",
       "@media screen": {
         color: primaryBase
-      },
+      }
+    },
+    subtitle1: {
       fontFamily: "'Space Mono', monospace",
       fontSize: "1.5em", // 24px
       fontWeight: 800,
       lineHeight: 2, // 48px
-      margin: "0"
+      margin: "0",
+      "@media screen": {
+        color: primaryBase
+      }
     }
   }),
   components: {

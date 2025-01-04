@@ -11,6 +11,7 @@ import { useTranslation } from "react-i18next";
 // types
 import { ExperienceItem } from "../../types/experience";
 import { Avatar, Tooltip } from "@mui/material";
+import { useMemo } from "react";
 
 type Props = {
   experienceItem: ExperienceItem;
@@ -18,9 +19,10 @@ type Props = {
 
 const ExperienceListItem = ({ experienceItem }: Props) => {
   const { t } = useTranslation();
-  const sortedTranslatedSkills = experienceItem.skills
-    .map(s => t(s, { ns: "skills" }))
-    .sort();
+  const sortedTranslatedSkills = useMemo(
+    () => experienceItem.skills.map(s => t(s, { ns: "skills" })).sort(),
+    [experienceItem.skills, t]
+  );
   return (
     <li
       className="experience-list-item"
