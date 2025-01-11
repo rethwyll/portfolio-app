@@ -1,9 +1,6 @@
 import { ReactElement } from "react";
 import { styled } from "@mui/material/styles";
 
-// hooks
-import { useTranslation } from "react-i18next";
-
 // styled components
 const Input = styled("input")`
   width: 100%;
@@ -19,12 +16,11 @@ export type Props = {
   themes: ThemeStoreState["allThemes"];
 };
 const ThemeSwitcher = ({ themes }: Props): ReactElement | null => {
-  const { t } = useTranslation();
   const { theme: currentTheme, updateTheme } = useThemeStore();
 
   return themes.length >= 2 ? (
     <div id="theme-switcher" data-testid="theme-switcher">
-      <p>{t("current-theme", { theme: currentTheme })}</p>
+      {/*<p>{t("current-theme", { theme: currentTheme })}</p> */}
       <Input
         type="range"
         id="switcher"
