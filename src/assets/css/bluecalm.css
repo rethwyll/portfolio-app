@@ -149,25 +149,73 @@
   justify-items: center;
 }
 
-@media screen {
-  [data-theme="bluecalm"] a {
+[data-theme="bluecalm"] a {
+  color: #ffa000;
+  text-decoration: underline;
+}
+
+[data-theme="bluecalm"] a:hover {
+  cursor: pointer;
+}
+
+[data-theme="bluecalm"] #app-header nav a {
+  color: #8c5800;
+
+  &.active {
     color: #ffa000;
-    text-decoration: underline;
   }
+}
 
-  [data-theme="bluecalm"] a:hover {
-    cursor: pointer;
+[data-theme="bluecalm"] #intro h2 {
+  background: linear-gradient(
+    45deg,
+    #d81b60,
+    #ffa000,
+    #ab47bc,
+    #d81b60,
+    #ab47bc
+  );
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+[data-theme="bluecalm"] #education .college-url a svg {
+  font-size: 0.8em;
+}
+
+[data-theme="bluecalm"] #contact-socials svg {
+  font-size: 1.5em;
+  height: inherit;
+  line-height: 1em;
+  width: inherit;
+}
+[data-theme="bluecalm"] .experience-skills-list-full {
+  display: none;
+}
+[data-theme="bluecalm"] #intro p {
+  margin-top: -3em;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  [data-theme="bluecalm"] a.animateable:hover {
+    -webkit-text-fill-color: transparent;
+    animation-name: text-animation;
+    animation-duration: 5s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-fill-mode: forwards;
+    background: linear-gradient(to right, #ffa000, #ffe082, #ffa000);
+    background-clip: text;
+    background-size: 300% auto;
+    /* color: transparent; */
   }
-
-  [data-theme="bluecalm"] #app-header nav a {
-    color: #8c5800;
-
-    &.active {
-      color: #ffa000;
-    }
-  }
-
-  [data-theme="bluecalm"] #intro h2 {
+  [data-theme="bluecalm"] #intro h2:hover {
+    -webkit-text-fill-color: transparent;
+    animation-duration: 5s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+    animation-name: text-animation;
+    animation-timing-function: linear;
     background: linear-gradient(
       45deg,
       #d81b60,
@@ -177,80 +225,14 @@
       #ab47bc
     );
     background-clip: text;
-    -webkit-text-fill-color: transparent;
+    background-size: 300% auto;
+    cursor: pointer;
   }
 
-  [data-theme="bluecalm"] #education .college-url a svg {
-    font-size: 0.8em;
-  }
-
-  [data-theme="bluecalm"] #contact-socials svg {
-    font-size: 1.5em;
-    height: inherit;
-    line-height: 1em;
-    width: inherit;
-  }
-  [data-theme="bluecalm"] .experience-skills-list-full {
-    display: none;
-  }
-  [data-theme="bluecalm"] #intro p {
-    margin-top: -3em;
-  }
-
-  @media (prefers-reduced-motion: no-preference) {
-    [data-theme="bluecalm"] a.animateable:hover {
-      -webkit-text-fill-color: transparent;
-      animation-name: text-animation;
-      animation-duration: 5s;
-      animation-timing-function: linear;
-      animation-iteration-count: infinite;
-      animation-fill-mode: forwards;
-      background: linear-gradient(to right, #ffa000, #ffe082, #ffa000);
-      background-clip: text;
-      background-size: 300% auto;
-      /* color: transparent; */
+  @keyframes text-animation {
+    to {
+      background-position: 300% center;
     }
-    [data-theme="bluecalm"] #intro h2:hover {
-      -webkit-text-fill-color: transparent;
-      animation-duration: 5s;
-      animation-fill-mode: forwards;
-      animation-iteration-count: infinite;
-      animation-name: text-animation;
-      animation-timing-function: linear;
-      background: linear-gradient(
-        45deg,
-        #d81b60,
-        #ffa000,
-        #ab47bc,
-        #d81b60,
-        #ab47bc
-      );
-      background-clip: text;
-      background-size: 300% auto;
-      cursor: pointer;
-    }
-
-    @keyframes text-animation {
-      to {
-        background-position: 300% center;
-      }
-    }
-  }
-}
-
-@media print {
-  [data-theme="bluecalm"] #theme-switcher,
-  [data-theme="bluecalm"] #main-nav,
-  [data-theme="bluecalm"] #all-experience,
-  [data-theme="bluecalm"] #skills-filter,
-  [data-theme="bluecalm"] #education .college-url a svg {
-    display: none;
-  }
-  [data-theme="bluecalm"] .experience-skills-list {
-    flex-wrap: wrap;
-  }
-  [data-theme="bluecalm"] .experience-skills-list-abbreviation {
-    display: none;
   }
 }
 

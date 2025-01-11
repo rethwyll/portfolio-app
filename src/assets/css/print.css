@@ -1,0 +1,100 @@
+@media print {
+  main {
+    margin: 0 !important;
+  }
+
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  dt,
+  .MuiTypography-body1,
+  .MuiTypography-body2,
+  .MuiTypography-subtitle1 {
+    -webkit-text-fill-color: unset !important;
+    color: black !important;
+    font-family: "Inter Tight", Roboto, sans-serif !important;
+    margin: 0 !important;
+    text-transform: none !important;
+    word-break: break-word !important;
+  }
+
+  h2 {
+    background: transparent !important;
+    font-size: 8em !important;
+    font-weight: 800 !important;
+    line-height: 1.3125 !important;
+  }
+
+  h3 {
+    font-size: 3em !important;
+    font-weight: 800 !important;
+    line-height: 1.5 !important;
+  }
+
+  h4 {
+    font-size: 2.5em !important;
+    font-weight: 800 !important;
+    line-height: 1.2 !important;
+  }
+  h5 {
+    font-size: 1.5em !important;
+    font-weight: 400 !important;
+    line-height: 2 !important;
+  }
+
+  h6 {
+    font-size: 1.5em !important;
+    font-weight: 400 !important;
+    line-height: 2 !important;
+  }
+  .MuiTypography-body1 {
+    font-size: 1.6rem !important;
+    font-weight: 400 !important;
+    line-height: 1.5 !important;
+  }
+  .MuiTypography-body2 {
+    font-size: 1.5em !important;
+    font-weight: 400 !important;
+    line-height: 2 !important;
+  }
+  .MuiTypography-subtitle1 {
+    font-size: 1.5em !important;
+    font-weight: 800 !important;
+    line-height: 2 !important;
+  }
+  .MuiAvatar-root {
+    color: white !important;
+    font-family: "Inter Tight", Roboto, sans-serif !important;
+  }
+
+  a {
+    color: black !important;
+    text-decoration: none !important;
+  }
+
+  h1,
+  #theme-switcher,
+  #main-nav,
+  #all-experience,
+  #skills-filter,
+  #education .college-url a svg {
+    display: none !important;
+  }
+  #keywords ul {
+    display: flex;
+    flex-flow: row wrap;
+    gap: 1.5em;
+    list-style-type: none;
+  }
+  .experience-skills-list {
+    flex-wrap: wrap !important;
+  }
+  .experience-skills-list-abbreviation {
+    display: none !important;
+  }
+  .experience-skills-list-full {
+    display: block !important;
+  }
+}
