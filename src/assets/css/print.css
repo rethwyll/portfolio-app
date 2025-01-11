@@ -1,3 +1,122 @@
+[data-theme="print"] {
+  color-scheme: light;
+
+  a {
+    color: #000;
+  }
+
+  a:hover {
+    cursor: pointer;
+  }
+
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  #main {
+    display: grid;
+    grid-template-columns: 1fr;
+    margin-top: 6em;
+  }
+
+  #home {
+    display: grid;
+    gap: 1.5em;
+    grid-template-columns: 1fr;
+  }
+
+  #home aside {
+    grid-row: 2 / 3;
+  }
+
+  #home aside section + section {
+    margin: 1.5em 0 0;
+  }
+
+  #education .college-url a {
+    align-items: baseline;
+    display: inline-flex;
+    flex-flow: row nowrap;
+    gap: 0.4em;
+  }
+
+  #experience-list header {
+    margin-bottom: 1.5em;
+  }
+
+  .experience-list-item ul {
+    list-style: initial;
+    list-style-position: inside;
+    list-style-type: square;
+    padding: initial;
+  }
+
+  .experience-skills-list {
+    align-items: baseline;
+    display: flex;
+    gap: 0.5em;
+    justify-content: flex-start;
+    margin: 1.5em 0;
+  }
+
+  #all-experience {
+    display: none;
+  }
+
+  #skills-filter {
+    display: flex;
+    flex-flow: row wrap;
+    gap: 1em;
+    list-style: none;
+    margin: 1.5em 0;
+    padding: 0;
+  }
+
+  #contact-socials {
+    align-items: baseline;
+    display: flex;
+    gap: 1em;
+    margin-top: 1.5em;
+  }
+
+  #contact-socials li {
+    margin: 0;
+  }
+
+  #contact-socials a {
+    display: block;
+    height: 1.5em;
+    width: 1.5em;
+  }
+
+  #education .college-url a svg {
+    font-size: 0.8em;
+  }
+
+  #contact-socials svg {
+    font-size: 1.5em;
+    height: inherit;
+    line-height: 1em;
+    width: inherit;
+  }
+  .experience-skills-list-abbreviation {
+    display: none !important;
+  }
+  .experience-skills-list-full {
+    display: block !important;
+  }
+}
+
+@media screen and (min-width: 900px) {
+  [data-theme="print"] {
+    #main {
+      width: 75%;
+    }
+  }
+}
+
 @media print {
   main {
     margin: 0 !important;
@@ -14,64 +133,52 @@
   .MuiTypography-subtitle1 {
     -webkit-text-fill-color: unset !important;
     color: black !important;
-    font-family: "Inter Tight", Roboto, sans-serif !important;
+    font-family: "Noto Serif", serif !important;
     margin: 0 !important;
     text-transform: none !important;
     word-break: break-word !important;
   }
 
   h2 {
-    background: transparent !important;
-    font-size: 8em !important;
-    font-weight: 800 !important;
-    line-height: 1.3125 !important;
-  }
-
-  h3 {
-    font-size: 3em !important;
-    font-weight: 800 !important;
-    line-height: 1.5 !important;
-  }
-
-  h4 {
     font-size: 2.5em !important;
     font-weight: 800 !important;
     line-height: 1.2 !important;
   }
-  h5 {
-    font-size: 1.5em !important;
-    font-weight: 400 !important;
-    line-height: 2 !important;
-  }
 
-  h6 {
-    font-size: 1.5em !important;
-    font-weight: 400 !important;
-    line-height: 2 !important;
-  }
-  .MuiTypography-body1 {
-    font-size: 1.6rem !important;
-    font-weight: 400 !important;
-    line-height: 1.5 !important;
-  }
-  .MuiTypography-body2 {
-    font-size: 1.5em !important;
-    font-weight: 400 !important;
-    line-height: 2 !important;
-  }
-  .MuiTypography-subtitle1 {
+  h3,
+  h4 {
     font-size: 1.5em !important;
     font-weight: 800 !important;
-    line-height: 2 !important;
+    line-height: 1 !important;
   }
-  .MuiAvatar-root {
-    color: white !important;
-    font-family: "Inter Tight", Roboto, sans-serif !important;
+
+  h5,
+  h6,
+  dt,
+  .MuiTypography-body1,
+  .MuiTypography-body2,
+  .MuiTypography-subtitle1 {
+    font-size: 1.125em !important;
+    font-weight: 400 !important;
+    line-height: 1.333 !important;
+  }
+
+  dt {
+    font-weight: 800 !important;
+    line-height: 2.666 !important;
   }
 
   a {
     color: black !important;
     text-decoration: none !important;
+  }
+
+  #experience-list header {
+    margin-bottom: 1.5em !important;
+  }
+
+  .experience-list-item h4 {
+    line-height: 2 !important;
   }
 
   h1,
@@ -91,10 +198,18 @@
   .experience-skills-list {
     flex-wrap: wrap !important;
   }
+
+  .experience-skills-list > div {
+    background-color: black !important;
+    font-family: "Noto Serif", serif !important;
+    color: black !important;
+  }
+
   .experience-skills-list-abbreviation {
     display: none !important;
   }
   .experience-skills-list-full {
+    color: white !important;
     display: block !important;
   }
 }

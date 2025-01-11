@@ -52,132 +52,112 @@ export default createTheme({
   typography: () => ({
     fontFamily: "'Inter Tight', Roboto, sans-serif",
     h1: {
+      ...base.typography.h1,
+      color: primaryBaseDarker,
       fontFamily: "'Inter Tight', Roboto, sans-serif",
-      fontSize: "3.375em", // 54px
       fontWeight: 800,
-      lineHeight: 1,
-      margin: "0 0 .33333em", // 18px
       wordBreak: "break-word",
-      "@media screen": {
-        color: primaryBaseDarker,
-        [base.breakpoints.up("md")]: {
-          wordBreak: "initial"
-        }
+      [base.breakpoints.up("md")]: {
+        wordBreak: "initial"
       }
     },
     h2: {
+      color: secondaryBase,
       fontFamily: "'Inter Tight', Roboto, sans-serif",
       fontSize: "8em", // 128px
       fontWeight: 800,
       lineHeight: 1.3125,
       margin: "0",
       wordBreak: "break-word",
-      "@media screen": {
-        color: secondaryBase,
-        [base.breakpoints.up("md")]: {
-          fontSize: "11em", // 176px
-          lineHeight: 1.227,
-          wordBreak: "initial"
-        }
+      [base.breakpoints.up("md")]: {
+        fontSize: "11em", // 176px
+        lineHeight: 1.227,
+        wordBreak: "initial"
       }
     },
     h3: {
+      color: secondaryBase,
       fontFamily: "'Inter Tight', Roboto, sans-serif",
       fontSize: "3em", // 48px
       fontWeight: 800,
       lineHeight: 1.5,
       margin: "0",
       wordBreak: "break-word",
-      "@media screen": {
-        color: secondaryBase,
-        [base.breakpoints.up("md")]: {
-          fontSize: "4em", // 64px
-          lineHeight: 1.125, // 72px
-          wordBreak: "initial"
-        }
+      [base.breakpoints.up("md")]: {
+        fontSize: "4em", // 64px
+        lineHeight: 1.125, // 72px
+        wordBreak: "initial"
       }
     },
     h4: {
+      color: tertiaryBase,
       fontFamily: "'Inter Tight', Roboto, sans-serif",
       fontSize: "2.5em", // 40px
       fontWeight: 800,
       lineHeight: 1.2, // 48px
       margin: "0", // 24px
       wordBreak: "break-word",
-      "@media screen": {
-        color: tertiaryBase,
-        [base.breakpoints.up("md")]: {
-          fontSize: "3em", // 48px
-          lineHeight: 1.5, // 72px
-          wordBreak: "initial"
-        }
+      [base.breakpoints.up("md")]: {
+        fontSize: "3em", // 48px
+        lineHeight: 1.5, // 72px
+        wordBreak: "initial"
       }
     },
     h5: {
+      color: tertiaryBase,
       fontFamily: "'Inter Tight', Roboto, sans-serif",
       fontSize: "1.5em", // 24px
       fontWeight: 400,
       lineHeight: 2, // 48px
       margin: "0",
       wordBreak: "break-word",
-      "@media screen": {
-        color: tertiaryBase,
-        [base.breakpoints.up("md")]: {
-          wordBreak: "initial"
-        }
+      [base.breakpoints.up("md")]: {
+        wordBreak: "initial"
       }
     },
     h6: {
+      color: primaryBase,
       fontFamily: "'Inter Tight', Roboto, sans-serif",
       fontSize: "1.5em", // 24px
       fontWeight: 400,
       lineHeight: 2, // 48px
       margin: "0",
       wordBreak: "break-word",
-      "@media screen": {
-        color: primaryBase,
-        [base.breakpoints.up("md")]: {
-          wordBreak: "initial"
-        }
+      [base.breakpoints.up("md")]: {
+        wordBreak: "initial"
       }
     },
     body1: {
+      color: primaryBase,
       fontSize: "1.6rem", // 16px
       fontWeight: 400,
       lineHeight: 1.5, // 24px
       margin: "0",
       wordBreak: "break-word",
-      "@media screen": {
-        color: primaryBase,
-        [base.breakpoints.up("md")]: {
-          wordBreak: "initial"
-        }
+      [base.breakpoints.up("md")]: {
+        wordBreak: "initial"
       }
     },
     body2: {
+      color: primaryBase,
       fontSize: "1.5em", // 24px
       fontWeight: 400,
       lineHeight: 2, // 48px
       margin: "0",
       wordBreak: "break-word",
-      "@media screen": {
-        color: primaryBase,
-        [base.breakpoints.up("md")]: {
-          wordBreak: "initial"
-        }
+      [base.breakpoints.up("md")]: {
+        wordBreak: "initial"
       }
     },
     subtitle1: {
+      color: primaryBase,
       fontSize: "1.5em", // 24px
       fontWeight: 800,
       lineHeight: 2, // 48px
       margin: "0",
       wordBreak: "break-word",
-      "@media screen": {
-        color: primaryBase,
-        [base.breakpoints.up("md")]: {
-          wordBreak: "initial"
-        }
+      [base.breakpoints.up("md")]: {
+        wordBreak: "initial"
       }
     }
   }),

@@ -38,7 +38,9 @@ const ExperienceList = ({ num }: Props): ReactElement | null => {
       {num ? (
         <header>
           <Typography variant="h3">
-            {t("recent-experience", { ns: "experience" })}
+            {t(num === data.length ? "all-experience" : "recent-experience", {
+              ns: "experience"
+            })}
           </Typography>
           <Divider />
         </header>
