@@ -42,16 +42,16 @@ export default createTheme({
     tonalOffset: 0.3
   },
   typography: () => ({
-    fontFamily: "'Roboto Slab', serif",
+    fontFamily: "'Roboto Slab', sans-serif",
     h1: {
       ...base.typography.h1,
       color: primaryBase,
-      fontFamily: "'Six Caps', cursive",
+      fontFamily: "'Six Caps', sans-serif",
       fontWeight: 400
     },
     h2: {
       color: primaryBase,
-      fontFamily: "'Six Caps', cursive",
+      fontFamily: "'Six Caps', sans-serif",
       fontSize: "13em", // 208px
       fontWeight: 400,
       lineHeight: 0.80769,
@@ -66,7 +66,7 @@ export default createTheme({
     },
     h3: {
       color: secondaryBase,
-      fontFamily: "'Six Caps', cursive",
+      fontFamily: "'Six Caps', sans-serif",
       fontSize: "4em", // 64px
       fontWeight: 400,
       lineHeight: 1.5, // 96px

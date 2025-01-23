@@ -1,8 +1,18 @@
+import { styled } from "@mui/material/styles";
 import { PropsWithChildren, Suspense } from "react";
 import i18next from "i18next";
 import { I18nextProvider, I18nextProviderProps } from "react-i18next";
 import backend, { HttpBackendOptions } from "i18next-http-backend";
 import { initReactI18next } from "react-i18next";
+import { CircularProgress } from "@mui/material";
+
+const Container = styled("div")`
+  align-items: center;
+  display: grid;
+  height: 100vh;
+  justify-content: center;
+  width: 100vw;
+`;
 
 i18next
   .use(backend)
@@ -33,7 +43,15 @@ type Props = { i18n?: I18nextProviderProps["i18n"] } & PropsWithChildren;
 const TranslationProvider = ({ children, i18n = i18next }: Props) => {
   return (
     <I18nextProvider i18n={i18n}>
-      <Suspense fallback="loading">{children}</Suspense>
+      <Suspense
+        fallback={
+          <Container>
+            <CircularProgress />
+          </Container>
+        }
+      >
+        {children}
+      </Suspense>
     </I18nextProvider>
   );
 };
