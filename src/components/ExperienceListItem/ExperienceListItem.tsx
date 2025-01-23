@@ -12,6 +12,8 @@ import { useTranslation } from "react-i18next";
 import { ExperienceItem } from "../../types/experience";
 import { Avatar, Tooltip } from "@mui/material";
 import { useMemo } from "react";
+import { skills } from "../../constants";
+import { kebabCase } from "lodash";
 
 type Props = {
   experienceItem: ExperienceItem;
@@ -20,7 +22,11 @@ type Props = {
 const ExperienceListItem = ({ experienceItem }: Props) => {
   const { t } = useTranslation();
   const sortedTranslatedSkills = useMemo(
-    () => experienceItem.skills.map(s => t(s, { ns: "skills" })).sort(),
+    () =>
+      experienceItem.skills
+        .filter(s => skills.includes(s))
+        .map(s => t(s, { ns: "skills" }))
+        .sort(),
     [experienceItem.skills, t]
   );
   return (
@@ -90,7 +96,12 @@ const ExperienceListItem = ({ experienceItem }: Props) => {
               <span className="experience-skills-list-abbreviation">
                 {s.slice(0, 1)}
               </span>
-              <span className="experience-skills-list-full">{s}</span>
+              <span
+                className="experience-skills-list-full"
+                data-testid={`skill-item-${kebabCase(s)}`}
+              >
+                {s}
+              </span>
             </Avatar>
           </Tooltip>
         ))}

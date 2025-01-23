@@ -9,7 +9,7 @@ export const skills = [
   "css",
   "project-management",
   "uxui-design",
-  "devops",
+  // "devops",
   "teaching",
   "ruby",
   "rails"

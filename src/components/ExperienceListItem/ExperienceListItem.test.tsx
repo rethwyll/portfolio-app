@@ -40,3 +40,21 @@ it("renders when end is falsy", async () => {
   expect(queryByTestId("present")).toBeTruthy();
   expect(getByTestId("present").getAttribute("dateTime")).toEqual("2024-08-31");
 });
+
+it("renders when skill is not available in constants", async () => {
+  const mockDate = DateTime.local(2024, 8, 31, 0, 0, 0);
+  Settings.now = () => mockDate.toMillis();
+  const { queryByTestId } = render(
+    <TranslationProvider i18n={i18next}>
+      <ExperienceListItem
+        experienceItem={{
+          ...experienceItem,
+          end: null,
+          skills: ["react", "foo"]
+        }}
+      />
+    </TranslationProvider>
+  );
+  expect(queryByTestId("skill-item-react")).toBeTruthy();
+  expect(queryByTestId("skill-item-foo")).toBeFalsy();
+});
