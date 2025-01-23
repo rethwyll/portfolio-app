@@ -91,6 +91,9 @@
   line-height: 1em;
   width: inherit;
 }
+[data-theme="yellowstack"] .experience-skills-list-header {
+  display: none;
+}
 [data-theme="yellowstack"] .experience-skills-list-full {
   display: none;
 }

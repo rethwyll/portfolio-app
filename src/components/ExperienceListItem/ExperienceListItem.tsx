@@ -89,6 +89,9 @@ const ExperienceListItem = ({ experienceItem }: Props) => {
           </Typography>
         ))}
       </ul>
+      <Typography variant="h4" className="experience-skills-list-header">
+        Skills List
+      </Typography>
       <ul className="experience-skills-list">
         {sortedTranslatedSkills.map(s => (
           <Tooltip key={s} title={s}>

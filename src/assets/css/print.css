@@ -104,6 +104,9 @@
   .experience-skills-list-abbreviation {
     display: none !important;
   }
+  .experience-skills-list-header {
+    display: none;
+  }
   .experience-skills-list-full {
     display: block !important;
   }
@@ -134,7 +137,7 @@
     -webkit-text-fill-color: unset !important;
     color: black !important;
     font-family: "Noto Serif", serif !important;
-    margin: 0 !important;
+    margin: 0.5em 0 0 !important;
     text-transform: none !important;
     word-break: break-word !important;
   }
@@ -195,21 +198,42 @@
     gap: 1.5em;
     list-style-type: none;
   }
+
+  .experience-skills-list-header {
+    display: block !important;
+  }
   .experience-skills-list {
     flex-wrap: wrap !important;
+    margin: 0 !important;
   }
 
   .experience-skills-list > div {
-    background-color: black !important;
+    background-color: transparent !important;
     font-family: "Noto Serif", serif !important;
+    font-size: 1.6rem;
+    line-height: 1.5;
     color: black !important;
   }
 
   .experience-skills-list-abbreviation {
     display: none !important;
   }
+
+  .MuiAvatar-root {
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  .MuiAvatar-root::after {
+    content: ", ";
+  }
+
+  .MuiAvatar-root:last-child::after {
+    content: "";
+  }
+
   .experience-skills-list-full {
-    color: white !important;
+    color: black !important;
     display: block !important;
   }
 }
