@@ -11,6 +11,7 @@ import App from "./routes/App/App";
 import Contact from "./routes/Contact/Contact";
 import Error from "./routes/Error/Error";
 import Experience from "./routes/Experience/Experience";
+import Skills from "./routes/Skills/Skills";
 import Home from "./routes/Home/Home";
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
@@ -28,6 +29,10 @@ ReactDOM.createRoot(document.getElementById("root")!).render(
               {
                 path: "/experience",
                 element: <Experience />
+              },
+              {
+                path: "/skills",
+                element: <Skills />
               },
               {
                 path: "/contact",

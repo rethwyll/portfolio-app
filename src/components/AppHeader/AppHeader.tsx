@@ -47,6 +47,11 @@ const AppHeader = (): ReactElement | null => {
             </NavLink>
           </Typography>
           <Typography variant="body1" component="li">
+            <NavLink className="animateable" to="/skills">
+              {t("skills", { ns: "routes" })}
+            </NavLink>
+          </Typography>
+          <Typography variant="body1" component="li">
             <NavLink className="animateable" to="/contact">
               {t("contact", { ns: "routes" })}
             </NavLink>

@@ -83,9 +83,18 @@ const ExperienceListItem = ({ experienceItem }: Props) => {
         Key Contributions
       </Typography>
       <ul className="experience-contributions">
-        {experienceItem.contributions.map(c => (
-          <Typography variant="body1" component="li" key={c}>
-            {parse(c)}
+        {experienceItem.contributions.map(contribution => (
+          <Typography variant="body1" component="li" key={contribution.item}>
+            {parse(contribution.item)}
+            {contribution.children?.length ? (
+              <ul className="experience-contributions-children">
+                {contribution.children.map(child => (
+                  <Typography variant="body1" component="li" key={child.item}>
+                    {child.item}
+                  </Typography>
+                ))}
+              </ul>
+            ) : null}
           </Typography>
         ))}
       </ul>

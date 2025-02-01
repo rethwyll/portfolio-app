@@ -10,28 +10,15 @@ import { useTranslation } from "react-i18next";
 // data
 import skillsData from "../../data/skills.json";
 
-// stores
-import { useSkillsStore } from "../../stores/skillsStore";
-
-const Skills = () => {
+const SkillsList = () => {
   const { t } = useTranslation();
-  const yearsOfExperience = useSkillsStore(state => state.yearsOfExperience);
   const formatter = new Intl.ListFormat("en", {
     style: "long",
     type: "conjunction"
   });
   return (
-    <section id="skills" data-testid="skills">
-      <header>
-        <Typography variant="h3">{t("title", { ns: "skills" })}</Typography>
-        <Typography variant="body1" component="p">
-          {t("intro", { ns: "skills", years: yearsOfExperience })}
-        </Typography>
-        <Typography variant="body1" component="p">
-          {t("unique", { ns: "skills" })}
-        </Typography>
-      </header>
-      <dl>
+    <section id="skills-list" data-testid="skills">
+      <dl className="skills-list">
         {skillsData.map(s => (
           <div key={s.id}>
             <Typography variant="h4" component="dt">
@@ -54,4 +41,4 @@ const Skills = () => {
   );
 };
 
-export default Skills;
+export default SkillsList;

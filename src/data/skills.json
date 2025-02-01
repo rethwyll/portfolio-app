@@ -2,56 +2,49 @@
   {
     "id": "development",
     "skills": [
-      "HTML",
       "CSS",
-      "CSS-in-JS",
-      "JavaScript",
-      "TypeScript",
-      "React",
-      "vite",
-      "SPA",
-      "RESTful service calls",
+      "front-end",
       "Highcharts",
-      "Launch Darkly",
-      "feature flags",
-      "vitest",
+      "HTML",
+      "JavaScript",
       "Jest",
-      "unit testing",
-      "Agile",
       "Jira",
-      "W3C standards-based and semantic development",
-      "Macintosh, Windows, *nix environments",
-      "MUI"
+      "Launch Darkly",
+      "MUI",
+      "React",
+      "RESTful service calls",
+      "SASS/SCSS",
+      "SPA",
+      "styled-components",
+      "TypeScript",
+      "unit testing",
+      "vite",
+      "vitest",
+      "Sentry"
     ]
   },
   {
-    "id": "ux",
+    "id": "project-management",
     "skills": [
-      "UI",
-      "Site navigation",
-      "Component libraries",
-      "Analytics tools",
-      "i18n/l10n"
-    ]
-  },
-  {
-    "id": "project",
-    "skills": [
-      "Project estimation",
-      "Client relations",
-      "Copy-editing",
-      "Project management",
-      "Documentation/technical writing",
-      "Proofreading"
+      "Agile process",
+      "customer communication",
+      "documentation",
+      "feature flags management",
+      "Jira management",
+      "project estimation",
+      "release management",
+      "roadmap ownership"
     ]
   },
   {
     "id": "communication",
     "skills": [
-      "Strong written and oral communication skills",
-      "Project meeting facilitation",
-      "In-house technical seminars",
-      "Client training/instruction"
+      "Client training/instruction",
+      "in-house technical seminars",
+      "mentorship",
+      "peer-programming",
+      "proofreading",
+      "strong written and oral communication skills"
     ]
   }
 ]

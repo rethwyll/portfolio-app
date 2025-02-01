@@ -2,6 +2,27 @@
   color-scheme: light;
 }
 
+[data-theme="yellowstack"] #app {
+  max-width: 160rem;
+}
+
+[data-theme="yellowstack"] a {
+  color: #d50000;
+  text-decoration: underline;
+}
+
+[data-theme="yellowstack"] #app-header nav a {
+  color: black;
+
+  &.active {
+    color: #d50000;
+  }
+}
+
+[data-theme="yellowstack"] a:hover {
+  cursor: pointer;
+}
+
 [data-theme="yellowstack"] ul {
   list-style: none;
   margin: 0;
@@ -30,11 +51,23 @@
   gap: 0.4em;
 }
 
-[data-theme="yellowstack"] .experience-list-item ul {
+[data-theme="yellowstack"] .experience-list-item .experience-contributions {
   list-style: initial;
   list-style-position: inside;
   list-style-type: square;
   padding: initial;
+}
+
+[data-theme="yellowstack"]
+  .experience-contributions
+  .experience-contributions-children {
+  list-style-position: inside;
+  list-style-type: square;
+  margin: 0 0 0 2em;
+}
+
+[data-theme="yellowstack"] #skills-summary p + p {
+  margin: 1.5em 0 0;
 }
 
 [data-theme="yellowstack"] .experience-skills-list {
@@ -75,13 +108,6 @@
   width: 1.5em;
 }
 
-[data-theme="yellowstack"] a {
-  color: #d50000;
-  text-decoration: underline;
-}
-[data-theme="yellowstack"] a:hover {
-  cursor: pointer;
-}
 [data-theme="yellowstack"] #education .college-url a svg {
   font-size: 0.8em;
 }

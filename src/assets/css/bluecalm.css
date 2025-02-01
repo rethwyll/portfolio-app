@@ -3,6 +3,27 @@
   padding: 4rem;
 }
 
+[data-theme="bluecalm"] #app {
+  max-width: 160rem;
+}
+
+[data-theme="bluecalm"] a {
+  color: #ffa000;
+  text-decoration: underline;
+}
+
+[data-theme="bluecalm"] a:hover {
+  cursor: pointer;
+}
+
+[data-theme="bluecalm"] #app-header nav a {
+  color: #8c5800;
+
+  &.active {
+    color: #ffa000;
+  }
+}
+
 [data-theme="bluecalm"] #main-nav {
   align-items: baseline;
   display: flex;
@@ -36,12 +57,16 @@
   margin: 1.5em 0 0;
 }
 
-[data-theme="bluecalm"] #skills p + p {
+[data-theme="bluecalm"] #skills-summary p + p {
   margin: 1.5em 0 0;
 }
 
-[data-theme="bluecalm"] #skills dd {
+[data-theme="bluecalm"] #skills-list dd {
   margin: 0;
+}
+
+[data-theme="bluecalm"] #education {
+  margin: 1.5em 0 0 0;
 }
 
 [data-theme="bluecalm"] #education h3 {
@@ -108,6 +133,14 @@
   margin: 0;
 }
 
+[data-theme="bluecalm"]
+  .experience-contributions
+  .experience-contributions-children {
+  list-style-position: inside;
+  list-style-type: square;
+  margin: 0 0 0 2em;
+}
+
 [data-theme="bluecalm"] .experience-skills-list {
   align-items: baseline;
   display: flex;
@@ -147,23 +180,6 @@
   display: grid;
   grid-template-columns: 1fr;
   justify-items: center;
-}
-
-[data-theme="bluecalm"] a {
-  color: #ffa000;
-  text-decoration: underline;
-}
-
-[data-theme="bluecalm"] a:hover {
-  cursor: pointer;
-}
-
-[data-theme="bluecalm"] #app-header nav a {
-  color: #8c5800;
-
-  &.active {
-    color: #ffa000;
-  }
 }
 
 [data-theme="bluecalm"] #intro h2 {
@@ -258,7 +274,8 @@
 
   [data-theme="bluecalm"] #experience .experience-contributions,
   [data-theme="bluecalm"] #experience .experience-summary,
-  [data-theme="bluecalm"] #experience .experience-skills-list {
+  [data-theme="bluecalm"] #experience .experience-skills-list,
+  [data-theme="bluecalm"] #skills .skills-list {
     max-width: 50%;
   }
 

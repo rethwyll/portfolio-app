@@ -8,15 +8,44 @@
     "title": "Principal engineer",
     "start": "2019-03-01",
     "end": "2025-01-23",
-    "summary": "Uplevel, a series-A startup hatched at Madrona Venture Labs, hired me to stand up a greenfield React SPA web app for its engineering effectiveness dashboard. On the path to product/market fit, I created two different greenfield SPA dashboards as our main product offering.",
+    "summary": "Uplevel, a series-A startup hatched at Madrona Venture Labs, hired me as front-end SME for its main product offering (an engineering effectiveness dashboard) as it worked to achieve product/market fit.",
     "contributions": [
-      "Led front-end development of two different React SPA (create-react-app and vite) webapps delivering effectiveness dashboards for software engineering organizations, including Fortune 100 companies.",
-      "Developed a hackathon project that was integrated into the production app: a robust query parameters utility that enabled flexible sharing of UI state for customer data visibility and greater efficiency during QA cycles.",
-      "Led/anchored feature initiatives for the development team, serving as liaison to PMs; documenting and maintaining technical requirements; shepherding development calendar.",
-      "Worked closely with PMs and design to negotiate and document technical requirements.",
-      "Mentored junior developers and contractors in front-end development via learning sessions, individual peer programming sessions and pr reviews.",
-      "Led front-end engineering efforts on error handling and monitoring.",
-      "Led front-end engineering efforts on i18n and l10n."
+      {
+        "item": "Led front-end development of two different React SPA webapps (create-react-app and vite) delivering effectiveness dashboards for software engineering organizations, including Fortune 100 companies."
+      },
+      {
+        "item": "Owned front-end repository as SME, maintaining quality standards for front-end development",
+        "children": [
+          { "item": "Mentored junior developers and contractors" },
+          {
+            "item": "Conducted learning sessions, individual peer programming sessions"
+          },
+          { "item": "Reviewed team PRs" }
+        ]
+      },
+      {
+        "item": "Led feature initiatives for the development team as project &ldquo;anchor&rdquo;",
+        "children": [
+          { "item": "Served as team liaison with PMs" },
+          { "item": "Negotiated technical requirements with PMs and design" },
+          { "item": "Documented technical requirements" },
+          { "item": "Developed project ship points" },
+          { "item": "Shepherded development calendar" },
+          { "item": "Led team scrum meetings" }
+        ]
+      },
+      {
+        "item": "Negotiated schema for REST data responses with back-end engineers."
+      },
+      {
+        "item": "Led front-end engineering efforts on error handling and monitoring."
+      },
+      {
+        "item": "Led front-end engineering efforts on i18n and l10n."
+      },
+      {
+        "item": "Developed a hackathon project that was integrated into the production app: a custom React hook to manage query parameters which enabled flexible sharing of UI state for customer data visibility and greater efficiency during QA cycles."
+      }
     ],
     "skills": [
       "typescript",
@@ -39,13 +68,21 @@
     "end": "2021-05-01",
     "summary": "Northeastern University invited me to create and teach a weekly 3-hour lecture and practical applications course for grad-level students, focusing on the basics of front-end development: HTML, CSS, JavaScript, React, usability and accessibility best practices in web UI design and development.",
     "contributions": [
-      "Prepared lectures, homework, and tests for a 10-week course consisting of weekly 3-hour lectures.",
-      "Delivered weekly lectures.",
-      "Managed github repositories and organizations for class lecture notes and group assignments.",
-      "Facilitated class discussions via Canvas learning platform.",
-      "Conducted weekly office hours to provide guidance and mentorship to students.",
-      "Supervised a TA in grading and providing feedback on weekly homework and tests.",
-      "Managed class administration via Canvas learning platform."
+      {
+        "item": "Prepared lectures, homework, and tests for a 10-week course."
+      },
+      { "item": "Delivered weekly 3-hour lectures." },
+      {
+        "item": "Managed github repositories and organizations for class lecture notes and group assignments."
+      },
+      { "item": "Facilitated class discussions via Canvas learning platform." },
+      {
+        "item": "Conducted weekly office hours to provide guidance and mentorship to students."
+      },
+      {
+        "item": "Supervised a TA in grading and providing feedback on weekly homework and tests."
+      },
+      { "item": "Managed class administration via Canvas learning platform." }
     ],
     "skills": [
       "javascript",
@@ -67,12 +104,27 @@
     "title": "Staff software developer",
     "start": "2014-09-01",
     "end": "2019-01-01",
-    "summary": "As a staff engineer for The Climate Corporation&rsquo;s Insights web team, I supported the desktop and webview UI with HTML5, CSS (SASS and css-modules) and React/Redux. I also Led the initiative to build the next iteration of our internal React component asset library.",
+    "summary": "As a staff engineer for The Climate Corporation’s Insights web team, I supported the desktop and webview UI. I also led the initiative to build the next iteration of our internal React component asset library.",
     "contributions": [
-      "Led UI development of React app to integrate digital farming diagnostic equipment with farm field mapping and CRUD operations.",
-      "Collaborated closely with UX design teams in California and Missouri to test and validate use cases.",
-      "Led project to refactor and improve internal React library for use by internal front-end development team with an eye towards extensibility and accessibility.",
-      "Mentored junior developers in front-end development via technical presentations and brown bag sessions."
+      {
+        "item": "Led front-end development of React app to integrate digital farming diagnostic equipment with farm field mapping and CRUD operations."
+      },
+      {
+        "item": "Collaborated closely with design teams in California and Missouri to test and validate use cases."
+      },
+      {
+        "item": "Led project to refactor and improve internal React library for use by internal front-end development team with an eye towards extensibility and accessibility."
+      },
+      {
+        "item": "Maintained quality standards for front-end development:",
+        "children": [
+          { "item": "Mentored junior developers" },
+          {
+            "item": "Conducted technical presentations and brown bag sessions"
+          },
+          { "item": "Reviewed team PRs" }
+        ]
+      }
     ],
     "skills": [
       "javascript",
@@ -94,9 +146,13 @@
     "end": "2014-09-01",
     "summary": "I was hired by Wetpaint to supplement its growing development team supporting dynamic entertainment content for women aged 18-34.",
     "contributions": [
-      "Supported UI for the Wetpaint consumer experience website and associated products.",
-      "Drove conversion to a responsive layout to serve both desktop and mobile users.",
-      "Led implementation of site redesign."
+      {
+        "item": "Supported UI for the Wetpaint consumer experience website and associated products."
+      },
+      {
+        "item": "Drove conversion to a responsive layout to serve both desktop and mobile users."
+      },
+      { "item": "Led implementation of site redesign." }
     ],
     "skills": [
       "javascript",
@@ -118,12 +174,24 @@
     "end": "2012-10-01",
     "summary": "I was hired By Aptimus as the cornerstone of a growing front-end development team tasked with supporting the University of Phoenix marketing website (http://www.phoenix.edu), a high-traffic site that receives millions of page views every month. As Led UI developer, I create dynamic, data-driven templates and components utilized by the Apollo Group web content strategy team to build the UOPX website.",
     "contributions": [
-      "Led development of template UI for UOPX homepage, degree-program pages, course pages and continuing education mini-site (many of the site&rsquo;s highest-visibility pages), as well as various extensible components",
-      "Collaborated closely with UX design teams in California and Missouri to test and validate use cases.",
-      "Spearheaded integration of Backbone MVC framework in codebase from research through implementation to standardize team Javascript coding efforts.",
-      "Led key CSS refactoring efforts to reduce CSS load times and improve development efficiency.",
-      "Mentored junior developers in Day (Adobe) CQ enterprise CMS development and Javascript.",
-      "Initiated project to support responsive presentation for mobile devices via implementation of Twitter Bootstrap."
+      {
+        "item": "Led development of template UI for UOPX homepage, degree-program pages, course pages and continuing education mini-site (many of the site&rsquo;s highest-visibility pages), as well as various extensible components"
+      },
+      {
+        "item": "Collaborated closely with UX design teams in Arizona to test and validate use cases."
+      },
+      {
+        "item": "Spearheaded integration of Backbone MVC framework in codebase from research through implementation to standardize team Javascript coding efforts."
+      },
+      {
+        "item": "Led key CSS refactoring efforts to reduce CSS load times and improve development efficiency."
+      },
+      {
+        "item": "Mentored junior developers in Day (Adobe) CQ enterprise CMS development and JavaScript."
+      },
+      {
+        "item": "Initiated project to support responsive presentation for mobile devices via implementation of Bootstrap."
+      }
     ],
     "skills": ["javascript", "html", "css", "project-management"]
   },
@@ -138,9 +206,13 @@
     "end": "2008-10-01",
     "summary": "I was recruited by Zillow.com to provide development expertise with regard to UI.",
     "contributions": [
-      "Developed UI for Zillow Professional Directory.",
-      "Presented talk advocating for semantic HTML development during Zillow Developer Presentation.",
-      "Contributed core Web 2.0 concepts such as standards-based development; code validation; and separation of structure, presentation and behavior into Zillow codebase."
+      { "item": "Developed UI for Zillow Professional Directory." },
+      {
+        "item": "Presented talk advocating for semantic HTML development during Zillow Developer Presentation."
+      },
+      {
+        "item": "Contributed core Web 2.0 concepts such as standards-based development; code validation; and separation of structure, presentation and behavior into Zillow codebase."
+      }
     ],
     "skills": ["javascript", "html", "css"]
   },
@@ -155,10 +227,26 @@
     "end": "2008-04-01",
     "summary": "I was hired to guide development of company into full-service interactive agency, implement processes for small- and large-scale web project development and provide advanced level of design/development expertise with regard to UI and programming. I implemented all phases of site development; mentored co-workers in web development skills; administrated Linux-based dedicated server and in-house Internet connectivity infrastructure on a day-to-day operational basis; and provided Internet technologies consulting for 20+ employees of strategic-management affiliate company.",
     "contributions": [
-      "Created proprietary WAVE<sup>&trade;</sup> client needs evaluation, which was implemented as standard procedure in project exploratory process.",
-      "Managed transfer of client websites to in-house dedicated server, allowing company to generate new revenue stream and significantly reduce third-party website hosting expenses.",
-      "Headed technical development of ADDY award-winning projects: Green Bay Chamber of Commerce &ldquo;Shine&rdquo; interactive CD (2003), Green Bay Chamber of Commerce &ldquo;A Place To Shine&rdquo; website (2006).",
-      "Integrated core Web 2.0 concepts such as standards-based development; code validation; and separation of structure, presentation and behavior into company web development process."
+      {
+        "item": "Created proprietary WAVE<sup>&trade;</sup> client needs evaluation, which was implemented as standard procedure in project exploratory process."
+      },
+      {
+        "item": "Managed transfer of client websites to in-house dedicated server, allowing company to generate new revenue stream and significantly reduce third-party website hosting expenses."
+      },
+      {
+        "item": "Headed technical development of ADDY award-winning projects",
+        "children": [
+          {
+            "item": "Green Bay Chamber of Commerce &ldquo;Shine&rdquo; interactive CD (2003)"
+          },
+          {
+            "item": "Green Bay Chamber of Commerce &ldquo;A Place To Shine&rdquo; website (2006)"
+          }
+        ]
+      },
+      {
+        "item": "Integrated core Web 2.0 concepts such as standards-based development; code validation; and separation of structure, presentation and behavior into company web development process."
+      }
     ],
     "skills": [
       "javascript",
@@ -180,8 +268,12 @@
     "end": "2001-04-01",
     "summary": "I was hired to guide development of company into full-service interactive agency, implement processes for small- and large-scale web project development and provide advanced level of design/development expertise with regard to UI and programming. I implemented all phases of site development; mentored co-workers in web development skills; administrated Linux-based dedicated server and in-house Internet connectivity infrastructure on a day-to-day operational basis; and provided Internet technologies consulting for 20+ employees of strategic-management affiliate company.",
     "contributions": [
-      "Developed interactive tradeshow kiosk, increasing client&rsquo;s product sales by 625%. (25 systems vs. 4 systems in previous year).",
-      "Proposed, built and deployed company intranet to improve internal communication and project coordination."
+      {
+        "item": "Developed interactive tradeshow kiosk, increasing client&rsquo;s product sales by 625%. (25 systems vs. 4 systems in previous year)."
+      },
+      {
+        "item": "Proposed, built and deployed company intranet to improve internal communication and project coordination."
+      }
     ],
     "skills": [
       "javascript",

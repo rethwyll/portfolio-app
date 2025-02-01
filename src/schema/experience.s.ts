@@ -10,6 +10,11 @@ export const sExperienceItem = z.object({
   start: z.string(),
   end: z.string().nullable(),
   summary: z.string(),
-  contributions: z.array(z.string()),
+  contributions: z.array(
+    z.object({
+      item: z.string(),
+      children: z.array(z.object({ item: z.string() })).optional()
+    })
+  ),
   skills: z.array(z.string())
 });
