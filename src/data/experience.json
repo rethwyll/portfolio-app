@@ -73,7 +73,7 @@
       },
       { "item": "Delivered weekly 3-hour lectures." },
       {
-        "item": "Managed github repositories and organizations for class lecture notes and group assignments."
+        "item": "Managed Github repositories and organizations for class lecture notes and group assignments."
       },
       { "item": "Facilitated class discussions via Canvas learning platform." },
       {
@@ -175,7 +175,7 @@
     "summary": "I was hired By Aptimus as the cornerstone of a growing front-end development team tasked with supporting the University of Phoenix marketing website (http://www.phoenix.edu), a high-traffic site that receives millions of page views every month. As Led UI developer, I create dynamic, data-driven templates and components utilized by the Apollo Group web content strategy team to build the UOPX website.",
     "contributions": [
       {
-        "item": "Led development of template UI for UOPX homepage, degree-program pages, course pages and continuing education mini-site (many of the site&rsquo;s highest-visibility pages), as well as various extensible components"
+        "item": "Led development of template UI for UOPX homepage, degree-program pages, course pages and continuing education mini-site (many of the site&rsquo;s highest-visibility pages), as well as various extensible components."
       },
       {
         "item": "Collaborated closely with UX design teams in Arizona to test and validate use cases."
@@ -258,6 +258,29 @@
     ]
   },
   {
+    "name": "FutureLook, Inc.",
+    "id": "futurelook",
+    "location": "Oshkosh, WI",
+    "mapsLink": null,
+    "title": "Web designer/developer",
+    "start": "2002-09-01",
+    "end": "2002-05-01",
+    "summary": "I was contracted to provide seamless continuity of website development during a critical transitional period. During this time, I implemented all phases of site development.",
+    "contributions": [
+      {
+        "item": "Implemented all phases of site design and development"
+      }
+    ],
+    "skills": [
+      "javascript",
+      "html",
+      "css",
+      "project-management",
+      "uxui-design",
+      "devops"
+    ]
+  },
+  {
     "name": "Pulse Communications",
     "id": "pulse",
     "url": "https://www.pulsecommunications.com/",
@@ -268,6 +291,11 @@
     "end": "2001-04-01",
     "summary": "I was hired to guide development of company into full-service interactive agency, implement processes for small- and large-scale web project development and provide advanced level of design/development expertise with regard to UI and programming. I implemented all phases of site development; mentored co-workers in web development skills; administrated Linux-based dedicated server and in-house Internet connectivity infrastructure on a day-to-day operational basis; and provided Internet technologies consulting for 20+ employees of strategic-management affiliate company.",
     "contributions": [
+      {
+        "item": "Implemented all phases of site design and development"
+      },
+      { "item": "Mentored colleagues in front-end development" },
+
       {
         "item": "Developed interactive tradeshow kiosk, increasing client&rsquo;s product sales by 625%. (25 systems vs. 4 systems in previous year)."
       },
