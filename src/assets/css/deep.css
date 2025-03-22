@@ -1,0 +1,377 @@
+[data-theme="deep"] {
+  background: #11111f;
+  color-scheme: dark;
+  padding: 0;
+}
+
+[data-theme="deep"] a {
+  color: #d50000;
+  text-decoration: underline;
+}
+
+[data-theme="deep"] #app-header {
+  height: 30rem;
+  padding: 4rem 4rem 0;
+  position: relative;
+  z-index: 5;
+}
+
+[data-theme="deep"] #app-header nav a {
+  color: black;
+
+  &.active {
+    color: #d50000;
+  }
+}
+
+[data-theme="deep"] a:hover {
+  cursor: pointer;
+}
+
+[data-theme="deep"] ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+[data-theme="deep"] #main {
+  display: flex;
+  height: 100%;
+  justify-content: center;
+  padding-bottom: 5rem;
+  position: relative;
+  z-index: 5;
+}
+
+[data-theme="deep"] #main > section {
+  display: grid;
+  grid-template-columns: 1fr;
+  max-width: 50rem;
+}
+
+[data-theme="deep"] #home aside {
+  grid-row: 2 / 3;
+}
+
+[data-theme="deep"] #education .college-url a {
+  align-items: baseline;
+  display: inline-flex;
+  flex-flow: row nowrap;
+  gap: 0.4em;
+}
+
+[data-theme="deep"] .experience-list-item .experience-contributions {
+  list-style: initial;
+  list-style-position: inside;
+  list-style-type: square;
+  padding: initial;
+}
+
+[data-theme="deep"]
+  .experience-contributions
+  .experience-contributions-children {
+  list-style-position: inside;
+  list-style-type: square;
+  margin: 0 0 0 2em;
+}
+
+[data-theme="deep"] #skills-summary p + p {
+  margin: 1.5em 0 0;
+}
+
+[data-theme="deep"] .experience-skills-list {
+  align-items: baseline;
+  display: flex;
+  gap: 0.5em;
+  justify-content: flex-start;
+  margin: 1.5em 0;
+}
+
+[data-theme="deep"] #all-experience {
+  justify-self: flex-end;
+}
+
+[data-theme="deep"] #skills-filter {
+  display: flex;
+  flex-flow: row wrap;
+  gap: 1em;
+  list-style: none;
+  margin: 1.5em 0;
+  padding: 0;
+}
+
+[data-theme="deep"] #contact-socials {
+  align-items: baseline;
+  display: flex;
+  gap: 1em;
+  margin-top: 1.5em;
+}
+
+[data-theme="deep"] #contact-socials li {
+  margin: 0;
+}
+
+[data-theme="deep"] #contact-socials a {
+  display: block;
+  height: 1.5em;
+  width: 1.5em;
+}
+
+[data-theme="deep"] #education .college-url a svg {
+  font-size: 0.8em;
+}
+[data-theme="deep"] #contact-socials svg {
+  font-size: 1.5em;
+  height: inherit;
+  line-height: 1em;
+  width: inherit;
+}
+[data-theme="deep"] .experience-skills-list-header {
+  display: none;
+}
+[data-theme="deep"] .experience-skills-list-full {
+  display: none;
+}
+
+/* submarine */
+[data-theme="deep"] #placeholder-1 {
+  background: url("../svg/submarine.svg") no-repeat;
+  height: 8rem;
+  left: 4.5rem;
+  position: fixed;
+  top: 34rem;
+  width: 10rem;
+  z-index: 5;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  @keyframes sub-bobbing {
+    to {
+      top: 34.3rem;
+    }
+  }
+  @keyframes jellyfish-bobbing-shallow {
+    to {
+      top: 50%;
+    }
+  }
+  @keyframes jellyfish-bobbing-mid {
+    to {
+      top: 250%;
+    }
+  }
+  @keyframes jellyfish-bobbing-deep {
+    to {
+      top: 350%;
+    }
+  }
+  @keyframes bubble {
+    to {
+      bottom: 8rem;
+      opacity: 1;
+    }
+  }
+  @keyframes right-to-left {
+    to {
+      left: -150%;
+    }
+  }
+  @keyframes left-to-right {
+    to {
+      left: 150%;
+    }
+  }
+
+  [data-theme="deep"] #placeholder-1 {
+    animation-direction: alternate;
+    animation-duration: 1s;
+    animation-fill-mode: both;
+    animation-iteration-count: infinite;
+    animation-name: sub-bobbing;
+    animation-timing-function: linear;
+  }
+
+  [data-theme="deep"] #placeholder-1::before {
+    animation-duration: 0.5s;
+    animation-iteration-count: infinite;
+    animation-name: bubble;
+    animation-timing-function: linear;
+    border-radius: 50%;
+    border: 0.1rem solid white;
+    bottom: 3rem;
+    color: transparent;
+    content: "*";
+    display: block;
+    height: 1rem;
+    opacity: 0;
+    position: absolute;
+    right: 0;
+    width: 1rem;
+  }
+  [data-theme="deep"] #placeholder-1::after {
+    animation-delay: 0.3s;
+    animation-duration: 0.5s;
+    animation-iteration-count: infinite;
+    animation-name: bubble;
+    animation-timing-function: ease-in-out;
+    border-radius: 50%;
+    border: 0.1rem solid white;
+    bottom: 3rem;
+    color: transparent;
+    content: "*";
+    display: block;
+    height: 1rem;
+    opacity: 0;
+    position: absolute;
+    right: 0.5rem;
+    width: 1rem;
+  }
+
+  /* shark */
+  [data-theme="deep"] #placeholder-2 {
+    animation-duration: 30s;
+    animation-iteration-count: infinite;
+    animation-name: left-to-right;
+    animation-timing-function: linear;
+    background: url("../svg/shark.svg") no-repeat;
+    top: 110%;
+    filter: blur(0.2rem);
+    height: 10rem;
+    left: -150%;
+    opacity: 0.5;
+    position: absolute;
+    width: 30rem;
+  }
+
+  /* whale */
+  [data-theme="deep"] #placeholder-3 {
+    animation-delay: 60s;
+    animation-duration: 45s;
+    animation-iteration-count: infinite;
+    animation-name: right-to-left;
+    animation-timing-function: linear;
+    background: url("../svg/whale.svg") no-repeat;
+    top: 300%;
+    filter: blur(0.8rem);
+    height: 50rem;
+    left: 100%;
+    opacity: 0.5;
+    position: absolute;
+    width: 120rem;
+  }
+
+  /* schools */
+  [data-theme="deep"] #placeholder-4 {
+    animation-delay: 7s;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-name: right-to-left;
+    animation-timing-function: linear;
+    background: url("../svg/school-1.svg") no-repeat;
+    top: 124rem;
+    filter: blur(0.1rem);
+    height: 10rem;
+    left: 100%;
+    position: absolute;
+    width: 25rem;
+  }
+  [data-theme="deep"] #placeholder-5 {
+    animation-delay: 13s;
+    animation-duration: 6s;
+    animation-iteration-count: infinite;
+    animation-name: right-to-left;
+    animation-timing-function: linear;
+    background: url("../svg/school-2.svg") no-repeat;
+    top: 70rem;
+    filter: blur(0.1rem);
+    height: 10rem;
+    left: 100%;
+    position: absolute;
+    width: 25rem;
+  }
+  [data-theme="deep"] #placeholder-6 {
+    animation-delay: 10s;
+    animation-duration: 7s;
+    animation-iteration-count: infinite;
+    animation-name: left-to-right;
+    animation-timing-function: linear;
+    background: url("../svg/school-3.svg") no-repeat;
+    top: 35rem;
+    filter: blur(0.1rem);
+    height: 10rem;
+    left: -100%;
+    position: absolute;
+    width: 25rem;
+  }
+
+  /* jellyfish */
+  [data-theme="deep"] #placeholder-7 {
+    animation-delay: 1s;
+    animation-direction: alternate;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-name: jellyfish-bobbing-shallow;
+    animation-timing-function: linear;
+    background: url("../svg/jellyfish.svg") no-repeat;
+    top: 40%;
+    filter: blur(0.05rem);
+    height: 10rem;
+    left: 80%;
+    position: absolute;
+    width: 5rem;
+  }
+  [data-theme="deep"] #placeholder-8 {
+    animation-delay: 10s;
+    animation-direction: alternate;
+    animation-duration: 20s;
+    animation-iteration-count: infinite;
+    animation-name: jellyfish-bobbing-shallow;
+    animation-timing-function: linear;
+    background: url("../svg/jellyfish.svg") no-repeat;
+    top: 53%;
+    filter: blur(0.05rem);
+    height: 8rem;
+    left: 88%;
+    position: absolute;
+    width: 4rem;
+  }
+  [data-theme="deep"] #placeholder-9 {
+    animation-direction: alternate;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    animation-name: jellyfish-bobbing-mid;
+    animation-timing-function: linear;
+    background: url("../svg/jellyfish.svg") no-repeat;
+    top: 260%;
+    filter: blur(0.2rem);
+    height: 12rem;
+    left: 20%;
+    position: absolute;
+    width: 6rem;
+  }
+  [data-theme="deep"] #placeholder-10 {
+    animation-delay: 5s;
+    animation-direction: alternate;
+    animation-duration: 15s;
+    animation-iteration-count: infinite;
+    animation-name: jellyfish-bobbing-mid;
+    animation-timing-function: linear;
+    background: url("../svg/jellyfish.svg") no-repeat;
+    top: 258%;
+    filter: blur(0.05rem);
+    height: 16rem;
+    left: 75%;
+    position: absolute;
+    width: 12rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  [data-theme="deep"] #placeholder-2,
+  [data-theme="deep"] #placeholder-3,
+  [data-theme="deep"] #placeholder-4,
+  [data-theme="deep"] #placeholder-5,
+  [data-theme="deep"] #placeholder-6 {
+    display: none;
+  }
+}

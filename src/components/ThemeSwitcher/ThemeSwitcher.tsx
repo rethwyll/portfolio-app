@@ -18,7 +18,7 @@ export type Props = {
 const ThemeSwitcher = ({ themes }: Props): ReactElement | null => {
   const { theme: currentTheme, updateTheme } = useThemeStore();
 
-  return themes.length >= 2 ? (
+  return themes.length >= 3 ? (
     <div id="theme-switcher" data-testid="theme-switcher">
       {/*<p>{t("current-theme", { theme: currentTheme })}</p> */}
       <Input

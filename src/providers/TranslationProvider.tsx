@@ -35,6 +35,9 @@ i18next
     fallbackLng: "en", // use en if detected lng is not available
     interpolation: {
       escapeValue: false // not needed for react as it escapes by default
+    },
+    react: {
+      useSuspense: import.meta.env.PROD
     }
     // saveMissing: true // send not translated keys to endpoint
   });

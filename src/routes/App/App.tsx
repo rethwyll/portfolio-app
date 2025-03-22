@@ -42,7 +42,7 @@ const App = (): ReactElement | null => {
         <GlobalStyles
           styles={{
             body: {
-              backgroundColor: fullTheme.palette.background.default
+              background: fullTheme.palette.background.default
             }
           }}
         />
@@ -53,6 +53,16 @@ const App = (): ReactElement | null => {
             <Outlet />
           </main>
           <AppFooter />
+          <div id="placeholder-1"></div>
+          <div id="placeholder-2"></div>
+          <div id="placeholder-3"></div>
+          <div id="placeholder-4"></div>
+          <div id="placeholder-5"></div>
+          <div id="placeholder-6"></div>
+          <div id="placeholder-7"></div>
+          <div id="placeholder-8"></div>
+          <div id="placeholder-9"></div>
+          <div id="placeholder-10"></div>
         </div>
         <ScrollRestoration />
       </ThemeProvider>

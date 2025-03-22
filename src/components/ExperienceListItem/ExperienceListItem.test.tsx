@@ -5,7 +5,11 @@ import TranslationProvider from "../../providers/TranslationProvider";
 import i18next from "i18next";
 import experience from "../../data/experience.json";
 import { DateTime, Settings } from "luxon";
-const experienceItem = { ...experience[0], id: "foo", end: "2024-08-31" };
+const experienceItem = {
+  ...experience[0],
+  id: "foo",
+  end: "2024-08-31"
+};
 
 it("renders", async () => {
   const { queryByTestId } = render(

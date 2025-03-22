@@ -219,7 +219,7 @@
   {
     "name": "Seismic Interactive & Design",
     "id": "seismic",
-    "url": "https://www.seismicinteractive.com/",
+    "url": null,
     "location": "Green Bay, WI",
     "mapsLink": null,
     "title": "Web designer/developer",
@@ -260,6 +260,7 @@
   {
     "name": "FutureLook, Inc.",
     "id": "futurelook",
+    "url": null,
     "location": "Oshkosh, WI",
     "mapsLink": null,
     "title": "Web designer/developer",
@@ -283,7 +284,7 @@
   {
     "name": "Pulse Communications",
     "id": "pulse",
-    "url": "https://www.pulsecommunications.com/",
+    "url": null,
     "location": "Green Bay, WI",
     "mapsLink": null,
     "title": "Web designer/developer",
@@ -292,12 +293,12 @@
     "summary": "I was hired to guide development of company into full-service interactive agency, implement processes for small- and large-scale web project development and provide advanced level of design/development expertise with regard to UI and programming. I implemented all phases of site development; mentored co-workers in web development skills; administrated Linux-based dedicated server and in-house Internet connectivity infrastructure on a day-to-day operational basis; and provided Internet technologies consulting for 20+ employees of strategic-management affiliate company.",
     "contributions": [
       {
-        "item": "Implemented all phases of site design and development"
+        "item": "Implemented all phases of site design and development."
       },
-      { "item": "Mentored colleagues in front-end development" },
+      { "item": "Mentored colleagues in front-end development." },
 
       {
-        "item": "Developed interactive tradeshow kiosk, increasing client&rsquo;s product sales by 625%. (25 systems vs. 4 systems in previous year)."
+        "item": "Developed interactive trade show kiosk, increasing client&rsquo;s product sales by 625%. (25 systems vs. 4 systems in previous year)."
       },
       {
         "item": "Proposed, built and deployed company intranet to improve internal communication and project coordination."
